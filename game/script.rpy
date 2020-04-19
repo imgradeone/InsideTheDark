@@ -22,11 +22,10 @@ label start:
     $ allow_skipping = True
     $ config.allow_skipping = True
 
-
     if persistent.example_seen:
-        call tutorial_selection
+        call horrormenu
     else:
-        call example_chapter from _call_example_chapter
+        call horrorintro
 
     return
 

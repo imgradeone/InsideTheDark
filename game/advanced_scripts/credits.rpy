@@ -636,7 +636,7 @@ label credits2:
     #Hide console and show the Team salvato logo and thankyou
     call hideconsole from _call_hideconsole_1
     show credits_ts
-    show credits_text "made with love by":
+    show credits_text "great thanks to":
         zoom 0.75 xalign 0.5 yalign 0.25 alpha 0 subpixel True
         linear 2.0 alpha 1
         4.5

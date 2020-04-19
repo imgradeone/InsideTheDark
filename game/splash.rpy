@@ -10,7 +10,7 @@ init -100 python:
 init python:
     menu_trans_time = 1
 
-    splash_message_default = "This game is an unofficial fan work, unaffiliated with Team Salvato."
+    splash_message_default = "This game is an unofficial fan work, unaffiliated with Team Salvato.\nAnd this mod is not suitable for children or they are easily distrubed.\n\nYOU HAVE BEEN WARNED."
 
     splash_messages = [
         "Please support Doki Doki Literature Club.",
@@ -270,9 +270,11 @@ label splashscreen:
         "[config.name] is a Doki Doki Literature Club fan mod that is not affiliated with Team Salvato."
         "It is designed to be played only after the official game has been completed, and contains spoilers for the official game."
         "Game files for Doki Doki Literature Club are required to play this mod and can be downloaded for free at: http://ddlc.moe"
+        "And this mod contains something HORROR from original DDLC games, so it is not suitable for children or they are easily distrubed. More detail can be viewed at https://ddlc.moe/warning.html (with spoilers)."
+        "YOU HAVE BEEN WARNED."
 
         menu:
-            "By playing [config.name] you agree that you have completed Doki Doki Literature Club and accept any spoilers contained within."
+            "By playing [config.name] you agree that you have completed Doki Doki Literature Club and accept any spoilers and horror things contained within."
             "I agree.":
 
                 pass
