@@ -1,4 +1,6 @@
-# Welcome to the Modification Club!
+# Inside The Dark
+
+A DDLC mod to let you experience the
 
 The DDLC Mod Template is an easy way to get started building your own game mods for Doki Doki Literature Club that adhere to [Team Salvato's IP Guidelines](http://teamsalvato.com/ip-guidelines/) for fan mods.
 

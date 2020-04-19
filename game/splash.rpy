@@ -208,17 +208,14 @@ init python:
             if not os.access(config.basedir + "/characters/", os.F_OK):
                 os.mkdir(config.basedir + "/characters")
 
-            if persistent.playthrough <= 2:
-                try: renpy.file("../characters/monika.chr")
-                except: open(config.basedir + "/characters/monika.chr", "wb").write(renpy.file("monika.chr").read())
-            if persistent.playthrough <= 1 or persistent.playthrough == 4:
-                try: renpy.file("../characters/natsuki.chr")
-                except: open(config.basedir + "/characters/natsuki.chr", "wb").write(renpy.file("natsuki.chr").read())
-                try: renpy.file("../characters/yuri.chr")
-                except: open(config.basedir + "/characters/yuri.chr", "wb").write(renpy.file("yuri.chr").read())
-            if persistent.playthrough == 0 or persistent.playthrough == 4:
-                try: renpy.file("../characters/sayori.chr")
-                except: open(config.basedir + "/characters/sayori.chr", "wb").write(renpy.file("sayori.chr").read())
+            renpy.file("../characters/monika.chr")
+            open(config.basedir + "/characters/monika.chr", "wb").write(renpy.file("monika.chr").read())
+            renpy.file("../characters/natsuki.chr")
+            open(config.basedir + "/characters/natsuki.chr", "wb").write(renpy.file("natsuki.chr").read())
+            renpy.file("../characters/yuri.chr")
+            open(config.basedir + "/characters/yuri.chr", "wb").write(renpy.file("yuri.chr").read())
+            renpy.file("../characters/sayori.chr")
+            open(config.basedir + "/characters/sayori.chr", "wb").write(renpy.file("sayori.chr").read())
 
         except:
             pass
@@ -329,7 +326,10 @@ label after_load:
         scene black
         "The save file could not be loaded."
         "Are you trying to cheat?"
-
+        "Or there is a bug...?"
+        "If this happened, please delete the firstrun file at /game folder."
+        "And also, you can create a issue from this project's GitHub repo, which can be found at Help."
+        "Now restarting..."
 
         $ renpy.utter_restart()
     return

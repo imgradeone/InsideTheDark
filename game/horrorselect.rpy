@@ -11,22 +11,25 @@ label horrorintro:
     "So make sure you clone this mod project from https://github.com/imgradeone/InsideTheDark so that you could learn better."
     "But if you only want to experience the worst part of the DDLC game..."
     "Well..."
-    "Did you finished the real game?"
+    "Did you finished the original game?"
     "..."
-    "Ahaha..."
-    "So let's get into it."
+    "Bruh. XD"
+    "So let's get into the mod."
+    "Wait..."
     "Jeeeeeeez..."
     "I forgot to tell you that I am a newbie of modding..."
-    "The mod might be VERY INCOMPLATED and FULL OF ISSUES."
+    "The mod might be VERY INCOMPLATED and FULL OF BUGS."
     "Sorry about this..."
-    "BTW, I will bring 4 girls to this mod."
+    "BTW, I will bring 4 cute girls to this mod."
+    "And I will take good care of them."
     "So, let me show them..."
+    "Hello!"
     show monika 1a at t41 zorder 4
     show sayori 1a at t42 zorder 3
     show yuri 1a at t43 zorder 2
     show natsuki 1a at t44 zorder 1
-    m "Hi, [player]!"
-    m 1b "I am watching your code!"
+    m "Hi, modder. And hello, [player]!"
+    m 1b "I will love you at any time!"
     m 5a "Good luck and have fun!"
     
     $ style.say_dialogue = style.edited
@@ -50,7 +53,10 @@ label horrorintro:
     y 3y3 "INSANEEEEEEEEEEEEEE???!!!"
     $ style.say_dialogue = style.normal
     s "..."
+    s 4p "Kyaaaaaaaaaa!"
     show natsuki vomit
+    n "WHAAAAAAAA!"
+    n "What's your problem, Yuri?"
 
     "Yep, I am making a lot of bugs..."
     "This will be the worst mod..."
@@ -64,7 +70,7 @@ label horrorintro:
     show yuri 1a at t43 zorder 2
     show natsuki 1a at t44 zorder 1
 
-    "Just like nothing happened."
+    "Now just like nothing happened."
 
     "So let me get into the worst part..."
 
@@ -72,6 +78,10 @@ label horrorintro:
     "So..."
 
     "I will always love you all."
+    show monika at thide zorder 4
+    show sayori at thide zorder 3
+    show yuri at thide zorder 2
+    show natsuki at thide zorder 1
 
     hide monika
     hide sayori
@@ -85,15 +95,16 @@ label horrorintro:
     return
 
 label horrormenu:
+    stop music fadeout 2.0
 
-    "Time to select."
+    "Now please select a weird thing."
 
     menu:
         "Sayori Hangout":
             jump sayoriisgone
-        "Back to menu":
-            return
         "Intro":
             jump horrorintro
+        "Back to main menu":
+            return
 
     return
