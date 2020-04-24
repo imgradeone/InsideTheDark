@@ -20,7 +20,7 @@ And this mod contains something **HORROR** from original DDLC games, so it is **
 
 ## Getting Started
 
-### Into code or contribute
+### Into the code or contribute
 Follow these steps to get into the code.
 
 1. Download and install the [Ren'Py SDK version 6.99.12](https://www.renpy.org/release/6.99.12). *(NOTE: The current version of DDLC is not compatible with .rpyc files generated with other versions of the Renpy SDK)*
