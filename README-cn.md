@@ -1,10 +1,12 @@
+> 简体中文 README 尚未完成翻译，请再等等，咕咕咕（
+
 # Inside The Dark
 
 A DDLC mod to let you experience the worst part of DDLC and inside the code
 
 This is a mod that made by [DDLCModTemplate](https://github.com/Monika-After-Story/DDLCModTemplate) by Monika After Story Team. Great thanks.
 
-English | [简体中文](./README-cn.md)
+[English](./README.md) | 简体中文
 
 ## WARNING
 
