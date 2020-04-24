@@ -1,6 +1,8 @@
 # Inside The Dark
 
-A DDLC mod to let you experience the
+A DDLC mod to let you experience the worst part of DDLC and inside the code
+
+This repo has been an archive now. Please go to [another repo](https://github.com/imgradeone/InsideTheDark).
 
 The DDLC Mod Template is an easy way to get started building your own game mods for Doki Doki Literature Club that adhere to [Team Salvato's IP Guidelines](http://teamsalvato.com/ip-guidelines/) for fan mods.
 
