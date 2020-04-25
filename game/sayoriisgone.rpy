@@ -18,7 +18,7 @@ label sayoriisgone_act:
 
     image exception_bg = "#dadada"
     image fake_exception = Text("An exception has occurred.", size=40, style="_default")
-    image fake_exception2 = Text("File \"game/script-ch5.rpy\", line 214\nSee traceback.txt for details.", size=20, style="_default")
+    image fake_exception2 = Text("File \"game/sayoriisgone.rpy\", line 214\nSee traceback.txt for details.", size=20, style="_default")
 
     image splash_glitch:
         subpixel True
