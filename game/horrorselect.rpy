@@ -65,6 +65,8 @@ label horrorintro:
 
     m "..."
 
+    "Let me fix it..."
+
     show monika 1a at t41 zorder 4
     show sayori 1a at t42 zorder 3
     show yuri 1a at t43 zorder 2
@@ -97,11 +99,13 @@ label horrorintro:
 label horrormenu:
     stop music fadeout 2.0
 
-    "Now please select a weird thing."
+    "Now please select a character."
 
     menu:
-        "Sayori Hangout":
-            jump sayoriisgone
+        "Sayori":
+            jump sayori
+        "Yuri":
+            jump yuri
         "Intro":
             jump horrorintro
         "Back to main menu":

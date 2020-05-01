@@ -8,47 +8,50 @@
 
 [English](./README.md) | 简体中文
 
-## WARNING
+## 警告
 
-This game is an unofficial fan work, unaffiliated with Team Salvato.
+此 mod 为非官方的粉丝作品，与 Team Salvato 无关。
 
-This mod is STILL IN DEVELOPMENT. It may contains lots of bugs and incompleted parts.
+此 mod **仍在开发中**，可能有 bug 和不完整的部分。
 
-本 mod 理应在通关原游戏后再进行游玩，因为本 mod 包含 **剧透**。
+本 mod 理应在通关原游戏后再进行游玩，因为本 mod 包含**大量剧透**。
 
-And this mod contains something **HORROR** from original DDLC games, so it is **not suitable for children or they are easily distrubed**. More detail can be viewed at https://ddlc.moe/warning.html (with spoilers).
+本 mod 包含来自原游戏的**恐怖部分**，因此，本 mod 不适合儿童或者极易受影响的人。更多详情可以访问 https://ddlc.moe/warning.html（亦包含剧透）。
 
 **不要说我们没有警告过你.png**
 
-## Getting Started
+## 开始入门
 
-### Into the code or contribute
-Follow these steps to get into the code.
+### 深入代码 / 贡献
+跟着以下步骤来深入代码。
 
-1. Download and install the [Ren'Py SDK version 6.99.12](https://www.renpy.org/release/6.99.12). *(NOTE: The current version of DDLC is not compatible with .rpyc files generated with other versions of the Renpy SDK)*
-2. Clone this repo or just download a ZIP.
-3. Place the files in the Ren'py working directory (chosen during installation).
-4. Download the DDLC files (available for free at http://ddlc.moe) & drop the `audio.rpa`, `images.rpa`, and `fonts.rpa` files from it into the /game directory. (Do **not** include the `scripts.rpa` file, as this will create conflicts.)
-5. Launch the project in Ren'Py. It should compile & run.
-6. If you want to build a release version, navigate the Ren'Py menu & select "Build Distributions", then check "DDLC Compatible Mod" and build the mod. This will create a cross-platform .ZIP file with files for the mod & installation instructions.
+1. 下载并安装 [Ren'Py SDK 版本 6.99.12](https://www.renpy.org/release/6.99.12). *（注意：现有版本的 DDLC 不兼容由其他版本 Ren'Py SDK 生成的 .rpyc 文件）*
+1. Clone 这个 repo 到 Ren'Py SDK 的工作目录。
+1. 下载 DDLC（可在 https://ddlc.moe 或者 Steam 获取）并将 `audio.rpa`、`images.rpa` 和 `fonts.rpa` 复制到工程的 /game 文件夹。（**不要**把 `scripts.rpa` 复制过去，因为这可能造成冲突。）
+1. 在 Ren'Py 里启动工程。它应该正常启动。
+1. 如果想构建可发行的 Release 版本，在 Ren'Py 项目启动器里选择 “Build Distributions” / “生成分发版”，勾选 “DDLC Compatible Mod” 并构建。这将创建一个包含 mod 和安装指南的跨平台 ZIP 文件。
 
-### 只玩？
+### 只想玩？
 
 由于目前 mod 自身完成度极低，所以没有 Release。
 
-comingsoon...
+但如果实在想玩的话，你可以试试：
+
+1. 下载本 repo 的 ZIP。
+1. 复制 **/game 文件夹下的所有文件** 到你的原版 DDLC。您可以从 https://ddlc.moe 下载游戏。
+1. 开始玩吧。
 
 ### 简体中文版本？
 
-由于目前 mod 自身完成度极低，且字体问题待解决，所以目前暂不制作简体中文版本。
+由于目前 mod 自身完成度极低，且字体问题待解决，所以目前暂不制作简体中文版本。（绝赞咕咕咕（（（
 
-## Thanks for
+## 感谢
 
-- Team Salvato http://teamsalvato.com - https://ddlc.moe
+- Team Salvato http://teamsalvato.com / https://ddlc.moe
 - Monika After Story Team http://www.monikaafterstory.com
 
 ## Discalmer
 
-*Doki Doki Literature Club* and all related characters and trademarks are property of Team Salvato and are used in accordance with their [IP Guidlines](http://teamsalvato.com/ip-guidelines/).
+*Doki Doki Literature Club* 和所有相关角色和商标归 Team Salvato 所有，并且依据 [IP Guidlines](http://teamsalvato.com/ip-guidelines/) 进行使用。
 
-The codes are only used for LEARNING.
+代码仅供学习用途。

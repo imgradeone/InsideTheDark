@@ -4,7 +4,7 @@ init -100 python:
     # archive check for mods
     for archive in ['audio','images','fonts']:
         if archive not in config.archives:
-            renpy.error("DDLC archive files not found in /game folder. Check installation and try again.")
+            renpy.error("DDLC archive files not found in /game folder. Check installation and try again. / 看样子你还没有把 DDLC 游戏的文件复制过去呐。建议您去看看 README 一步步操作。")
 
 # disclaimers
 init python:
@@ -208,14 +208,14 @@ init python:
             if not os.access(config.basedir + "/characters/", os.F_OK):
                 os.mkdir(config.basedir + "/characters")
 
-            renpy.file("../characters/monika.chr")
-            open(config.basedir + "/characters/monika.chr", "wb").write(renpy.file("monika.chr").read())
-            renpy.file("../characters/natsuki.chr")
-            open(config.basedir + "/characters/natsuki.chr", "wb").write(renpy.file("natsuki.chr").read())
-            renpy.file("../characters/yuri.chr")
-            open(config.basedir + "/characters/yuri.chr", "wb").write(renpy.file("yuri.chr").read())
-            renpy.file("../characters/sayori.chr")
-            open(config.basedir + "/characters/sayori.chr", "wb").write(renpy.file("sayori.chr").read())
+            try: renpy.file("../characters/monika.chr")
+            except: open(config.basedir + "/characters/monika.chr", "wb").write(renpy.file("monika.chr").read())
+            try: renpy.file("../characters/natsuki.chr")
+            except: open(config.basedir + "/characters/natsuki.chr", "wb").write(renpy.file("natsuki.chr").read())
+            try: renpy.file("../characters/yuri.chr")
+            except: open(config.basedir + "/characters/yuri.chr", "wb").write(renpy.file("yuri.chr").read())
+            try: renpy.file("../characters/sayori.chr")
+            except: open(config.basedir + "/characters/sayori.chr", "wb").write(renpy.file("sayori.chr").read())
 
         except:
             pass
@@ -235,8 +235,11 @@ label splashscreen:
         if persistent.first_run and not persistent.do_not_delete:
             $ quick_menu = False
             scene black
+            "We noticed that you've deleted the firstrun file, and there is still a previous save data."
+            "If you get into trouble, this is the right place to reset the game and get out from the issue."
+            "But, your status of collected CG will be deleted as well."
             menu:
-                "A previous save file has been found. Would you like to delete your save data and start over?"
+                "Would you like to delete your save data and start over?"
                 "Yes, delete my existing data.":
                     "Deleting save data...{nw}"
                     python:
@@ -267,7 +270,7 @@ label splashscreen:
         "[config.name] is a Doki Doki Literature Club fan mod that is not affiliated with Team Salvato."
         "It is designed to be played only after the official game has been completed, and contains spoilers for the official game."
         "Game files for Doki Doki Literature Club are required to play this mod and can be downloaded for free at: http://ddlc.moe"
-        "And this mod contains something HORROR from original DDLC games, so it is not suitable for children or they are easily distrubed. More detail can be viewed at https://ddlc.moe/warning.html (with spoilers)."
+        "And this mod contains something HORROR from original DDLC games, so it is not suitable for children or those who are easily distrubed. More detail can be viewed at https://ddlc.moe/warning.html (with spoilers)."
         "YOU HAVE BEEN WARNED."
 
         menu:

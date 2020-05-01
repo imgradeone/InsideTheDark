@@ -8,7 +8,7 @@ define config.name = "Inside The Dark"
 define gui.show_name = False
 
 # Version of the game
-define config.version = "1.0.0"
+define config.version = "0.1.0"
 
 # text placed on about screen
 define gui.about = _("")

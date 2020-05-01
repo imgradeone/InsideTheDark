@@ -6,8 +6,10 @@ label sayoriisgone:
 
         "EXPERIENCE":
             jump sayoriisgone_act
+        "Inside the Code (TODO)":
+            jump sayoriisgone_ins
         "Back to select menu":
-            jump horrormenu
+            jump sayori
     return
 
 label sayoriisgone_act:
@@ -18,7 +20,7 @@ label sayoriisgone_act:
 
     image exception_bg = "#dadada"
     image fake_exception = Text("An exception has occurred.", size=40, style="_default")
-    image fake_exception2 = Text("File \"game/script-ch5.rpy\", line 307\nSee traceback.txt for details.", size=20, style="_default")
+    image fake_exception2 = Text("File \"game/sayoriisgone.rpy\", line 216\nSee traceback.txt for details.", size=20, style="_default")
 
     image splash_glitch:
         subpixel True
@@ -97,8 +99,6 @@ label sayoriisgone_act:
             pause 0.02
             repeat
 
-
-
     menu:
         "So, What do you want to say to Sayori?"
 
@@ -106,9 +106,13 @@ label sayoriisgone_act:
             $ sayori_confess = True
             scene s_cg3 with dissolve_cg
             "You are so nice."
+            "I think you'll be the best guy to save Sayori."
             scene black with dissolve_cg
         "You'll always be my dearest friend.":
             $ sayori_confess = False
+            "Oh gosh, that's too bad."
+            "However, that's your own choice."
+            "So..."
 
     "Here we go."
 
@@ -159,6 +163,7 @@ label sayoriisgone_act:
     show s_kill2 as s_kill
     pause 0.01
     show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
     pause 0.25
     stop sound
     hide screen tear
@@ -186,11 +191,13 @@ label sayoriisgone_act:
     show splash_glitch zorder 2
     pause 1.5
     show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
     pause 0.2
     stop sound
     hide screen tear
     pause 4.0
     show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
     pause 0.2
     stop sound
     hide screen tear
@@ -214,7 +221,6 @@ label sayoriisgone_act:
         try: sys.modules['renpy.error'].report_exception("Oh jeez...I didn't break anything, did I? Hold on a sec, I can probably fix this...I think...\nActually, you know what? This would probably be a lot easier if I just deleted her. She's the one who's making this so difficult. Ahaha! Well, here's goes nothing.", False)
         except: pass
     pause 6.0
-
 
     "..."
     hide fake_exception
@@ -301,6 +307,137 @@ label sayoriisgone_act:
     "By the way, did you notice the traceback.txt?"
     "There are something..."
     "Interesting."
+
+    "Let me clean up..."
+
+    jump sayoriisgone
+
+return
+
+label sayoriisgone_ins:
+
+    "I'm still working on this."
+
+    "comingsoon..."
+
+    "But now I can show you a part of it."
+
+    "So, I still need to import the resources..."
+
+    image exception_bg = "#dadada"
+    image fake_exception = Text("An exception has occurred.", size=40, style="_default")
+    image fake_exception2 = Text("File \"game/sayoriisgone.rpy\", line 416\nSee traceback.txt for details.", size=20, style="_default")
+
+    image splash_glitch:
+        subpixel True
+        "images/bg/splash-glitch.png"
+        alpha 0.0
+        pause 0.5
+        linear 0.5 alpha 1.0
+        pause 2.5
+        linear 0.5 alpha 0.0
+        "gui/menu_bg.png"
+        topleft
+        alpha 0.0
+        parallel:
+            xoffset 0 yoffset 0
+            linear 0.25 xoffset -100 yoffset -100
+            repeat
+        parallel:
+            linear 0.5 alpha 1.0
+        parallel:
+            ypos 0
+            pause 1.0
+            easeout 1.0 ypos -500
+    image splash_glitch2:
+        subpixel True
+        "gui/menu_bg.png"
+        topleft
+        block:
+            xoffset 0 yoffset 0
+            linear 0.05 xoffset -100 yoffset -100
+            repeat
+
+    image splash_glitch_m:
+        subpixel True
+        "gui/menu_art_m.png"
+        zoom 0.5
+        xpos 0.5 ypos 0.5
+        pause 0.1
+        parallel:
+            xpos 0.3 ypos 1.2
+            linear 0.08 ypos 0.1
+            repeat
+        parallel:
+            pause 0.5
+            alpha 0.0
+
+    image splash_glitch_n:
+        subpixel True
+        "gui/menu_art_n.png"
+        zoom 0.5
+        pause 0.2
+        xpos 0.8 ypos 0.8
+        pause 0.05
+        xpos 0.2 ypos 0.7
+        pause 0.05
+        xpos 0.4 ypos 0.2
+        pause 0.05
+        xpos 0.7 ypos 1.2
+        pause 0.05
+        xpos 0.1 ypos 1.0
+        pause 0.05
+        xpos 0.2 ypos 0.6
+        pause 0.05
+        xpos 0.9 ypos 0.4
+        pause 0.05
+        alpha 0.0
+
+    image splash_glitch_y:
+        subpixel True
+        "gui/menu_art_y.png"
+        zoom 0.5
+        ypos 1.3
+        block:
+            xpos 0.85
+            pause 0.02
+            xpos 0.81
+            pause 0.02
+            repeat
+    
+    "OK."
+
+    "First of all, you will noticed that there are a fake exception in the background."
+    show exception_bg zorder 2
+    show fake_exception zorder 2:
+        xpos 0.1 ypos 0.05
+    show fake_exception2 zorder 2:
+        xpos 0.1 ypos 0.15
+    python:
+        try: sys.modules['renpy.error'].report_exception("wait, wow, that's such a great thing.", False)
+        except: pass
+    
+    "Just look like this."
+    "This looks like a real Ren'Py error. At this time, I created the traceback file as well."
+    "Go to have a look at the traceback file."
+    "..."
+    "Ahaha, that's really interesting."
+
+    "So how do I write the traceback?"
+
+    call updateconsole("sys.modules['renpy.error'].report_exception(\"wait, wow, that's such a great thing.\", False)", "traceback.txt created.")
+
+    "That is the code."
+    "Clone the repo and have a look."
+    call hideconsole
+    hide fake_exception
+    hide fake_exception2
+    hide exception_bg
+
+    "I'm still working on this."
+
+    "comingsoon..."
+
 
     jump sayoriisgone
 

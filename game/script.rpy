@@ -23,9 +23,9 @@ label start:
     $ config.allow_skipping = True
 
     if persistent.example_seen:
-        call horrormenu
+        call horrormenu from _call_horrormenu
     else:
-        call horrorintro
+        call horrorintro from _call_horrorintro
 
     return
 

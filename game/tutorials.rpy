@@ -687,7 +687,7 @@ label tutorial_route_adv_repeat:
 
     show monika at t11
 
-    call expression _return
+    call expression _return from _call_expression_1
 
     jump tutorial_route_adv_repeat
 
@@ -781,7 +781,7 @@ label tutorial_route_adv_poemgame_pgexp:
     m "Alright, lets start with a slightly modified Act 1."
     m "I'll be in this game, and I'll collect the points scored for each doki."
     stop music fadeout 1.0
-    call mas_poem_minigame_actone(show_monika=True, poem_wordlist=mas_wordlist, total_words=5, trans_fast=True, show_poemhelp=False)
+    call mas_poem_minigame_actone(show_monika=True, poem_wordlist=mas_wordlist, total_words=5, trans_fast=True, show_poemhelp=False) from _call_mas_poem_minigame_actone
     scene bg club_day with dissolve_scene_full
     play music t3 fadein 1.0
 
@@ -796,7 +796,7 @@ label tutorial_route_adv_poemgame_pgexp:
     m "Now let's do Act 2 but with higher chances of the glitchy word scare and no music."
     m "I'll also gather the words you select."
     stop music fadeout 1.0
-    call mas_poem_minigame_acttwo(show_monika=True, poem_wordlist=mas_wordlist, total_words=5, music_filename=None, gather_words=True, glitch_wordscare=(True, 5), trans_fast=True, one_counter=False, show_poemhelp=False)
+    call mas_poem_minigame_acttwo(show_monika=True, poem_wordlist=mas_wordlist, total_words=5, music_filename=None, gather_words=True, glitch_wordscare=(True, 5), trans_fast=True, one_counter=False, show_poemhelp=False) from _call_mas_poem_minigame_acttwo
 
     scene bg club_day with dissolve_scene_full
     play music t3 fadein 1.0
@@ -812,7 +812,7 @@ label tutorial_route_adv_poemgame_pgexp:
     m "Okay, time for my favorite Act, but with a twist!"
     m "I won't glitch any of the words and I'll hop for all your selections."
     m "I'll also keep the friendly music we have currently playing on during the game."
-    call mas_poem_minigame_actthree(glitch_words=None, hop_monika=True, music_filename="BACK", trans_fast=True, total_words=5)
+    call mas_poem_minigame_actthree(glitch_words=None, hop_monika=True, music_filename="BACK", trans_fast=True, total_words=5) from _call_mas_poem_minigame_actthree
     scene bg club_day with dissolve_scene_full
 
     show monika 5a at t11
@@ -835,7 +835,7 @@ label tutorial_route_adv_poemgame_pgexp:
         "Glitch the words.":
             m "Sure!"
 
-            call tutorial_route_adv_poemgame_getnum("What are the odds that a space appears instead of a letter? (1 out of x)")
+            call tutorial_route_adv_poemgame_getnum("What are the odds that a space appears instead of a letter? (1 out of x)") from _call_tutorial_route_adv_poemgame_getnum
             $ space_odds = _return
 
             if space_odds <= 0:
@@ -843,7 +843,7 @@ label tutorial_route_adv_poemgame_pgexp:
                 show monika 3a
                 $ space_odds = 5
 
-            call tutorial_route_adv_poemgame_getnum("What are the odds that a nonunicode character appears instead of a letter? (1 out of x)")
+            call tutorial_route_adv_poemgame_getnum("What are the odds that a nonunicode character appears instead of a letter? (1 out of x)") from _call_tutorial_route_adv_poemgame_getnum_1
             $ nonuni_odds = _return
 
             if nonuni_odds <= 0:
@@ -914,7 +914,7 @@ label tutorial_route_adv_poemgame_pgexp:
             pass
 
     m "Okay, last one."
-    call tutorial_route_adv_poemgame_getnum("How many words should we select?")
+    call tutorial_route_adv_poemgame_getnum("How many words should we select?") from _call_tutorial_route_adv_poemgame_getnum_2
     $ count = _return
 
     if count <= 0:
@@ -936,7 +936,7 @@ label tutorial_route_adv_poemgame_pgexp:
     if "music_filename" not in pg_args:
         stop music fadeout 1.0
 
-    call mas_poem_minigame(**pg_args)
+    call mas_poem_minigame(**pg_args) from _call_mas_poem_minigame
     $ results = _return
 
     scene bg club_day with dissolve_scene_full
@@ -1004,7 +1004,7 @@ label tutorial_route_adv_poemgame_txgrid:
 
     m 5a "Let's build those parameters together!"
     m 2a "First..."
-    call tutorial_route_adv_poemgame_getnum("How many words should we show?")
+    call tutorial_route_adv_poemgame_getnum("How many words should we show?") from _call_tutorial_route_adv_poemgame_getnum_3
     $ word_count = _return
 
     if word_count < 1:
@@ -1025,7 +1025,7 @@ label tutorial_route_adv_poemgame_txgrid:
             word_list.append((_word, _word))
 
     m "Now..."
-    call tutorial_route_adv_poemgame_getnum("How many rows should we show?")
+    call tutorial_route_adv_poemgame_getnum("How many rows should we show?") from _call_tutorial_route_adv_poemgame_getnum_4
     $ row_count = _return
 
     if row_count < 1:
@@ -1033,7 +1033,7 @@ label tutorial_route_adv_poemgame_txgrid:
         $ row_count = 6
 
     m 2a "And finally..."
-    call tutorial_route_adv_poemgame_getnum("How many columns should we show?")
+    call tutorial_route_adv_poemgame_getnum("How many columns should we show?") from _call_tutorial_route_adv_poemgame_getnum_5
     $ col_count = _return
 
     if col_count <1:
