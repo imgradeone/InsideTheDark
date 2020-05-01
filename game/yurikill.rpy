@@ -15,7 +15,7 @@ label yurikill:
 label yurikill_act:
 
     "OK, go for it."
-
+    "Known issue: It won't be able to get the kill time shorter by saving and loading."
     scene bg club_day2
 
     play music t10y
@@ -59,13 +59,15 @@ label yurikill_act:
     y "Do you accept my confession?"
 
     menu:
+
+        "R.I.P Yuri"
+
         "Yes.":
             jump yuriinkill
         "No.":
             jump yuriinkill
 
     label yuriinkill:
-        $ quick_menu = False
         window hide(None)
         stop music
         pause 1.0
@@ -73,10 +75,9 @@ label yurikill_act:
         # Instead of deleting saves, we'll use after_load label to return to Yuri whenever a save is loaded
         window auto
         $ persistent.yurikillround = 1
-        $ in_yuri_kill = True
-    label yuri_kill_1:
+
+    label yurikill1:
         window auto
-        $ quick_menu = False
         stop music
         scene bg club_day
         show yuri 3d at i11
@@ -122,9 +123,9 @@ label yurikill_act:
         pause 2.0
 
         scene black
-        show y_kill
+        show ykilling
         with dissolve_cg
-    label yuri_kill_2:
+    label yurikill2:
         $ quick_menu = True
         python:
             _history_list = []
@@ -137,7 +138,7 @@ label yurikill_act:
             $ audiostart = str(renpy.random.random() * 360)
             $ audio.t6s = "<from " + audiostart + " loop 43.572>bgm/6s.ogg"
             play music t6s
-        show y_kill
+        show ykilling
         label yurikillloop:
             $ persistent.yurikillround += 1
             if persistent.yurikillround < 1440:
@@ -145,14 +146,13 @@ label yurikill_act:
                 if config.developer:
                     y "current round: [persistent.yurikillround], [gtext]"
                 else:
-                    y "[gtext]"
+                    y "current round: [persistent.yurikillround], [gtext]"
                 $ _history_list.pop()
                 jump yurikillloop
             else:
                 jump yurikill3
 
     label yurikill3:
-        $ persistent.autoload = "yuri_kill_3"
         $ style.say_dialogue = style.normal
         $ gtext = glitchtext(renpy.random.randint(8, 80))
         if not renpy.music.get_playing(channel='music') == audio.t6s:
@@ -209,6 +209,11 @@ label yurikill_act:
         m "...But anyway, I really shouldn't be making you wait any longer."
         m 2j "Just bear with me, okay?"
         m 2a "This should only take a second."
+
+        $ persistent.yuri_kill = 0
+        scene black
+        show monika at thide zorder 4
+        hide monika
 
     jump yurikill
 
