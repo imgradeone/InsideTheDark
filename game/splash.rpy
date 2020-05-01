@@ -10,7 +10,7 @@ init -100 python:
 init python:
     menu_trans_time = 1
 
-    splash_message_default = "This game is an unofficial fan work, unaffiliated with Team Salvato.\nAnd this mod is not suitable for children or they are easily distrubed.\n\nYOU HAVE BEEN WARNED."
+    splash_message_default = "This game is an unofficial fan work, unaffiliated with Team Salvato.\nAnd this mod is not suitable for children or those are easily distrubed.\n\nYOU HAVE BEEN WARNED."
 
     splash_messages = [
         "Please support Doki Doki Literature Club.",

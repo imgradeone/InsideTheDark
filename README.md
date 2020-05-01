@@ -6,6 +6,10 @@ This is a mod that made by [DDLCModTemplate](https://github.com/Monika-After-Sto
 
 English | [简体中文](./README-cn.md)
 
+## Mirror
+
+A mirror at [Gitee](https://gitee.com/imgradeone/InsideTheDark) in China mainland is avaliable.
+
 ## WARNING
 
 This mod is an unofficial fan work, unaffiliated with Team Salvato.
@@ -14,7 +18,7 @@ This mod is STILL IN DEVELOPMENT. It may contains lots of bugs and incompleted p
 
 It is designed to be played only after the official game has been completed, and contains **SPOILERS** for the official game.
 
-And this mod contains something **HORROR** from original DDLC games, so it is **not suitable for children or those are easily distrubed**. More detail can be viewed at https://ddlc.moe/warning.html (with spoilers).
+And this mod contains something **HORROR** from original DDLC games, so it is **not suitable for children or those who are easily distrubed**. More detail can be viewed at https://ddlc.moe/warning.html (with spoilers).
 
 **YOU HAVE BEEN WARNED.**
 
