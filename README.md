@@ -35,9 +35,11 @@ Follow these steps to get into the code.
 
 ### Just play it
 
-I haven't decided to make a release, as it is still incompleted.
+I haven't decided to make a stable release, as it is still incompleted.
 
-But you can try this:
+But there is an early access now. You can find it at [Releases page](https://github.com/imgradeone/InsideTheDark/releases).
+
+For now, you'd better try this:
 
 1. Download ZIP of the repo.
 1. Copy **ALL files INSIDE THE /game FOLDER** to your DDLC original game, which can be downloaded from https://ddlc.moe .

@@ -37,9 +37,13 @@
 
 ### 只想玩？
 
-由于目前 mod 自身完成度极低，所以没有 Release。
+由于目前 mod 自身完成度极低，所以没有正式版 Release。
 
-但如果实在想玩的话，你可以试试：
+但是早期测试版本已经推出。您可以在 [Releases 页面](https://github.com/imgradeone/InsideTheDark/releases) 找到它。
+
+中国大陆用户可访问 [这里](https://gitee.com/imgradeone/InsideTheDark/releases)。
+
+目前你可以试试：
 
 1. 下载本 repo 的 ZIP。
 1. 复制 **/game 文件夹下的所有文件** 到你的原版 DDLC。您可以从 https://ddlc.moe 下载游戏。
