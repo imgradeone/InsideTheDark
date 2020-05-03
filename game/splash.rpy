@@ -241,7 +241,7 @@ label splashscreen:
             menu:
                 "是否重置游戏？"
                 "是的，删除存档":
-                    "Deleting save data...{nw}"
+                    "正在删除存档...{nw}"
                     python:
                         delete_all_saves()
                         renpy.loadsave.location.unlink_persistent()

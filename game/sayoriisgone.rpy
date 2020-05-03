@@ -2,17 +2,18 @@ label sayoriisgone:
 
     menu:
 
-        "Which section do you want?"
+        "你想选择哪个项目？"
 
-        "EXPERIENCE":
+        "体验！":
             jump sayoriisgone_act
         "Inside the Code (TODO)":
             jump sayoriisgone_ins
-        "Back to select menu":
+        "返回上一级":
             jump sayori
     return
 
 label sayoriisgone_act:
+    "当前汉化未完全，暂时放出英文版。"
 
     "Now there is the original content."
     "Be careful of your neck."
@@ -315,6 +316,7 @@ label sayoriisgone_act:
 return
 
 label sayoriisgone_ins:
+    "当前汉化未完全，暂时放出英文版。"
 
     "I'm still working on this."
 
