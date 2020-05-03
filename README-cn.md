@@ -58,7 +58,7 @@
 - Team Salvato http://teamsalvato.com / https://ddlc.moe
 - Monika After Story Team http://www.monikaafterstory.com
 
-## Discalmer
+## Disclaimer
 
 *Doki Doki Literature Club* 和所有相关角色和商标归 Team Salvato 所有，并且依据 [IP Guidlines](http://teamsalvato.com/ip-guidelines/) 进行使用。
 

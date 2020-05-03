@@ -143,10 +143,7 @@ label yurikill_act:
             $ persistent.yurikillround += 1
             if persistent.yurikillround < 1440:
                 $ gtext = glitchtext(renpy.random.randint(8, 80))
-                if config.developer:
-                    y "current round: [persistent.yurikillround], [gtext]"
-                else:
-                    y "current round: [persistent.yurikillround], [gtext]"
+                y "current round: [persistent.yurikillround]/1440, [gtext]"
                 $ _history_list.pop()
                 jump yurikillloop
             else:
@@ -173,7 +170,7 @@ label yurikill_act:
         show natsuki scream at h11
         pause 0.75
         show natsuki vomit at h11
-        pause 1.25
+        pause 2.0
         show natsuki at lhide
         hide natsuki
         "Natsuki runs away."
@@ -195,9 +192,9 @@ label yurikill_act:
         m 2e "I'll make it up to you, okay?"
         m "Just gimme a sec..."
         $ consolehistory = []
-        call updateconsole("os.remove(\"characters/yuri.chr\")", "yuri.chr was not deleted.") from _call_updateconsole_18
+        call updateconsole("os.remove(\"characters/yuri.chr\")", "You cannot delete any character.") from _call_updateconsole_18
         pause 1.0
-        call updateconsole("os.remove(\"characters/natsuki.chr\")", "natsuki.chr was not deleted.") from _call_updateconsole_19
+        call updateconsole("os.remove(\"characters/natsuki.chr\")", "You cannot delete any character.") from _call_updateconsole_19
         pause 1.0
         m 2a "I'm almost done."
         m 2j "I just want to have a cupcake real quick!"

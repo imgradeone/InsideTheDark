@@ -50,7 +50,7 @@ For now, you'd better try this:
 - Team Salvato http://teamsalvato.com / https://ddlc.moe
 - Monika After Story Team http://www.monikaafterstory.com
 
-## Discalmer
+## Disclaimer
 
 *Doki Doki Literature Club* and all related characters and trademarks are property of Team Salvato and are used in accordance with their [IP Guidlines](http://teamsalvato.com/ip-guidelines/).
 

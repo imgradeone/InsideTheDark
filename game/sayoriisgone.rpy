@@ -326,7 +326,7 @@ label sayoriisgone_ins:
 
     image exception_bg = "#dadada"
     image fake_exception = Text("An exception has occurred.", size=40, style="_default")
-    image fake_exception2 = Text("File \"game/sayoriisgone.rpy\", line 416\nSee traceback.txt for details.", size=20, style="_default")
+    image fake_exception3 = Text("File \"game/sayoriisgone.rpy\", line 416\nSee traceback.txt for details.", size=20, style="_default")
 
     image splash_glitch:
         subpixel True
@@ -411,7 +411,7 @@ label sayoriisgone_ins:
     show exception_bg zorder 2
     show fake_exception zorder 2:
         xpos 0.1 ypos 0.05
-    show fake_exception2 zorder 2:
+    show fake_exception3 zorder 2:
         xpos 0.1 ypos 0.15
     python:
         try: sys.modules['renpy.error'].report_exception("wait, wow, that's such a great thing.", False)
@@ -425,11 +425,11 @@ label sayoriisgone_ins:
 
     "So how do I write the traceback?"
 
-    call updateconsole("sys.modules['renpy.error'].report_exception(\"wait, wow, that's such a great thing.\", False)", "traceback.txt created.")
+    call updateconsole("sys.modules['renpy.error'].report_exception(\"wait, wow, that's such a great thing.\", False)", "traceback.txt created.") from _call_updateconsole_15
 
     "That is the code."
     "Clone the repo and have a look."
-    call hideconsole
+    call hideconsole from _call_hideconsole_2
     hide fake_exception
     hide fake_exception2
     hide exception_bg
