@@ -10,7 +10,7 @@ init -100 python:
 init python:
     menu_trans_time = 1
 
-    splash_message_default = "This game is an unofficial fan work, unaffiliated with Team Salvato.\nAnd this mod is not suitable for children or those are easily distrubed.\n\nYOU HAVE BEEN WARNED."
+    splash_message_default = "这是非官方的粉丝向 mod，与 Team Salvato 无关。\n本 mod 不适合儿童或者极易受影响的人。\n\n不要说我们没有警告过你.png"
 
     splash_messages = [
         "Please support Doki Doki Literature Club.",
@@ -235,19 +235,19 @@ label splashscreen:
         if persistent.first_run and not persistent.do_not_delete:
             $ quick_menu = False
             scene black
-            "We noticed that you've deleted the firstrun file, and there is still a previous save data."
-            "If you get into trouble, this is the right place to reset the game and get out from the issue."
-            "But, your status of collected CG will be deleted as well."
+            "你似乎删除了 firstrun 文件，并且我们发现还有之前的存档。"
+            "如果你触发了大 bug，这里可以让你逃离 bug。"
+            "但是，你收集的 CG 状态也会被删除。"
             menu:
-                "Would you like to delete your save data and start over?"
-                "Yes, delete my existing data.":
+                "是否重置游戏？"
+                "是的，删除存档":
                     "Deleting save data...{nw}"
                     python:
                         delete_all_saves()
                         renpy.loadsave.location.unlink_persistent()
                         renpy.persistent.should_save_persistent = False
                         renpy.utter_restart()
-                "No, continue where I left off.":
+                "不，继续游戏":
                     pass
 
         python:
@@ -267,15 +267,15 @@ label splashscreen:
         with Dissolve(1.0)
         pause 1.0
 
-        "[config.name] is a Doki Doki Literature Club fan mod that is not affiliated with Team Salvato."
-        "It is designed to be played only after the official game has been completed, and contains spoilers for the official game."
-        "Game files for Doki Doki Literature Club are required to play this mod and can be downloaded for free at: http://ddlc.moe"
-        "And this mod contains something HORROR from original DDLC games, so it is not suitable for children or those who are easily distrubed. More detail can be viewed at https://ddlc.moe/warning.html (with spoilers)."
-        "YOU HAVE BEEN WARNED."
+        "[config.name] 是 Doki Doki Literature Club 的粉丝向 mod，与 Team Salvato 无关。"
+        "本 mod 理应在通关原游戏后再进行游玩，因此本 mod 包含大量剧透。"
+        "要游玩本 mod，需要原版 Doki Doki Literature Club 的文件。您可以在 https://ddlc.moe 或者 Steam 免费获取。"
+        "本 mod 包含来自原游戏的恐怖部分，因此，本 mod 不适合儿童或者极易受影响的人。更多详情可以访问 https://ddlc.moe/warning.html （亦包含剧透）。"
+        "**不要说我们没有警告过你.png**"
 
         menu:
-            "By playing [config.name] you agree that you have completed Doki Doki Literature Club and accept any spoilers and horror things contained within."
-            "I agree.":
+            "如果继续游玩 [config.name] 将视为你已经通关原游戏，并接受任何剧透和恐怖的内容。"
+            "我同意。":
 
                 pass
         scene tos2

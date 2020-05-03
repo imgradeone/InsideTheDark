@@ -2,20 +2,20 @@
 
 # human readable name of this game
 # _() marks strings eligable for translation
-define config.name = "Inside The Dark"
+define config.name = "Inside The Dark - 简体中文版"
 
 # True shows the name on main menu, False hides it
 define gui.show_name = False
 
 # Version of the game
-define config.version = "0.1.1-earlyaccess"
+define config.version = "0.1.1-chinese-earlyaccess"
 
 # text placed on about screen
 define gui.about = _("")
 
 # short name used in executables and dirs.
 # ASCII-only, no spaces, no colons, no semis
-define build.name = "InsideTheDark"
+define build.name = "InsideTheDarkChs"
 
 # Controls which sound / music mixers are available
 define config.has_sound = True
@@ -66,7 +66,7 @@ default preferences.sfx_volume = 0.75
 #   Linux: $HOME/.renpy/
 #
 # must be a literal string
-define config.save_directory = "InsideTheDark"
+define config.save_directory = "InsideTheDarkChs"
 
 # icon displayed on taskbar / dock
 define config.window_icon = "gui/window_icon.png"
