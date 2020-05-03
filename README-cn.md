@@ -6,6 +6,12 @@
 
 [English](./README.md) | 简体中文
 
+## 提示
+
+您正在查看的是简体中文版本的 Inside The Dark mod，如需要英文版，请查看 `master` 分支。
+
+You are now viewing the Chinese version of the Inside The Dark mod. If you need English ver, please go to `master` branch.
+
 ## 仓库镜像
 
 目前中国大陆地区可以通过访问在 [码云 Gitee](https://gitee.com/imgradeone/InsideTheDark) 的镜像来查看该 mod 源码并获取该 mod。

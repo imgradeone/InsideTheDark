@@ -6,6 +6,12 @@ This is a mod that made by [DDLCModTemplate](https://github.com/Monika-After-Sto
 
 English | [简体中文](./README-cn.md)
 
+## Hint
+
+您正在查看的是简体中文版本的 Inside The Dark mod，如需要英文版，请查看 `master` 分支。
+
+You are now viewing the Chinese version of the Inside The Dark mod. If you need English ver, please go to `master` branch.
+
 ## Mirror
 
 A mirror at [Gitee](https://gitee.com/imgradeone/InsideTheDark) in China mainland is avaliable.
