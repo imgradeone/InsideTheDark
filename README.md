@@ -39,6 +39,8 @@ I haven't decided to make a stable release, as it is still incompleted.
 
 But there is an early access now. You can find it at [Releases page](https://github.com/imgradeone/InsideTheDark/releases).
 
+Also, you can download it at [Gitee](https://gitee.com/imgradeone/InsideTheDark/releases) in China mainland.
+
 For now, you'd better try this:
 
 1. Download ZIP of the repo.

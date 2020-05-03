@@ -11,7 +11,7 @@ label yurieye:
 
         "Back":
             jump yuri
-    
+
 return
 
 label yurieye_original:
