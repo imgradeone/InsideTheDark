@@ -2,36 +2,36 @@ label yurikill:
 
     menu:
 
-        "Which section do you want?"
+        "你想选择哪个项目？"
 
-        "EXPERIENCE":
+        "体验！":
             jump yurikill_act
 #        "Inside the Code (TODO)":
 #           jump yurikill
-        "Back to select menu":
+        "返回上一级":
             jump yuri
     return
 
 label yurikill_act:
 
-    "OK, go for it."
-    "Known issue: It won't be able to get the kill time shorter by saving and loading."
+    "好的，那么开始吧。"
+    "已知问题：凝视尸体的时长不能通过存档读档来加速。"
     scene bg club_day2
 
     play music t10y
     show yuri 2m at t11 zorder 2
-    y "Finally."
-    y 2y1 "Finally!"
-    y 2s "This is really all I wanted."
-    y 1y6 "[player], there's no need to spend the weekend with Monika."
-    y "Don't listen to her."
-    y 1y5 "Just come to my house instead."
-    y 3y5 "The whole day, with just the two of us..."
-    y "Doesn't that sound wonderful?"
-    y 3y1 "Ahahaha!"
-    y 3y4 "Wow... There's really something wrong with me, isn't there?"
-    y "But you know what?"
-    y 1y3 "I don't care anymore."
+    y "终于啊。"
+    y 2y1 "终于啊！！！"
+    y 2s "这就是我真心想要的！"
+    y 1y6 "[player]，没必要和 Monika 度过周末了。"
+    y "别听她的。"
+    y 1y5 "就来我家吧。"
+    y 3y5 "一整天就只有我们两个..."
+    y "是不是很完美啊？"
+    y 3y1 "啊哈哈哈哈！"
+    y 3y4 "哇... 我是不是有毛病...？"
+    y "但你知道吗？"
+    y 1y3 "老子才不在乎呢！"
     y "I've never felt this good my whole life."
     y 1y4 "Just being with you is a far greater pleasure than anything I could imagine."
     y "I'm addicted to you."
@@ -60,11 +60,11 @@ label yurikill_act:
 
     menu:
 
-        "R.I.P Yuri"
+        "凉凉预警"
 
-        "Yes.":
+        "是的。":
             jump yuriinkill
-        "No.":
+        "不！":
             jump yuriinkill
 
     label yuriinkill:
@@ -81,12 +81,12 @@ label yurikill_act:
         stop music
         scene bg club_day
         show yuri 3d at i11
-        y "...Ahahaha."
-        y "Ahahahahahaha!"
+        y "...啊哈哈哈。"
+        y "啊哈哈哈哈哈哈哈！"
         $ style.say_dialogue = style.normal
-        y 3y5 "Ahahahahahahahaha!"
+        y 3y5 "啊哈哈哈哈哈哈哈哈！"
         $ style.say_dialogue = style.edited
-        y 3y3 "AHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA{nw}"
+        y 3y3 "啊哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈{nw}"
         window hide(None)
         window auto
         $ style.say_dialogue = style.normal
@@ -143,7 +143,7 @@ label yurikill_act:
             $ persistent.yurikillround += 1
             if persistent.yurikillround < 1440:
                 $ gtext = glitchtext(renpy.random.randint(8, 80))
-                y "current round: [persistent.yurikillround]/1440, [gtext]"
+                y "当前进度：[persistent.yurikillround]/1440, [gtext]"
                 $ _history_list.pop()
                 jump yurikillloop
             else:
@@ -159,13 +159,13 @@ label yurikill_act:
         scene bg club_day
         "[gtext]"
         window auto
-        n "Alright, it's festival time!"
+        n "好哇，是学园祭时间！"
         show natsuki 4k at t11 zorder 2
-        n "Wow, you got here before me?"
-        n "I thought I was pretty ea--{nw}"
+        n "哇，你比我早到？"
+        n "我觉得我真是个吃hu————{nw}"
         show natsuki scream at h11
-        n "EYAH!"
-        n "AAAAAAAAAAAAAAAHHHH!!!"
+        n "噫啊！"
+        n "啊↑啊↗啊→啊↘啊↓啊↓啊↓啊↓！！！"
         pause 1.0
         show natsuki scream at h11
         pause 0.75
@@ -173,39 +173,39 @@ label yurikill_act:
         pause 2.0
         show natsuki at lhide
         hide natsuki
-        "Natsuki runs away."
+        "Natsuki 溜了。"
         m "..."
         show monika 2b at t11 zorder 2
-        m "I'm here!"
-        m 2d "[player], did something happen?"
-        m "Natsuki just ran past me..."
-        m 2i "...Oh..."
-        m "...Oh."
+        m "我在这呢！"
+        m 2d "[player]，刚刚是不是发生了什么？"
+        m "Natsuki 刚刚从我身边跑了..."
+        m 2i "...哦..."
+        m "...口我。"
         m 2r "..."
-        m 2l "Ahahaha!"
-        m "Well, that's a shame."
-        m 2d "Wait, were you here the entire weekend, [player]?"
-        m "Oh, jeez..."
-        m 2g "I didn't realize the script was broken that badly."
-        m "I'm super sorry!"
-        m "It must have been pretty boring..."
-        m 2e "I'll make it up to you, okay?"
-        m "Just gimme a sec..."
+        m 2l "啊哈哈哈！"
+        m "有点遗憾啊。"
+        m 2d "等等，[player]，你是不是整个周末都要在这里？"
+        m "天哪..."
+        m 2g "我都没发现这游戏爆得这么厉害。"
+        m "肥肠抱歉！"
+        m "这肯定很无聊的说..."
+        m 2e "我帮你整理一下，好伐？"
+        m "给我一点点时间..."
         $ consolehistory = []
         call updateconsole("os.remove(\"characters/yuri.chr\")", "You cannot delete any character.") from _call_updateconsole_18
         pause 1.0
         call updateconsole("os.remove(\"characters/natsuki.chr\")", "You cannot delete any character.") from _call_updateconsole_19
         pause 1.0
-        m 2a "I'm almost done."
-        m 2j "I just want to have a cupcake real quick!"
+        m 2a "可以了。"
+        m 2j "我现在想拿一个纸杯蛋糕了。"
         $ gtext = glitchtext(10)
-        "Monika lifts the foil from [gtext]'s tray and takes a cupcake."
-        m 2b "Seriously, these are the best!"
-        m "I really just had to have one, since it's the last time I'll ever get the chance to."
-        m 2a "You know, before they stop existing and everything."
-        m "...But anyway, I really shouldn't be making you wait any longer."
-        m 2j "Just bear with me, okay?"
-        m 2a "This should only take a second."
+        "Monika 从 [gtext] 的托盘里拿出箔纸并拿走了一个纸杯蛋糕。"
+        m 2b "啊，真香！"
+        m "我肯定要拿的呐，毕竟这是最后一次了。"
+        m 2a "你懂的，在她们彻底消失之前。"
+        m "...但怎么说，我真的不能让你再等下去了。"
+        m 2j "就陪我，好吧？"
+        m 2a "一下下就好。"
 
         $ persistent.yuri_kill = 0
         scene black

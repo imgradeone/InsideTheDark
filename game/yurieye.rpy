@@ -27,7 +27,7 @@ label yurieye_original:
     with wipeleft
     y "我的心..."
     y 2y6 "我的心不会停止跳动的，[player]..."
-    y "我冷静不下来."
+    y "我冷静不下来。"
     y "我再也没法专注于任何东西了...!"
     y "[player]，你感觉到了吗？"
     "Yuri 突然把我的手按在她的胸前。"
