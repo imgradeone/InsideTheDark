@@ -8,7 +8,7 @@ define config.name = "Inside The Dark 简体中文版"
 define gui.show_name = False
 
 # Version of the game
-define config.version = "0.1.1-chinese-earlyaccess"
+define config.version = "0.1.2-chinese-earlyaccess"
 
 # text placed on about screen
 define gui.about = _("")

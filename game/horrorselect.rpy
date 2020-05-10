@@ -106,6 +106,8 @@ label horrormenu:
             jump sayori
         "Yuri":
             jump yuri
+        "Natsuki":
+            jump natsuki
         "重播首次启动的故事":
             jump horrorintro
         "返回主菜单":

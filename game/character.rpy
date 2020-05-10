@@ -10,6 +10,10 @@ label sayori:
             show sayori at thide zorder 3
             hide sayori
             jump sayoriisgone
+        "Sayori's Cursor":
+            show sayori at thide zorder 3
+            hide sayori
+            jump sayoricur
         "返回角色选择":
             show sayori at thide zorder 3
             hide sayori
@@ -38,5 +42,24 @@ label yuri:
             jump horrormenu
     return
 
+return
 
+label natsuki:
+
+    show natsuki 1a at t44 zorder 3
+
+    menu:
+
+        "Which horror thing do you want for Natsuki?"
+
+        "Natsuki's Snaaaap neccck":
+            show natsuki at thide zorder 3
+            hide natsuki
+            jump natneck
+        "Back to select menu":
+            show natsuki at thide zorder 3
+            hide natsuki
+            jump horrormenu
     return
+
+return
