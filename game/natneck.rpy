@@ -70,34 +70,34 @@ label natneck:
 
     menu:
 
-        "Which section do you want?"
+        "你想选择哪个项目？"
 
-        "EXPERIENCE":
+        "体验！":
             jump natneck_act
 #        "EXPERIENCE (Peace ver.)":
 #            jump natneck
 #        "Inside the Code (TODO)":
 #            jump natneck
-        "Back to select menu":
+        "返回上一级":
             jump natsuki
 return
 
 label natneck_act:
 
-    "OK, let's play with Natsuki."
+    "好的，那就和 Natsuki 玩吧。"
     scene bg club_day
     with dissolve_scene_full
     show natsuki 1g at t11 zorder 3
     $ style.say_dialogue = style.edited
     n "[player]..."
-    n "Why didn't you come read with me today?"
-    n 1m "I was waiting for you."
-    n "I was waiting for a long time."
-    n "It was the only thing I had to look forward to today."
-    n "Why did you ruin it?"
-    n "Do you like Yuri more?"
-    n 1k "I think you're better off not associating with her."
-    n "Are you listening to me?"
+    n "为什么你今天不陪我一起看书？"
+    n 1m "我一直在等着你。"
+    n "我等你等得很久了！"
+    n "这是我今天唯一期待的事情。"
+    n "你为什么要毁了它？？"
+    n "难道你更喜欢 Yuri？"
+    n 1k "我强烈建议你远离她。"
+    n "喂，你有在听吗？"
     show darkred zorder 5:
         alpha 0.0
         easein 4.0 alpha 1.0
@@ -108,25 +108,25 @@ label natneck_act:
     show n_rects_ghost1 zorder 4
     show n_rects_ghost2 zorder 4
     show n_rects_ghost3 zorder 4
-    n ghost1 "Yuri is a sick freak."
-    n "That should be obvious by now."
-    n "So just play with me instead."
-    n "Okay?"
-    n "You don't hate me, [player], do you?"
-    n "Do you hate me?"
+    n ghost1 "Yuri 就 TM 一死病娇。"
+    n "现在这一点特别明显了。"
+    n "所以还是陪我玩吧。"
+    n "好伐？"
+    n "[player]，你不恨我吧？"
+    n "你恨我吗？"
     show natsuki_ghost_blood zorder 3
-    n "Do you want to make me go home crying?"
-    n "The club is the only place I feel safe."
-    n "Don't ruin that for me."
-    n "Don't ruin it."
-    n "Please."
-    n "Just stop talking to Yuri."
-    n "Play with me instead."
-    n "It's all I have..."
-    n "Play with me."
+    n "难道你 TM 想让我哭着回家？"
+    n "文学部是我唯一感觉安全的地方。"
+    n "不要毁了它。"
+    n "千万不要毁了它。"
+    n "求你了。"
+    n "不要再和 Yuri 聊天了。"
+    n "要陪我玩。"
+    n "我要说的就这么多了..."
+    n "陪我玩。"
     stop music
     hide n_rects_ghost3
-    n ghost2 "PLAY WITH ME!!!"
+    n ghost2 "{b}快来陪我玩！！！{/b}"
     $ style.say_dialogue = style.normal
     $ quick_menu = False
     pause 1

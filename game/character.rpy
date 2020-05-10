@@ -10,7 +10,7 @@ label sayori:
             show sayori at thide zorder 3
             hide sayori
             jump sayoriisgone
-        "Sayori's Cursor":
+        "Sayori 的奇妙光标":
             show sayori at thide zorder 3
             hide sayori
             jump sayoricur
@@ -26,7 +26,7 @@ label yuri:
 
     menu:
 
-        "你想拿什么恐怖的内容来迫害 Sayori？"
+        "你想拿什么恐怖的内容来迫害 Yuri？"
 
         "精 湛 刀 法":
             show yuri at thide zorder 3
@@ -50,13 +50,13 @@ label natsuki:
 
     menu:
 
-        "Which horror thing do you want for Natsuki?"
+        "你想拿什么恐怖的内容来迫害 Natsuki？"
 
-        "Natsuki's Snaaaap neccck":
+        "歪 脖 子 树":
             show natsuki at thide zorder 3
             hide natsuki
             jump natneck
-        "Back to select menu":
+        "返回角色选择":
             show natsuki at thide zorder 3
             hide natsuki
             jump horrormenu
