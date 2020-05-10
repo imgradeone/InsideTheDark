@@ -1,3 +1,85 @@
+image exception_bg = "#dadada"
+image fake_exception = Text("An exception has occurred.", size=40, style="_default")
+image fake_exception2 = Text("File \"game/sayoriisgone.rpy\", line 216\nSee traceback.txt for details.", size=20, style="_default")
+
+image splash_glitch:
+    subpixel True
+    "images/bg/splash-glitch.png"
+    alpha 0.0
+    pause 0.5
+    linear 0.5 alpha 1.0
+    pause 2.5
+    linear 0.5 alpha 0.0
+    "gui/menu_bg.png"
+    topleft
+    alpha 0.0
+    parallel:
+        xoffset 0 yoffset 0
+        linear 0.25 xoffset -100 yoffset -100
+        repeat
+    parallel:
+        linear 0.5 alpha 1.0
+    parallel:
+        ypos 0
+        pause 1.0
+        easeout 1.0 ypos -500
+image splash_glitch2:
+    subpixel True
+    "gui/menu_bg.png"
+    topleft
+    block:
+        xoffset 0 yoffset 0
+        linear 0.05 xoffset -100 yoffset -100
+        repeat
+
+image splash_glitch_m:
+    subpixel True
+    "gui/menu_art_m.png"
+    zoom 0.5
+    xpos 0.5 ypos 0.5
+    pause 0.1
+    parallel:
+        xpos 0.3 ypos 1.2
+        linear 0.08 ypos 0.1
+        repeat
+    parallel:
+        pause 0.5
+        alpha 0.0
+
+image splash_glitch_n:
+    subpixel True
+    "gui/menu_art_n.png"
+    zoom 0.5
+    pause 0.2
+    xpos 0.8 ypos 0.8
+    pause 0.05
+    xpos 0.2 ypos 0.7
+    pause 0.05
+    xpos 0.4 ypos 0.2
+    pause 0.05
+    xpos 0.7 ypos 1.2
+    pause 0.05
+    xpos 0.1 ypos 1.0
+    pause 0.05
+    xpos 0.2 ypos 0.6
+    pause 0.05
+    xpos 0.9 ypos 0.4
+    pause 0.05
+    alpha 0.0
+
+image splash_glitch_y:
+    subpixel True
+    "gui/menu_art_y.png"
+    zoom 0.5
+    ypos 1.3
+    block:
+        xpos 0.85
+        pause 0.02
+        xpos 0.81
+        pause 0.02
+        repeat
+
+
 label sayoriisgone:
 
     menu:
@@ -17,87 +99,6 @@ label sayoriisgone_act:
     "Now there is the original content."
     "Be careful of your neck."
     "Let me import the resources..."
-
-    image exception_bg = "#dadada"
-    image fake_exception = Text("An exception has occurred.", size=40, style="_default")
-    image fake_exception2 = Text("File \"game/sayoriisgone.rpy\", line 216\nSee traceback.txt for details.", size=20, style="_default")
-
-    image splash_glitch:
-        subpixel True
-        "images/bg/splash-glitch.png"
-        alpha 0.0
-        pause 0.5
-        linear 0.5 alpha 1.0
-        pause 2.5
-        linear 0.5 alpha 0.0
-        "gui/menu_bg.png"
-        topleft
-        alpha 0.0
-        parallel:
-            xoffset 0 yoffset 0
-            linear 0.25 xoffset -100 yoffset -100
-            repeat
-        parallel:
-            linear 0.5 alpha 1.0
-        parallel:
-            ypos 0
-            pause 1.0
-            easeout 1.0 ypos -500
-    image splash_glitch2:
-        subpixel True
-        "gui/menu_bg.png"
-        topleft
-        block:
-            xoffset 0 yoffset 0
-            linear 0.05 xoffset -100 yoffset -100
-            repeat
-
-    image splash_glitch_m:
-        subpixel True
-        "gui/menu_art_m.png"
-        zoom 0.5
-        xpos 0.5 ypos 0.5
-        pause 0.1
-        parallel:
-            xpos 0.3 ypos 1.2
-            linear 0.08 ypos 0.1
-            repeat
-        parallel:
-            pause 0.5
-            alpha 0.0
-
-    image splash_glitch_n:
-        subpixel True
-        "gui/menu_art_n.png"
-        zoom 0.5
-        pause 0.2
-        xpos 0.8 ypos 0.8
-        pause 0.05
-        xpos 0.2 ypos 0.7
-        pause 0.05
-        xpos 0.4 ypos 0.2
-        pause 0.05
-        xpos 0.7 ypos 1.2
-        pause 0.05
-        xpos 0.1 ypos 1.0
-        pause 0.05
-        xpos 0.2 ypos 0.6
-        pause 0.05
-        xpos 0.9 ypos 0.4
-        pause 0.05
-        alpha 0.0
-
-    image splash_glitch_y:
-        subpixel True
-        "gui/menu_art_y.png"
-        zoom 0.5
-        ypos 1.3
-        block:
-            xpos 0.85
-            pause 0.02
-            xpos 0.81
-            pause 0.02
-            repeat
 
     menu:
         "So, What do you want to say to Sayori?"
@@ -324,86 +325,7 @@ label sayoriisgone_ins:
 
     "So, I still need to import the resources..."
 
-    image exception_bg = "#dadada"
-    image fake_exception = Text("An exception has occurred.", size=40, style="_default")
     image fake_exception3 = Text("File \"game/sayoriisgone.rpy\", line 416\nSee traceback.txt for details.", size=20, style="_default")
-
-    image splash_glitch:
-        subpixel True
-        "images/bg/splash-glitch.png"
-        alpha 0.0
-        pause 0.5
-        linear 0.5 alpha 1.0
-        pause 2.5
-        linear 0.5 alpha 0.0
-        "gui/menu_bg.png"
-        topleft
-        alpha 0.0
-        parallel:
-            xoffset 0 yoffset 0
-            linear 0.25 xoffset -100 yoffset -100
-            repeat
-        parallel:
-            linear 0.5 alpha 1.0
-        parallel:
-            ypos 0
-            pause 1.0
-            easeout 1.0 ypos -500
-    image splash_glitch2:
-        subpixel True
-        "gui/menu_bg.png"
-        topleft
-        block:
-            xoffset 0 yoffset 0
-            linear 0.05 xoffset -100 yoffset -100
-            repeat
-
-    image splash_glitch_m:
-        subpixel True
-        "gui/menu_art_m.png"
-        zoom 0.5
-        xpos 0.5 ypos 0.5
-        pause 0.1
-        parallel:
-            xpos 0.3 ypos 1.2
-            linear 0.08 ypos 0.1
-            repeat
-        parallel:
-            pause 0.5
-            alpha 0.0
-
-    image splash_glitch_n:
-        subpixel True
-        "gui/menu_art_n.png"
-        zoom 0.5
-        pause 0.2
-        xpos 0.8 ypos 0.8
-        pause 0.05
-        xpos 0.2 ypos 0.7
-        pause 0.05
-        xpos 0.4 ypos 0.2
-        pause 0.05
-        xpos 0.7 ypos 1.2
-        pause 0.05
-        xpos 0.1 ypos 1.0
-        pause 0.05
-        xpos 0.2 ypos 0.6
-        pause 0.05
-        xpos 0.9 ypos 0.4
-        pause 0.05
-        alpha 0.0
-
-    image splash_glitch_y:
-        subpixel True
-        "gui/menu_art_y.png"
-        zoom 0.5
-        ypos 1.3
-        block:
-            xpos 0.85
-            pause 0.02
-            xpos 0.81
-            pause 0.02
-            repeat
     
     "OK."
 

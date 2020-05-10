@@ -106,6 +106,8 @@ label horrormenu:
             jump sayori
         "Yuri":
             jump yuri
+        "Natsuki":
+            jump natsuki
         "Intro":
             jump horrorintro
         "Back to main menu":
