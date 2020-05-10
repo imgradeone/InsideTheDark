@@ -13,15 +13,13 @@ label sayoriisgone:
     return
 
 label sayoriisgone_act:
-    "当前汉化未完全，暂时放出英文版。"
-
-    "Now there is the original content."
-    "Be careful of your neck."
-    "Let me import the resources..."
+    "接下来是原版内容。"
+    "请注意脖子安全。"
+    "让我先导入资源..."
 
     image exception_bg = "#dadada"
     image fake_exception = Text("An exception has occurred.", size=40, style="_default")
-    image fake_exception2 = Text("File \"game/sayoriisgone.rpy\", line 216\nSee traceback.txt for details.", size=20, style="_default")
+    image fake_exception2 = Text("File \"game/sayoriisgone.rpy\", line 221\nSee traceback.txt for details.", size=20, style="_default")
 
     image splash_glitch:
         subpixel True
@@ -101,56 +99,56 @@ label sayoriisgone_act:
             repeat
 
     menu:
-        "So, What do you want to say to Sayori?"
+        "对了，你想对 Sayori 说什么？"
 
-        "I love you.":
+        "我爱你。":
             $ sayori_confess = True
             scene s_cg3 with dissolve_cg
-            "You are so nice."
-            "I think you'll be the best guy to save Sayori."
+            "你是个大好人。"
+            "你就是能拯救 Sayori 的人！"
             scene black with dissolve_cg
-        "You'll always be my dearest friend.":
+        "你永远是我最好的朋友。":
             $ sayori_confess = False
-            "Oh gosh, that's too bad."
-            "However, that's your own choice."
-            "So..."
+            "这不太好吧..."
+            "但这是你的选择。"
+            "所以..."
 
-    "Here we go."
+    "开始吧。"
 
     scene bg residential_day
-    "What was I thinking?"
-    "I should have tried a little bit harder for Sayori."
-    "It's not a big deal to at least wait for her, or help her wake up."
-    "Even the simple gesture of walking her to school makes her really happy."
-    "Besides..."
-    "I told her yesterday that things will be the same as they always have been."
-    "That's all she needs, and what I want to give her."
+    "我在想什么？"
+    "我也许还要对 Sayori 再加大点力度。"
+    "是等她还是直球叫她起床，应该不是什么大事情吧。"
+    "即便是送她上学，她也会很开心的。"
+    "不过..."
+    "我昨天跟她说过，事情都会和以前一样。"
+    "这就是她需要的，也是我想给予她的。"
 
     scene bg house with wipeleft
-    "I reach Sayori's house and knock on the door."
-    "I don't expect an answer, since she's not picking up her phone, either."
-    "Like yesterday, I open the door and let myself in."
+    "我走到 Sayori 的家门口，敲了敲门。"
+    "我也没期待有反应，毕竟她也没接电话。"
+    "我直球打开了门，进去了。就像昨天那样。"
     scene black with wipeleft
-    mc "Sayori?"
-    "She really is a heavy sleeper..."
-    "I swallow."
-    "I can't believe I ended up doing this after all."
-    "Waking her up in her own house..."
+    mc "Sayori？"
+    "她真的是一个大懒虫..."
+    "我咽了下口水。"
+    "真不敢相信自己真的这么做了。"
+    "在她家叫她起床..."
     if sayori_confess:
-        "That really is something that a boyfriend would do, isn't it?"
+        "这难道不是一个合格的男朋友该做的吗？"
     else:
-        "Isn't that more like something a boyfriend would do?"
-    "In any case..."
-    "It just feels right."
+        "这更像是男朋友做的吧？"
+    "但怎么说..."
+    "感觉也不错。"
 
-    "Outside Sayori's room, I knock on her door."
-    mc "Sayori?"
-    mc "Wake up, dummy..."
-    "There's no response."
-    "I really didn't want to have to enter her room like this..."
-    "Isn't it kind of a breach of privacy?"
-    "But she really leaves me no choice."
-    "I gently open the door."
+    "在 Sayori 的寝室门口，我敲了敲门。"
+    mc "Sayori？"
+    mc "起床了，小懒虫..."
+    "没有反应。"
+    "我真的不想直接破门而入啊..."
+    "这是侵犯隐私吧？"
+    "但这回我真的别无选择了。"
+    "我悄悄打开了门。\nI gently open the door."
     mc "{cps=30}.......Sayo--{/cps}{nw}"
     window hide(None)
     window auto
@@ -219,7 +217,7 @@ label sayoriisgone_act:
     show fake_exception2 zorder 2:
         xpos 0.1 ypos 0.15
     python:
-        try: sys.modules['renpy.error'].report_exception("Oh jeez...I didn't break anything, did I? Hold on a sec, I can probably fix this...I think...\nActually, you know what? This would probably be a lot easier if I just deleted her. She's the one who's making this so difficult. Ahaha! Well, here's goes nothing.", False)
+        try: sys.modules['renpy.error'].report_exception("噫...我啥都没干吧？等我一下，我应该能修了这个 bug...也许吧...\n实际上，你猜猜是怎么回事？如果我直接把她删了，事情就会更简单了。就是她把修 bug 搞得更难的。啊哈哈！那么，现在没事了。", False)
         except: pass
     pause 6.0
 
@@ -227,90 +225,90 @@ label sayoriisgone_act:
     hide fake_exception
     hide fake_exception2
     hide exception_bg
-    "What the hell...?"
-    "{i}What the hell??{/i}"
-    "Is this a nightmare?"
-    "It...has to be."
-    "This isn't real."
-    "There's no way this can be real."
-    "Sayori wouldn't do this."
-    "Everything was normal up until a few days ago."
-    "That's why I can't believe what my eyes are showing me...!"
+    "发生啥事...？"
+    "{i}发 生 啥 事？？？{/i}"
+    "这 TM 是噩梦吧？"
+    "这...也许是真的噩梦。"
+    "这 TM 是假的。"
+    "这 TM 绝对是假的！"
+    "Sayori 不会这么干的。"
+    "明明几天前还很正常的啊。"
+    "所以我才不相信我眼前的所见...！"
     scene black with dissolve_cg
-    "I suppress the urge to vomit."
-    "Just yesterday..."
-    "I told Sayori I would be there for her."
-    "I told her I know what's best, and that everything will be okay."
-    "Then why...?"
-    "Why would she do this...?"
-    "How could I be so helpless?"
-    "What did I do wrong?"
+    "我差点点吐了。"
+    "就是昨天..."
+    "我告诉 Sayori，我会去等她。"
+    "我告诉她什么是最好的，一切都会好的。"
+    "然后，为什么...？"
+    "为什么她要这么做...？"
+    "为什么我比工具人还没用？"
+    "我做错了什么？"
     if sayori_confess:
-        "Confessing to her..."
-        "I shouldn't have confessed to her."
-        "That's not what Sayori needed at all."
-        "She even told me how painful it is for others to care about her."
-        "Then why did I confess to her, and make her feel even worse?"
+        "对她示爱..."
+        "我就不该这么做的。"
+        "这不是 Sayori 想要的。"
+        "她甚至告诉过我，别人的过度关心会有多么痛苦。"
+        "那么我为什么要向她示爱来让她的心情进一步崩溃？"
     else:
-        "Turning down her confession..."
-        "That has to have been what pushed her over the edge."
-        "Her agonized scream still echoes in my ears."
-        "Why did I do that to her when she needed me the most?"
-    "Why was I so selfish?"
-    "This is my fault--!"
-    "My swarming thoughts keep telling me everything I could have done to prevent this."
-    "If I just spent more time with her."
-    "Walked her to school."
+        "让她伤心..."
+        "肯定是这么把她逼疯的。"
+        "她那痛苦的惨叫仍在我的耳朵里回荡。"
+        "为什么在她最需要我的时候，我却这么做？"
+    "为什么我这么自私？"
+    "这是我的错！！！"
+    "我的大脑告诉我，我明明可以做出行动来阻止这一切的。"
+    "如果我多陪她一下..."
+    "送她上学..."
     if sayori_confess:
-        "And remained friends with her, like it always has been..."
+        "然后继续和她做朋友，就和从前一样..."
     else:
-        "And gave her what I know she wanted out of our relationship..."
-    "...Then I could have prevented this."
-    "I know I could have prevented this!"
-    "Screw the Literature Club."
-    "Screw the festival."
-    "I just...lost my best friend."
-    "Someone I grew up with."
-    "She's gone forever now."
-    "Nothing I do can bring her back."
-    "This isn't some game where I can reset and try something different."
-    "I had only one chance, and I wasn't careful enough."
-    "And now I'll carry this guilt with me until I die."
-    "Nothing in my life is worth more than hers..."
-    "But I still couldn't do what she needed from me."
-    "And now..."
-    "I can never take it back."
-    "Never."
-    "Never."
-    "Never."
-    "Never."
-    "Never..."
+        "然后给予她想要的，关系之外的东西..."
+    "...然后就能阻止这一切。"
+    "我明明可以阻止的！"
+    "去你 X 的文学部。"
+    "去你 X 的学员祭。"
+    "我...失去了我最好的朋友。"
+    "从小陪我长大的朋友。"
+    "她永远离开我了。"
+    "我再也没法把她带回来了。"
+    "这不是什么可以重置和更改剧情的游戏。"
+    "我只有一次机会。"
+    "现在我到死前都会背负着这种罪恶感。"
+    "生命中没什么比她还有价值的东西了..."
+    "但我还是没法做到给予她想要的东西。"
+    "现在..."
+    "我再也无法把她带回来了。"
+    "永远。"
+    "永远。"
+    "永远。"
+    "永远。"
+    "永远..."
 
     "..."
 
-    "Oh gosh..."
-    "I hope that there won't be a bug..."
-    "Hey, Sayori!"
-    "Are you still OK?"
+    "天哪..."
+    "但愿没出 bug..."
+    "嘿，Sayori！"
+    "你还好吧？"
 
     show sayori 4p at t11 zorder 2
-    s "Aaaaaah..."
+    s "啊啊啊啊啊啊啊..."
 
-    "I'm sorry for this..."
-    "But..."
-    "Remember..."
-    "I'll always love you."
+    "讲真，有点抱歉把你的模型挂上去..."
+    "但是..."
+    "记住..."
+    "我永远爱你。"
 
     s 1q "Ehehe..."
 
     hide sayori
 
-    "By the way, did you notice the traceback.txt?"
-    "There are something..."
-    "Interesting."
+    "顺便，你有没有去看看 traceback.txt？"
+    "那里有些很..."
+    "有意思的东西。"
 
-    "Let me clean up..."
-
+    "我先整理一下..."
+    stop music fadeout 2.0
     jump sayoriisgone
 
 return

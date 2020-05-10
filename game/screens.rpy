@@ -21,7 +21,7 @@ style default_monika is normal:
     slow_cps 30
 
 style edited is default:
-    font "gui/fontchs/sourcehanserif.otf"
+    font "mod_assets/font/sourcehanserif.otf"
     kerning 8
     outlines [(10, "#000", 0, 0)]
     xpos gui.text_xpos
@@ -57,7 +57,7 @@ style splash_text:
 
 style poemgame_text:
     yalign 0.5
-    font "gui/fontchs/zhushi.ttf"
+    font "mod_assets/font/zhushi.ttf"
     size 30
     color "#000"
     outlines []
@@ -497,7 +497,7 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
-    font "gui/fontchs/zcoolkuaile.ttf"
+    font "mod_assets/font/zcoolkuaile.ttf"
     color "#fff"
     outlines [(4, "#b59", 0, 0), (2, "#b59", 2, 2)]
     hover_outlines [(4, "#fac", 0, 0), (2, "#fac", 2, 2)]
@@ -720,7 +720,7 @@ style game_menu_label:
     ysize 120
 
 style game_menu_label_text:
-    font "gui/fontchs/zcoolkuaile.ttf"
+    font "mod_assets/font/zcoolkuaile.ttf"
     size gui.title_text_size
     color "#fff"
     outlines [(6, "#b59", 0, 0), (3, "#b59", 2, 2)]
@@ -1055,7 +1055,7 @@ style pref_label:
     bottom_margin 2
 
 style pref_label_text:
-    font "gui/fontchs/zcoolkuaile.ttf"
+    font "mod_assets/font/zcoolkuaile.ttf"
     size 24
     color "#fff"
     outlines [(3, "#b59", 0, 0), (1, "#b59", 1, 1)]
@@ -1073,7 +1073,7 @@ style radio_button:
 
 style radio_button_text:
     properties gui.button_text_properties("radio_button")
-    font "gui/fontchs/zhushi.ttf"
+    font "mod_assets/font/zhushi.ttf"
     outlines []
 
 style check_vbox:
@@ -1085,7 +1085,7 @@ style check_button:
 
 style check_button_text:
     properties gui.button_text_properties("check_button")
-    font "gui/fontchs/zhushi.ttf"
+    font "mod_assets/font/zhushi.ttf"
     outlines []
 
 style slider_slider:

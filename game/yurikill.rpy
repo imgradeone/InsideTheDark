@@ -16,8 +16,8 @@ label yurikill_act:
 
     "好的，那么开始吧。"
     "已知问题：凝视尸体的时长不能通过存档读档来加速。"
-    scene bg club_day2
-
+    scene bg club_day2  
+    #您有 1/6 的几率触发死不瞑目的 Sayori 彩蛋，如果你看到了这行注释，请加油触发（
     play music t10y
     show yuri 2m at t11 zorder 2
     y "终于啊。"
@@ -86,7 +86,7 @@ label yurikill_act:
         $ style.say_dialogue = style.normal
         y 3y5 "啊哈哈哈哈哈哈哈哈！"
         $ style.say_dialogue = style.edited
-        y 3y3 "啊哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈{nw}"
+        y 3y3 "啊哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈{nw}"
         window hide(None)
         window auto
         $ style.say_dialogue = style.normal
@@ -207,7 +207,7 @@ label yurikill_act:
         m 2j "就陪我，好吧？"
         m 2a "一下下就好。"
 
-        $ persistent.yuri_kill = 0
+        $ persistent.yurikillround = 0
         scene black
         show monika at thide zorder 4
         hide monika
