@@ -8,7 +8,7 @@ define config.name = "Inside The Dark"
 define gui.show_name = False
 
 # Version of the game
-define config.version = "0.1.2-earlyaccess"
+define config.version = "0.1.5-earlyaccess"
 
 # text placed on about screen
 define gui.about = _("")
@@ -23,7 +23,7 @@ define config.has_music = True
 define config.has_voice = False
 
 # main menu music
-define config.main_menu_music = audio.t1
+define config.main_menu_music = audio.mend
 
 # enter / exiting game menu transitions
 define config.enter_transition = Dissolve(.2)
