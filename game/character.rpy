@@ -4,17 +4,17 @@ label sayori:
 
     menu:
 
-        "Which horror thing do you want for Sayori?"
+        "你想拿什么恐怖的内容来迫害 Sayori？"
 
-        "Sayori Hangouts":
+        "晴 天 娃 娃 自 挂 东 南 枝":
             show sayori at thide zorder 3
             hide sayori
             jump sayoriisgone
-        "Sayori's Cursor":
+        "Sayori 的奇妙光标":
             show sayori at thide zorder 3
             hide sayori
             jump sayoricur
-        "Back to select menu":
+        "返回角色选择":
             show sayori at thide zorder 3
             hide sayori
             jump horrormenu
@@ -26,17 +26,17 @@ label yuri:
 
     menu:
 
-        "Which horror thing do you want for Yuri?"
+        "你想拿什么恐怖的内容来迫害 Yuri？"
 
-        "Yuri's Killing":
+        "精 湛 刀 法":
             show yuri at thide zorder 3
             hide yuri
             jump yurikill
-        "Yuri's realistic eyes":
+        "三次元之眼":
             show yuri at thide zorder 3
             hide yuri
             jump yurieye
-        "Back to select menu":
+        "返回角色选择":
             show yuri at thide zorder 3
             hide yuri
             jump horrormenu
@@ -50,13 +50,13 @@ label natsuki:
 
     menu:
 
-        "Which horror thing do you want for Natsuki?"
+        "你想拿什么恐怖的内容来迫害 Natsuki？"
 
-        "Natsuki's Snaaaap neccck":
+        "歪 脖 子 树":
             show natsuki at thide zorder 3
             hide natsuki
             jump natneck
-        "Back to select menu":
+        "返回角色选择":
             show natsuki at thide zorder 3
             hide natsuki
             jump horrormenu

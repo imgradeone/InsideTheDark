@@ -668,7 +668,7 @@ style poem_vbar is vscrollbar:
 
 #Styling for each of the authors
 style yuri_text:
-    font "gui/font/y1.ttf" #font used packaged with the game
+    font "mod_assets/font/zhushi.ttf" #font used packaged with the game
     size 32
     color "#000"
     outlines []

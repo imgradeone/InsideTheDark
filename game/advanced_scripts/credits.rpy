@@ -189,14 +189,14 @@ image credits_ts:
 
 #This styles the different text in the credits
 style credits_header:
-    font "gui/font/RifficFree-Bold.ttf"
+    font "gui/fontzcoolkuaile.ttf"
     color "#ffaae6"
     size 36
     text_align 0.5
     outlines []
 
 style credits_text:
-    font "gui/font/Halogen.ttf"
+    font "gui/fontzhushi.ttf"
     color "#fff"
     size 36
     text_align 0.5
