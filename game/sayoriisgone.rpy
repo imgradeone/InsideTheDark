@@ -1,6 +1,6 @@
 image exception_bg = "#dadada"
 image fake_exception = Text("An exception has occurred.", size=40, style="_default")
-image fake_exception2 = Text("File \"game/sayoriisgone.rpy\", line 216\nSee traceback.txt for details.", size=20, style="_default")
+image fake_exception2 = Text("File \"game/sayoriisgone.rpy\", line 221\nSee traceback.txt for details.", size=20, style="_default")
 
 image splash_glitch:
     subpixel True
@@ -149,7 +149,7 @@ label sayoriisgone_act:
     "我真的不想直接破门而入啊..."
     "这是侵犯隐私吧？"
     "但这回我真的别无选择了。"
-    "我悄悄打开了门。\nI gently open the door."
+    "我悄悄打开了门。"
     mc "{cps=30}.......Sayo--{/cps}{nw}"
     window hide(None)
     window auto
@@ -218,7 +218,7 @@ label sayoriisgone_act:
     show fake_exception2 zorder 2:
         xpos 0.1 ypos 0.15
     python:
-        try: sys.modules['renpy.error'].report_exception("噫...我啥都没干吧？等我一下，我应该能修了这个 bug...也许吧...\n实际上，你猜猜是怎么回事？如果我直接把她删了，事情就会更简单了。就是她把修 bug 搞得更难的。啊哈哈！那么，现在没事了。", False)
+        try: sys.modules['renpy.error'].report_exception("噫...我啥都没干吧？等我一下，我应该能修了这个 bug... 也许吧...\n实际上，你猜猜是怎么回事？如果我直接把她删了，事情就会更简单了。就是她把修 bug 搞得更难的。啊哈哈！那么，现在没事了。", False)
         except: pass
     pause 6.0
 
@@ -234,7 +234,7 @@ label sayoriisgone_act:
     "这 TM 绝对是假的！"
     "Sayori 不会这么干的。"
     "明明几天前还很正常的啊。"
-    "所以我才不相信我眼前的所见...！"
+    "所以我才不相信我眼前所见的...！"
     scene black with dissolve_cg
     "我差点点吐了。"
     "就是昨天..."
@@ -300,13 +300,13 @@ label sayoriisgone_act:
     "记住..."
     "我永远爱你。"
 
-    s 1q "Ehehe..."
+    s 1q "呃呵呵呵..."
 
     hide sayori
 
     "顺便，你有没有去看看 traceback.txt？"
-    "那里有些很..."
-    "有意思的东西。"
+    "那里有些..."
+    "很有意思的东西。"
 
     "我先整理一下..."
     stop music fadeout 2.0
@@ -325,7 +325,7 @@ label sayoriisgone_ins:
 
     "So, I still need to import the resources..."
 
-    image fake_exception3 = Text("File \"game/sayoriisgone.rpy\", line 416\nSee traceback.txt for details.", size=20, style="_default")
+    image fake_exception3 = Text("File \"game/sayoriisgone.rpy\", line 339\nSee traceback.txt for details.", size=20, style="_default")
     
     "OK."
 
