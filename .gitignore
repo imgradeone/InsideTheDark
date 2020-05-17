@@ -15,3 +15,5 @@ traceback.txt
 game/firstrun
 characters/*.chr
 *.swp
+game/mod_assets/font/*.ttf
+game/mod_assets/font/*.otf
