@@ -56,11 +56,11 @@ label natsuki:
             show natsuki at thide zorder 3
             hide natsuki
             jump natneck
-        "Crushed CG":
+        "粉 碎 的 C G":
             show natsuki at thide zorder 3
             hide natsuki
             jump natcrush
-        "Just Monika.":
+        "只 要 M o n i k a":
             show natsuki at thide zorder 3
             hide natsuki
             jump natjustmonika

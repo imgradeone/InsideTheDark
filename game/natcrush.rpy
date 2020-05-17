@@ -129,7 +129,7 @@ label natcrush_act:
     n "我是说，我觉得我甚至不能把它放在自己的房间里。"
 
     $ style.say_dialogue = style.edited
-    n "如果他发现了这个，我爸会打{i}屎{/i}我。"
+    n "如果我爸发现了这个，他会打{i}屎{/i}我。"
     $ style.say_dialogue = style.normal
     $ _history_list[-1].what = "我甚至不知道，如果我爸发现了那个，会做什么。"
     n "至少在俱乐部房间里是安全的。"

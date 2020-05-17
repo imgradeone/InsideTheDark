@@ -24,11 +24,11 @@ init python:
         "啊哈↓↓↓↓↓↓↓哈↓↓↓↓↓哈↓↓↓↓↓哈↓↓↓↓哈↓↓↓哈↓↓哈↓ —— Yuri",
         "我咋变成疯nggggggggggggggggg人nnnnnnnnnnnn了eeeeeeeeeee？！ —— Yuri",
         "噫啊啊啊啊啊啊啊啊啊！ —— Sayori",
-		"这也许是你游最烂的 mod...",
+        "这也许是你游最烂的 mod...",
         "我永远爱你。",
-		"爱你们喵！",
-		"我会一直爱你的呐！", # those 3 are intended
-		"祝你好运！",
+        "爱你们喵！",
+        "我会一直爱你的呐！", # those 3 are intended
+        "祝你好运！",
         "您有 1/6 的几率触发死不瞑目的 Sayori 彩蛋，如果你看到了这行警告，请加油触发（"
     ]
 

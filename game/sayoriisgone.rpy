@@ -88,9 +88,9 @@ label sayoriisgone:
 
         "体验！":
             jump sayoriisgone_act
-        "Inside the Code (TODO)":
+        "深入代码（WIP）":
             jump sayoriisgone_ins
-        "Alt version by imgradeone":
+        "imgradeone 的另版":
             jump sayoriisgone_alt
         "返回上一级":
             jump sayori

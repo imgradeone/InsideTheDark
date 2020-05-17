@@ -78,7 +78,7 @@ label natneck:
             jump natneck_peace
 #        "Inside the Code (TODO)":
 #            jump natneck
-        "Alt Version by imgradeone":
+        "imgradeone 的另版":
             jump natneck_alt
         "返回上一级":
             jump natsuki
@@ -234,29 +234,32 @@ label natneck_peace:
 return
 
 label natneck_alt:
-    "Yep, this is my own made version, but very suck."
+    "对，这是我的版本，但非常烂。"
 
     scene bg club_day2
 
     show natsuki 1g at t11 zorder 3
     n "[player]..."
-    n "Why did you download this mod?"
-    n "You know what?"
-    n 2b "This is the suckest mod ever."
-    n "Why did you consider it?"
-    n 3f "You should delete the mod now."
+    n "为什么你会下载这个 mod？"
+    n "你知道吗？"
+    n 2b "这是史上最烂的 mod。"
+    n "为什么你会想到装这个？"
+    n 3f "你要立刻删除这个 mod。"
     $ style.say_dialogue = style.edited
-    n "Or my dad would beat the shit out of me if he found this."
+    n "不然如果我爸发现了这个，他会打{i}屎{/i}我。"
+	$ _history_list[-1].what = "不然如果我爸发现了这个，就不知道他会怎么样了。"
     $ style.say_dialogue = style.normal
-    n scream "Ahhhh..."
-    n "Something went wrong..."
+    n scream "啊啊..."
+    n "有点不对劲..."
+	$ _history_list.pop()
     show screen tear(8, offtimeMult=1, ontimeMult=10)
     pause 3.0
     stop music
     hide screen tear
-    n ghost_base "Finally..."
-    n "The worst time..."
-    n "...is COMING!!!!"
+	$ style.say_dialogue = style.edited
+    n ghost_base "终于来了..."
+    n "最坏的时刻..."
+    n "...终于{b}来临了！！！！{/b}"
     $ style.say_dialogue = style.normal
     $ quick_menu = False
     pause 1
@@ -281,7 +284,6 @@ label natneck_alt:
     scene black
     with None
     $ quick_menu = True
-    $ style.say_dialogue = style.normal
     scene black
     jump natneck
 

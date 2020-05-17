@@ -145,21 +145,21 @@ image credits_ts:
 
 #This styles the different text in the credits
 style credits_header:
-    font "gui/font/RifficFree-Bold.ttf"
+    font "mod_assets/font/sourcehanserif.otf"
     color "#ffaae6"
     size 36
     text_align 0.5
     outlines []
 
 style credits_text:
-    font "gui/font/Halogen.ttf"
+    font "mod_assets/font/alipuhuireg.ttf"
     color "#fff"
     size 36
     text_align 0.5
     outlines []
 
 style monika_credits_text:
-    font "gui/font/m1.ttf"
+    font "mod_assets/font/zhushi.ttf"
     color "#fff"
     size 40
     text_align 0.5
@@ -456,15 +456,14 @@ label credits2:
     pause 0.88
     show credits_logo
     pause 9.12
-    #Each CG is shown. If it's unseen gray it out, if it's not a perfect ending
-    #make each image get deleted after a few seconds
+    #Each CG is shown. If it's unseen gray it out, if it's not a perfect ending make each image get deleted after a few seconds
     $ lockedtext = "" if persistent.clear[imagenum] else "_locked"
     $ if persistent.clearall: lockedtext = "_clearall"
     $ imagenum += 1
     show image ("credits_cg1" + lockedtext) at credits_scroll_right as credits_image_1
 
     #Actual names for the credits
-    show credits_header "Mod Developer" at credits_text_scroll_left as credits_header_1
+    show credits_header "Mod 开发者" at credits_text_scroll_left as credits_header_1
     show credits_text "imgradeone" at credits_text_scroll_left as credits_text_1
 
     ##The rest of the sections follow this same pattern
@@ -473,49 +472,49 @@ label credits2:
     $ imagenum += 1
     $ pause(16.95 - (datetime.datetime.now() - starttime).total_seconds())
     show image ("credits_cg2" + lockedtext) at credits_scroll_left as credits_image_2
-    show credits_header "Original Character Art" at credits_text_scroll_right as credits_header_2
+    show credits_header "原角色绘画" at credits_text_scroll_right as credits_header_2
     show credits_text "Satchely" at credits_text_scroll_right as credits_text_2
     $ lockedtext = "" if persistent.clear[imagenum] else "_locked"
     $ if persistent.clearall: lockedtext = "_clearall"
     $ imagenum += 1
     $ pause(26.05 - (datetime.datetime.now() - starttime).total_seconds())
     show image ("credits_cg3" + lockedtext) at credits_scroll_right as credits_image_1
-    show credits_header "Original Background Art" at credits_text_scroll_left as credits_header_1
+    show credits_header "原背景绘画" at credits_text_scroll_left as credits_header_1
     show credits_text "Velinquent" at credits_text_scroll_left as credits_text_1
     $ lockedtext = "" if persistent.clear[imagenum] else "_locked"
     $ if persistent.clearall: lockedtext = "_clearall"
     $ imagenum += 1
     $ pause(35.15 - (datetime.datetime.now() - starttime).total_seconds())
     show image ("credits_cg4" + lockedtext) at credits_scroll_left as credits_image_2
-    show credits_header "Writing" at credits_text_scroll_right as credits_header_2
+    show credits_header "剧本编写" at credits_text_scroll_right as credits_header_2
     show credits_text "Dan Salvato" at credits_text_scroll_right as credits_text_2
     $ lockedtext = "" if persistent.clear[imagenum] else "_locked"
     $ if persistent.clearall: lockedtext = "_clearall"
     $ imagenum += 1
     $ pause(44.25 - (datetime.datetime.now() - starttime).total_seconds())
     show image ("credits_cg5" + lockedtext) at credits_scroll_right as credits_image_1
-    show credits_header "Music" at credits_text_scroll_left as credits_header_1
+    show credits_header "音乐" at credits_text_scroll_left as credits_header_1
     show credits_text "Dan Salvato" at credits_text_scroll_left as credits_text_1
     $ lockedtext = "" if persistent.clear[imagenum] else "_locked"
     $ if persistent.clearall: lockedtext = "_clearall"
     $ imagenum += 1
     $ pause(53.35 - (datetime.datetime.now() - starttime).total_seconds())
     show image ("credits_cg6" + lockedtext) at credits_scroll_left as credits_image_2
-    show credits_header "Mod Contributor" at credits_text_scroll_right as credits_header_2
-    show credits_text "none yet" at credits_text_scroll_right as credits_text_2
+    show credits_header "Mod 贡献者" at credits_text_scroll_right as credits_header_2
+    show credits_text "Dobby233Liu" at credits_text_scroll_right as credits_text_2
     $ lockedtext = "" if persistent.clear[imagenum] else "_locked"
     $ if persistent.clearall: lockedtext = "_clearall"
     $ imagenum += 1
     $ pause(62.45 - (datetime.datetime.now() - starttime).total_seconds())
     show image ("credits_cg7" + lockedtext) at credits_scroll_right as credits_image_1
-    show credits_header "Special Thanks" at credits_text_scroll_left as credits_header_1
-    show credits_text "Monika After Story Team" at credits_text_scroll_left as credits_text_1
+    show credits_header "特别感谢" at credits_text_scroll_left as credits_header_1
+    show credits_text "Monika After Story 团队" at credits_text_scroll_left as credits_text_1
     $ lockedtext = "" if persistent.clear[imagenum] else "_locked"
     $ if persistent.clearall: lockedtext = "_clearall"
     $ imagenum += 1
     $ pause(71.55 - (datetime.datetime.now() - starttime).total_seconds())
     show image ("credits_cg8" + lockedtext) at credits_scroll_left as credits_image_2
-    show credits_header "Special Thanks" at credits_text_scroll_right as credits_header_2
+    show credits_header "特别感谢" at credits_text_scroll_right as credits_header_2
     show credits_text "Team Salvato" at credits_text_scroll_right as credits_text_2
     show s_sticker at credits_sticker_1
     show n_sticker at credits_sticker_2
@@ -527,13 +526,13 @@ label credits2:
     $ imagenum += 1
     $ pause(88.00 - (datetime.datetime.now() - starttime).total_seconds())
     show image ("credits_cg9" + lockedtext) at credits_scroll_right as credits_image_1
-    show credits_header "Special Thanks" at credits_text_scroll_left as credits_header_1
-    show credits_text "Ren'Py Team" at credits_text_scroll_left as credits_text_1
+    show credits_header "特别感谢" at credits_text_scroll_left as credits_header_1
+    show credits_text "Ren'Py 团队" at credits_text_scroll_left as credits_text_1
     $ lockedtext = "" if persistent.clear[imagenum] else "_locked"
     $ if persistent.clearall: lockedtext = "_clearall"
     $ pause(95.00 - (datetime.datetime.now() - starttime).total_seconds())
     show image ("credits_cg10" + lockedtext) at credits_scroll_left as credits_image_2
-    show credits_header "Special Thanks" at credits_text_scroll_right as credits_header_2
+    show credits_header "特别感谢" at credits_text_scroll_right as credits_header_2
     show credits_text "[player]" at credits_text_scroll_right as credits_text_2
     $ pause(104.10 - (datetime.datetime.now() - starttime).total_seconds())
 
@@ -542,7 +541,7 @@ label credits2:
     #Hide console and show the Team salvato logo and thankyou
     call hideconsole from _call_hideconsole_1
     show credits_ts
-    show credits_text "last, great thanks to":
+    show credits_text "最后，非常感谢":
         zoom 0.75 xalign 0.5 yalign 0.25 alpha 0 subpixel True
         linear 2.0 alpha 1
         4.5
