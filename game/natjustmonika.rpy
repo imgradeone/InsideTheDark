@@ -28,10 +28,10 @@ label natjustmonika_act:
     n "至少还有 Monika 支持我的作品..."
     n 1r "...啊。"
     n 1q "好吧...我想我现在要和你分享我的诗了。"
-    n "我真的很讨厌我必须这样做。"
-    n "但不幸的是，我没有太多选择。"
-    n 1h "只要...仔细阅读，好吗？"
-    n "那你就可以走了。"
+    n "我真的很讨厌必须要这样做。"
+    n "但不幸的是，我决择不了太多事情。"
+    n 1h "你只用...仔细阅读，好吗？"
+    n "然后你就可以走了。"
     call showpoem(poem_n23, revert_music=False) from _call_showpoem_4
     $ renpy.music.stop(channel="music_poem", fadeout=2.0)
     $ style.say_dialogue = style.edited
