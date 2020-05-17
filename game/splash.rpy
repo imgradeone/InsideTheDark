@@ -13,8 +13,13 @@ init python:
     splash_message_default = "这是非官方的粉丝向 mod，与 Team Salvato 无关。\n本 mod 不适合儿童或者极易受影响的人。\n\n不要说我们没有警告过你.png"
 
     splash_messages = [
-        "Please support Doki Doki Literature Club.",
-        "Monika is watching you code."
+        "请支持 Doki Doki Literature Club。",
+        "Monika 在看着你在码。",
+        "突rannnnnnnnnnnnnnnnnnnnnnnn nnnnnnnnn",
+        "这 TM 是噩梦吧？",
+        "噫啊↑啊↗啊→啊↘啊↓啊↓啊↓啊↓！！！ —— Natsuki"
+        "我永远爱你。",
+        "您有 1/6 的几率触发死不瞑目的 Sayori 彩蛋，如果你看到了这行警告，请加油触发（"
     ]
 
 
@@ -297,7 +302,7 @@ label splashscreen:
     $ config.allow_skipping = False
 
     show white
-    $ persistent.ghost_menu = False
+    $ persistent.ghost_menu = True
     $ splash_message = splash_message_default
     $ config.main_menu_music = audio.mend
     $ renpy.music.play(config.main_menu_music)
@@ -321,7 +326,7 @@ label warningscreen:
 label after_load:
     $ config.allow_skipping = allow_skipping
     $ _dismiss_pause = config.developer
-    $ persistent.ghost_menu = False
+    $ persistent.ghost_menu = True
     $ style.say_dialogue = style.normal
 
     if anticheat != persistent.anticheat:
