@@ -129,12 +129,12 @@ label natcrush_act:
     n "我是说，我觉得我甚至不能把它放在自己的房间里。"
 
     $ style.say_dialogue = style.edited
-    n "如果他发现了这个，我父亲会打{i}屎{/i}我。"
+    n "如果他发现了这个，我爸会打{i}屎{/i}我。"
     $ style.say_dialogue = style.normal
-    $ _history_list[-1].what = "我甚至不知道，如果我父亲发现了那个，会做什么。"
+    $ _history_list[-1].what = "我甚至不知道，如果我爸发现了那个，会做什么。"
     n "至少在俱乐部房间里是安全的。"
     show n_cg1_exp3 at cgfade
-    n "除了 Monika，对将那个寄放在房间里的态度有点古怪。"
+    n "除了 Monika，对将那个寄放在房间里的态度有点古怪..."
     n "啊！我就是赢不了，————难道我赢得了吗？"
     mc "好吧，最终因那件事得到了代价，不是吗？"
     mc "我的意思是，我在这里，读着它。"
@@ -152,14 +152,14 @@ label natcrush_act:
     n "真是的，够了！"
     n "你到底是要读那本书，还是有别的目的？"
     mc "是啊..."
-    "我翻了页。"
+    "我翻了一页又一页。"
     show black with dissolve_cg
     "..."
     "..."
     "....."
     "......."
     "........."
-    "时间渐渐地消逝了。"
+    "时间在消逝。"
     hide n_cg1_exp3
     show n_cg1_exp4 at cgfade behind black
     "Natsuki 现在古怪地安静下来了。" # is strangely quiet now."
