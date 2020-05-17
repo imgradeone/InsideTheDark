@@ -12,7 +12,7 @@
 
 [English](./README.md) | 简体中文
 
-## Hint
+## 提示
 
 您正在查看的是简体中文版本的 Inside The Dark mod，如需要英文版，请查看 `master` 分支。
 
