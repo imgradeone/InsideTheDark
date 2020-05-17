@@ -22,7 +22,7 @@ image splash_warning = ParameterizedText(style="splash_text", xalign=0.5, yalign
 
 
 image menu_logo:
-    "/mod_assets/DDLCModTemplateLogo.png"
+    "/mod_assets/insidethedark.png"
     subpixel True
     xcenter 240
     ycenter 120
@@ -299,11 +299,11 @@ label splashscreen:
     show white
     $ persistent.ghost_menu = False
     $ splash_message = splash_message_default
-    $ config.main_menu_music = audio.t1
+    $ config.main_menu_music = audio.mend
     $ renpy.music.play(config.main_menu_music)
-    show intro with Dissolve(0.5, alpha=True)
-    pause 2.5
-    hide intro with Dissolve(0.5, alpha=True)
+#    show intro with Dissolve(0.5, alpha=True)
+#    pause 2.5
+#    hide intro with Dissolve(0.5, alpha=True)
 
     if persistent.playthrough == 2 and renpy.random.randint(0, 3) == 0:
         $ splash_message = renpy.random.choice(splash_messages)
@@ -361,7 +361,7 @@ label autoload:
     jump expression persistent.autoload
 
 label before_main_menu:
-    $ config.main_menu_music = audio.t1
+    $ config.main_menu_music = audio.mend
     return
 
 label quit:

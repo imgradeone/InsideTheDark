@@ -74,12 +74,13 @@ label natneck:
 
         "体验！":
             jump natneck_act
-#        "EXPERIENCE (Peace ver.)":
-#            jump natneck
+        "EXPERIENCE (Peace ver.)":
+            jump natneck_peace
 #        "Inside the Code (TODO)":
 #            jump natneck
         "返回上一级":
             jump natsuki
+
 return
 
 label natneck_act:
@@ -163,4 +164,69 @@ label natneck_act:
     jump natneck
 
 
+return
+
+label natneck_peace:
+    "This is a still work-in-progress peace ver."
+    scene bg club_day
+    with dissolve_scene_full
+    show natsuki 1g at t11 zorder 3
+    $ style.say_dialogue = style.edited
+    n "[player]..."
+    n "Why didn't you come read with me today?"
+    n 1m "I was waiting for you."
+    n "I was waiting for a long time."
+    n "It was the only thing I had to look forward to today."
+    n "Why did you ruin it?"
+    n "Do you like Yuri more?"
+    n 1k "I think you're better off not associating with her."
+    n "Are you listening to me?"
+    $ currentpos = get_pos(channel="music_poem")
+    $ audio.t5c = "<from " + str(currentpos) + " loop 4.444>bgm/5_ghost.ogg"
+    stop music_poem fadeout 2.0
+    $ renpy.music.play(audio.t5c, fadein=2.0, tight=True)
+    n ghost1 "Yuri is a sick freak."
+    n "That should be obvious by now."
+    n "So just play with me instead."
+    n "Okay?"
+    n "You don't hate me, [player], do you?"
+    n "Do you hate me?"
+    n "Do you want to make me go home crying?"
+    n "The club is the only place I feel safe."
+    n "Don't ruin that for me."
+    n "Don't ruin it."
+    n "Please."
+    n "Just stop talking to Yuri."
+    n "Play with me instead."
+    n "It's all I have..."
+    n "Play with me."
+    stop music
+    n ghost2 "PLAY WITH ME!!!"
+    $ style.say_dialogue = style.normal
+    $ quick_menu = False
+    pause 1
+    play sound "sfx/crack.ogg"
+    show natsuki ghost3
+    pause 0.5
+    hide natsuki
+    play sound "sfx/run.ogg"
+    show natsuki ghost4 at i11 onlayer front
+    pause 0.25
+    window hide(None)
+    hide natsuki onlayer front
+    scene black
+    with None
+    window auto
+    scene black
+    pause 0.5
+    show end:
+        xzoom -1
+    with dissolve_cg
+    pause 2.0
+    scene black
+    with None
+    $ quick_menu = True
+    $ style.say_dialogue = style.normal
+    scene black
+    jump natneck
 return

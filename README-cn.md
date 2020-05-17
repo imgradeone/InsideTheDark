@@ -1,4 +1,10 @@
-# Inside The Dark
+<!-- sorry -->
+<h1>
+  <div align="center">
+    <img src="https://github.com/imgradeone/InsideTheDark/raw/90d23499ba4099d90023599d5d63d57830f70f1b/game/mod_assets/insidethedark.png" width="128" height="128">
+    Inside the Dark
+  </div>
+</h1>
 
 既是高能播放器，又是学写代码的好东西（
 
@@ -34,35 +40,35 @@ You are now viewing the Chinese version of the Inside The Dark mod. If you need 
 跟着以下步骤来深入代码。
 
 1. 下载并安装 [Ren'Py SDK 版本 6.99.12](https://www.renpy.org/release/6.99.12). *（注意：现有版本的 DDLC 不兼容由其他版本 Ren'Py SDK 生成的 .rpyc 文件）*
-1. Clone 这个 repo 到 Ren'Py SDK 的工作目录。
-1. 下载 DDLC（可在 https://ddlc.moe 或者 Steam 获取）并将 `audio.rpa`、`images.rpa` 和 `fonts.rpa` 复制到工程的 /game 文件夹。（**不要**把 `scripts.rpa` 复制过去，因为这可能造成冲突。）
-1. 在 Ren'Py 里启动工程。它应该正常启动。
-1. 如果想构建可发行的 Release 版本，在 Ren'Py 项目启动器里选择 “Build Distributions” / “生成分发版”，勾选 “DDLC Compatible Mod” 并构建。这将创建一个包含 mod 和安装指南的跨平台 ZIP 文件。
+2. Clone 这个 repo 到 Ren'Py SDK 的工作目录。
+3. 下载 DDLC（可在 https://ddlc.moe 或者 Steam 获取）并将 `audio.rpa`、`images.rpa` 和 `fonts.rpa` 复制到工程的 /game 文件夹。（**不要**把 `scripts.rpa` 复制过去，因为这可能造成冲突。）
+4. 在 Ren'Py 里启动工程。它应该正常启动。
+5. 如果想构建可发行的 Release 版本，在 Ren'Py 项目启动器里选择 “Build Distributions” / “生成分发版”，勾选 “DDLC Compatible Mod” 并构建。这将创建一个包含 mod 和安装指南的跨平台 ZIP 文件。
 
 ### 只想玩？
 
-由于目前 mod 自身完成度极低，所以没有正式版 Release。
+由于目前 mod 自身完成度极低，所以没有正式的发布版。
 
-但是早期测试版本已经推出。您可以在 [Releases 页面](https://github.com/imgradeone/InsideTheDark/releases) 找到它。
+但是早期测试版本已经推出。您可以在 [Releases 页面](https://github.com/imgradeone/InsideTheDark/releases)找到它。
 
-中国大陆用户可访问 [这里](https://gitee.com/imgradeone/InsideTheDark/releases)。
+中国大陆用户亦可访问[码云](https://gitee.com/imgradeone/InsideTheDark/releases)下载。
 
 目前你可以试试：
 
-1. 下载本 repo 的 ZIP。
-1. 复制 **/game 文件夹下的所有文件** 到你的原版 DDLC。您可以从 https://ddlc.moe 下载游戏。
-1. 开始玩吧。
+  1. 下载本 repo 的 ZIP。
+  2. 复制 **/game 文件夹下的所有文件** 到你的原版 DDLC。您可以从 https://ddlc.moe 下载游戏。
+  3. 开始玩开发版吧。
 
 ### 简体中文版本？
 
-由于目前 mod 自身完成度极低，且字体问题待解决，所以简体中文版本绝赞咕咕咕中。
+由于目前 mod 自身完成度极低，<s>且字体问题待解决，</s>所以简体中文版本绝赞咕咕咕中。
 
-目前已创建一个新 branch，用于中文版开发。同时，暂不接受社区翻译。
+目前已创建一个新 [branch](../../tree/chinese)，用于中文版开发。同时，暂不接受社区翻译。
 
 ## 感谢
 
-- Team Salvato http://teamsalvato.com / https://ddlc.moe
-- Monika After Story Team http://www.monikaafterstory.com
+- [Team Salvato](http://teamsalvato.com) / [ddlc.moe](https://ddlc.moe)
+- [Monika After Story 团队](http://www.monikaafterstory.com)
 
 ## 中文字体相关
 
@@ -73,8 +79,17 @@ You are now viewing the Chinese version of the Inside The Dark mod. If you need 
 - 杨任东字体 / 杨任东竹石体 - 可关注“杨任东字体”微信公众号免费获取
 - Adobe、Google 等 / 思源宋体 https://source.typekit.com/source-han-serif/cn/
 
-## Disclaimer
+## 中文字体相关
 
-*Doki Doki Literature Club* 和所有相关角色和商标归 Team Salvato 所有，并且依据 [IP Guidlines](http://teamsalvato.com/ip-guidelines/) 进行使用。
+本 mod 的汉化版使用了部分免费商用字体，在此感谢字体作者。如有版权问题，将从 repo 里暂时移除字体。
+
+- 阿里巴巴 / 阿里巴巴普惠体 https://ics.alibaba.com/project/Hn8mXx
+- 站酷字体 / 站酷快乐体（免费字体区） https://www.zcool.com.cn/special/zcoolfonts/
+- 杨任东字体 / 杨任东竹石体 - 可关注“杨任东字体”微信公众号免费获取
+- Adobe、Google 等 / 思源宋体 https://source.typekit.com/source-han-serif/cn/
+
+## 免责声明
+
+*Doki Doki Literature Club* 和所有相关角色和商标归 Team Salvato 所有，并且依据 [IP Guidelines](http://teamsalvato.com/ip-guidelines/) 进行使用。
 
 代码仅供**学习**用途。
