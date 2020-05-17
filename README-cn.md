@@ -1,7 +1,10 @@
-<div align="center">
-  <img src="https://github.com/imgradeone/InsideTheDark/raw/90d23499ba4099d90023599d5d63d57830f70f1b/game/mod_assets/insidethedark.png" width=128 height=128>
-  Inside the Dark
-</div>
+<!-- sorry -->
+<h1>
+  <div align="center">
+    <img src="https://github.com/imgradeone/InsideTheDark/raw/90d23499ba4099d90023599d5d63d57830f70f1b/game/mod_assets/insidethedark.png" width="128" height="128">
+    Inside the Dark
+  </div>
+</h1>
 
 既是高能播放器，又是学写代码的好东西（
 
