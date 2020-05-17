@@ -56,6 +56,14 @@ label natsuki:
             show natsuki at thide zorder 3
             hide natsuki
             jump natneck
+        "Crushed CG":
+            show natsuki at thide zorder 3
+            hide natsuki
+            jump natcrush
+        "Just Monika.":
+            show natsuki at thide zorder 3
+            hide natsuki
+            jump natjustmonika
         "Back to select menu":
             show natsuki at thide zorder 3
             hide natsuki

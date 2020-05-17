@@ -59,9 +59,7 @@ label yurikill_act:
     y "Do you accept my confession?"
 
     menu:
-
-        "R.I.P Yuri"
-
+        
         "Yes.":
             jump yuriinkill
         "No.":

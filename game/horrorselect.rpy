@@ -13,7 +13,7 @@ label horrorintro:
     "Well..."
     "Did you finished the original game?"
     "..."
-    "Bruh. XD"
+    "XD"
     "So let's get into the mod."
     "Wait..."
     "Jeeeeeeez..."
@@ -110,6 +110,8 @@ label horrormenu:
             jump natsuki
         "Intro":
             jump horrorintro
+#        "Credits (in dev)":
+#            jump creditofitd
         "Back to main menu":
             return
 

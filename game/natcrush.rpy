@@ -221,6 +221,9 @@ label natcrush_act:
     m 1a "That's why I always keep a snack in my bag for her."
     m 5a "Anyway...!"
     m "Why don't we all share poems now?"
+    scene black
+    show monika at thide zorder 2
+    hide monika
     jump natcrush
 
 return
