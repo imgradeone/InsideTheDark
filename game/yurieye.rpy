@@ -1,7 +1,7 @@
 label yurieye:
     menu:
 
-        "你想怎么感受 Yuri 的三次元之眼？"
+        "imgradeone" "你想怎么感受 Yuri 的三次元之眼？"
 
         "体验！（原版）":
             jump yurieye_original
@@ -16,7 +16,7 @@ return
 
 label yurieye_original:
 
-    "好的，那么开始吧！"
+    "imgradeone" "好的，那么开始吧！"
 
     scene bg closet
     show yuri 2t at t11 zorder 2
@@ -74,9 +74,9 @@ return
 
 label yurieye_alt:
 
-    "嗯..."
-    "你应该是认真的。"
-    "那么，开始吧。"
+    "imgradeone" "嗯..."
+    "imgradeone" "你应该是认真的。"
+    "imgradeone" "那么，开始吧。"
 
     scene bg closet
     show yuri 2t at t11 zorder 2

@@ -2,7 +2,7 @@ label natjustmonika:
 
     menu:
 
-        "你想选择哪个项目？"
+        "imgradeone" "你想选择哪个项目？"
 
         "体验！":
             jump natjustmonika_act

@@ -3,8 +3,7 @@ label sayori:
     show sayori 1a at t44 zorder 3
 
     menu:
-
-        "你想拿什么恐怖的内容来迫害 Sayori？"
+        "imgradeone" "你想拿什么恐怖的内容来迫害 Sayori？"
 
         "晴 天 娃 娃 自 挂 东 南 枝":
             show sayori at thide zorder 3
@@ -25,8 +24,7 @@ label yuri:
     show yuri 1a at t44 zorder 3
 
     menu:
-
-        "你想拿什么恐怖的内容来迫害 Yuri？"
+        "imgradeone" "你想拿什么恐怖的内容来迫害 Yuri？"
 
         "精 湛 刀 法":
             show yuri at thide zorder 3
@@ -49,8 +47,7 @@ label natsuki:
     show natsuki 1a at t44 zorder 3
 
     menu:
-
-        "你想拿什么恐怖的内容来迫害 Natsuki？"
+        "imgradeone" "你想拿什么恐怖的内容来迫害 Natsuki？"
 
         "歪 脖 子 树":
             show natsuki at thide zorder 3
@@ -60,7 +57,7 @@ label natsuki:
             show natsuki at thide zorder 3
             hide natsuki
             jump natcrush
-        "只 要 M o n i k a":
+        "只要 Monika。":
             show natsuki at thide zorder 3
             hide natsuki
             jump natjustmonika

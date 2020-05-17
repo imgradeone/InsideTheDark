@@ -68,8 +68,7 @@ image n_rects_ghost5:
 label natcrush:
 
     menu:
-
-        "你想选择哪个项目？"
+        "imgradeone" "你想选择哪个项目？"
 
         "体验！":
             jump natcrush_act

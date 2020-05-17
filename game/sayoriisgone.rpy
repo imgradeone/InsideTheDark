@@ -83,8 +83,7 @@ image splash_glitch_y:
 label sayoriisgone:
 
     menu:
-
-        "你想选择哪个项目？"
+        "imgradeone" "你想选择哪个项目？"
 
         "体验！":
             jump sayoriisgone_act
@@ -97,26 +96,26 @@ label sayoriisgone:
     return
 
 label sayoriisgone_act:
-    "接下来是原版内容。"
-    "请注意脖子安全。"
-    "让我先导入资源..."
+    "imgradeone" "接下来是原版内容。"
+    "imgradeone" "请注意脖子安全。"
+    "imgradeone" "让我先导入资源..."
 
     menu:
-        "对了，你想对 Sayori 说什么？"
+        "imgradeone" "对了，你想对 Sayori 说什么？"
 
         "我爱你。":
             $ sayori_confess = True
             scene s_cg3 with dissolve_cg
-            "你是个大好人。"
-            "你就是能拯救 Sayori 的人！"
+            "imgradeone" "你是个大好人。"
+            "imgradeone" "你就是能拯救 Sayori 的人！"
             scene black with dissolve_cg
         "你永远是我最好的朋友。":
             $ sayori_confess = False
-            "这不太好吧..."
-            "但这是你的选择。"
-            "所以..."
+            "imgradeone" "这不太好吧..."
+            "imgradeone" "但这是你的选择。"
+            "imgradeone" "所以..."
 
-    "开始吧。"
+    "imgradeone" "开始吧。"
 
     scene bg residential_day
     "我在想什么？"
@@ -289,49 +288,49 @@ label sayoriisgone_act:
 
     "..."
 
-    "天哪..."
-    "但愿没出 bug..."
-    "嘿，Sayori！"
-    "你还好吧？"
+    "imgradeone" "天哪..."
+    "imgradeone" "但愿没出 bug..."
+    "imgradeone" "嘿，Sayori！"
+    "imgradeone" "你还好吧？"
 
     show sayori 4p at t11 zorder 2
     s "啊啊啊啊啊啊啊..."
 
-    "讲真，有点抱歉把你的模型挂上去..."
-    "但是..."
-    "记住..."
-    "我永远爱你。"
+    "imgradeone" "讲真，有点抱歉把你的模型挂上去..."
+    "imgradeone" "但是..."
+    "imgradeone" "记住..."
+    "imgradeone" "我永远爱你。"
 
-    s 1q "呃呵呵呵..."
+    s 1q "呃呵呵..."
 
     hide sayori
 
-    "顺便，你有没有去看看 traceback.txt？"
-    "那里有些..."
-    "很有意思的东西。"
+    "imgradeone" "顺便，你有没有去看看 traceback.txt？"
+    "imgradeone" "那里有些..."
+    "imgradeone" "很有意思的东西。"
 
-    "我先整理一下..."
+    "imgradeone" "我先整理一下..."
     stop music fadeout 2.0
     jump sayoriisgone
 
 return
 
 label sayoriisgone_ins:
-    "当前汉化未完全，暂时放出英文版。"
+    "imgradeone" "当前汉化未完成，暂时放出英文版。"
 
-    "I'm still working on this."
+    "imgradeone" "I'm still working on this."
 
-    "comingsoon..."
+    "imgradeone" "comingsoon..."
 
-    "But now I can show you a part of it."
+    "imgradeone" "But now I can show you a part of it."
 
-    "So, I still need to import the resources..."
+    "imgradeone" "So, I still need to import the resources..."
 
     image fake_exception3 = Text("File \"game/sayoriisgone.rpy\", line 339\nSee traceback.txt for details.", size=20, style="_default")
     
-    "OK."
+    "imgradeone" "OK."
 
-    "First of all, you will noticed that there are a fake exception in the background."
+    "imgradeone" "First of all, you will noticed that there are a fake exception in the background."
     show exception_bg zorder 2
     show fake_exception zorder 2:
         xpos 0.1 ypos 0.05
@@ -341,27 +340,26 @@ label sayoriisgone_ins:
         try: sys.modules['renpy.error'].report_exception("wait, wow, that's such a great thing.", False)
         except: pass
     
-    "Just look like this."
-    "This looks like a real Ren'Py error. At this time, I created the traceback file as well."
-    "Go to have a look at the traceback file."
-    "..."
-    "Ahaha, that's really interesting."
+    "imgradeone" "Just look like this."
+    "imgradeone" "This looks like a real Ren'Py error. At this time, I created the traceback file as well."
+    "imgradeone" "Go to have a look at the traceback file."
+    "imgradeone" "..."
+    "imgradeone" "Ahaha, that's really interesting."
 
-    "So how do I write the traceback?"
+    "imgradeone" "So how do I write the traceback?"
 
     call updateconsole("sys.modules['renpy.error'].report_exception(\"wait, wow, that's such a great thing.\", False)", "traceback.txt created.") from _call_updateconsole_15
 
-    "That is the code."
-    "Clone the repo and have a look."
+    "imgradeone" "That is the code."
+    "imgradeone" "Clone the repo and have a look."
     call hideconsole from _call_hideconsole_2
     hide fake_exception
     hide fake_exception2
     hide exception_bg
 
-    "I'm still working on this."
+    "imgradeone" "I'm still working on this."
 
-    "comingsoon..."
-
+    "imgradeone" "comingsoon..."
 
     jump sayoriisgone
 
@@ -448,9 +446,9 @@ label sayoriisgone_alt:
 
     hide sayori
 
-    "顺便，你有没有去看看 traceback.txt？"
-    "那里有些..."
-    "很{i}有{/i}意思的东西。"
+    "imgradeone" "顺便，你有没有去看看 traceback.txt？"
+    "imgradeone" "那里有些..."
+    "imgradeone" "很{i}有{/i}意思的东西。"
 
     stop music fadeout 2.0
 

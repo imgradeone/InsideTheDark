@@ -2,7 +2,7 @@ label yurikill:
 
     menu:
 
-        "你想选择哪个项目？"
+        "imgradeone" "你想选择哪个项目？"
 
         "体验！":
             jump yurikill_act
@@ -14,8 +14,8 @@ label yurikill:
 
 label yurikill_act:
 
-    "好的，那么开始吧。"
-    "已知问题：凝视尸体的时长不能通过存档读档来加速。"
+    "imgradeone" "已知问题：凝视尸体的时长不能通过存档读档来加速。"
+    "imgradeone" "好的，那么开始吧。"
     scene bg club_day2  
     #您有 1/6 的几率触发死不瞑目的 Sayori 彩蛋，如果你看到了这行注释，请加油触发（
     play music t10y
@@ -60,7 +60,7 @@ label yurikill_act:
 
     menu:
 
-#       "凉凉预警"
+#       "imgradeone" "凉凉预警"
 
         "是的。":
             jump yuriinkill
@@ -143,7 +143,8 @@ label yurikill_act:
             $ persistent.yurikillround += 1
             if persistent.yurikillround < 1440:
                 $ gtext = glitchtext(renpy.random.randint(8, 80))
-                y "当前进度：[persistent.yurikillround]/1440, [gtext]"
+                "imgradeone" "{fast}当前进度：[persistent.yurikillround]/1440{fast}"
+                y "[gtext]"
                 $ _history_list.pop()
                 jump yurikillloop
             else:

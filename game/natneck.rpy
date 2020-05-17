@@ -70,7 +70,7 @@ label natneck:
 
     menu:
 
-        "你想选择哪个项目？"
+        "imgradeone" "你想选择哪个项目？"
 
         "体验！":
             jump natneck_act
@@ -247,16 +247,16 @@ label natneck_alt:
     n 3f "你要立刻删除这个 mod。"
     $ style.say_dialogue = style.edited
     n "不然如果我爸发现了这个，他会打{i}屎{/i}我。"
-	$ _history_list[-1].what = "不然如果我爸发现了这个，就不知道他会怎么样了。"
+    $ _history_list[-1].what = "不然如果我爸发现了这个，就不知道他会怎么样了。"
     $ style.say_dialogue = style.normal
     n scream "啊啊..."
     n "有点不对劲..."
-	$ _history_list.pop()
+    $ _history_list.pop()
     show screen tear(8, offtimeMult=1, ontimeMult=10)
     pause 3.0
     stop music
     hide screen tear
-	$ style.say_dialogue = style.edited
+    $ style.say_dialogue = style.edited
     n ghost_base "终于来了..."
     n "最坏的时刻..."
     n "...终于{b}来临了！！！！{/b}"

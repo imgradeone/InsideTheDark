@@ -1,6 +1,5 @@
 ## splash screen is first thing that gets shown to player
 init -100 python:
-
     # archive check for mods
     for archive in ['audio','images','fonts']:
         if archive not in config.archives:
@@ -245,6 +244,7 @@ label splashscreen:
             firstrun = renpy.file("firstrun").read(1)
         except:
             with open(config.basedir + "/game/firstrun", "wb") as f:
+                f.write('1')
                 pass
     if not firstrun:
         if persistent.first_run and not persistent.do_not_delete:
