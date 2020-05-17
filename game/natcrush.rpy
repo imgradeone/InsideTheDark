@@ -69,111 +69,111 @@ label natcrush:
 
     menu:
 
-        "Which section do you want?"
+        "你想选择哪个项目？"
 
-        "EXPERIENCE":
+        "体验！":
             jump natcrush_act
 #        "EXPERIENCE (Peace ver.)":
 #            jump natcrush
 #        "Inside the Code (TODO)":
 #            jump natcrush
-        "Back to select menu":
+        "返回上一级":
             jump natsuki
 return
 
 label natcrush_act:
 
-    "OK, Act Start."
+    "好的，演出开始。"
 
     scene n_cg1_bg
     show n_cg1_base
     with dissolve_cg
-    mc "...Are you sure this isn't boring for you?"
-    n "It's not!"
-    mc "Even though you're just watching me read?"
-    n "Well...!"
-    n "I'm...fine with that."
-    mc "If you say so..."
-    mc "...I guess it's fun sharing something you like with someone else."
-    mc "I always get excited when I convince any of my friends to pick up a series I enjoy."
-    mc "You know what I mean?"
-    n "...?"
-    mc "Hm?"
-    mc "You don't?"
+    mc "...你确定那样不会无聊吗？"
+    n "不会！"
+    mc "即使你只是看我读着？"
+    n "额...！"
+    n "我认为...这样很好。"
+    mc "如果你这样说..."
+    mc "...我想与他人分享你喜欢的东西很有趣。"
+    mc "当我说服任何一个朋友挑选我喜欢的系列时，我总是会感到兴奋。"
+    mc "你明白我的意思吧？"
+    n "...？"
+    mc "嗯？"
+    mc "你不明白？"
     show n_cg1_exp2 at cgfade
-    n "Um..."
-    n "That's not..."
-    n "Well, I wouldn't really know."
-    mc "...What do you mean?"
-    mc "Don't you share your manga with your friends?"
+    n "嗯..."
+    n "那样不是..."
+    n "好吧，我不会真正地明白。"
+    mc "...你这是什么意思？"
+    mc "难道你没有把漫画分享给你的朋友过吗？" # Don't you share your manga with your friends?"
     hide n_cg1_exp2
     show n_cg1_exp3 at cgfade
-    n "Could you not rub it in?"
-    n "Jeez..."
-    mc "Ah... Sorry..."
-    n "Hmph."
-    n "Like I could ever get my friends to read this..."
-    n "They just think manga is for kids."
-    n "I can't even bring it up without them being all like..."
-    n "'Eh? You still haven't grown out of that yet?'"
-    n "Makes me want to punch them in the face..."
-    mc "Urgh, I know those kinds of people..."
-    mc "Honestly, it takes a lot of effort to find friends who don't judge, much less friends who are also into it..."
-    mc "I'm already kind of a loser, so I guess I gravitated toward the other losers over time."
-    mc "But it's probably harder for someone like you..."
+    n "你不能忘记那件事吗？"
+    n "真是的..."
+    mc "啊... 对不起..."
+    n "哼。"
+    n "说的像是我说服了我的朋友们读那一篇一样..."
+    n "他们只觉得漫画是给小孩子看的。"
+    n "如果他们都不喜欢的话，我甚至无法提开主题。"
+    n "”额？你还没脱离那个想法吗？“"
+    n "说得让我想一拳凹进他们的脸皮里..."
+    mc "呃，我认识那种人。"
+    mc "老实说，要找到不做判断的朋友，要花很多心血..."
+    mc "我已经是一个失败者，所以我想，随着时间的流逝，我已然倾向于其他的失败者了。"
+    mc "但是对像你这样的人来说可能更难..."
     hide n_cg1_exp3
-    n "Hm."
-    n "Yeah, that's pretty accurate."
-    "{i}...Wait, which part??{/i}"
+    n "嗯。"
+    n "是的，这很准确。"
+    "{i}...等等，是哪一部分？{/i}"
     $ style.say_dialogue = style.normal
-    n "I mean, I feel like I can't even keep it in my own room..."
+    n "我是说，我觉得我甚至不能把它放在自己的房间里。"
 
     $ style.say_dialogue = style.edited
-    n "My dad would beat the shit out of me if he found this."
+    n "如果他发现了这个，我父亲会打{i}屎{/i}我。"
     $ style.say_dialogue = style.normal
-    $ _history_list[-1].what = "I don't even know what my dad would do if he found this."
-    n "At least it's safe here in the clubroom."
+    $ _history_list[-1].what = "我甚至不知道，如果我父亲发现了那个，会做什么。"
+    n "至少在俱乐部房间里是安全的。"
     show n_cg1_exp3 at cgfade
-    n "'Cept Monika's kind of a jerk about it..."
-    n "Ugh! I just can't win, can I?"
-    mc "Well, it paid off in the end, didn't it?"
-    mc "I mean, here I am, reading it."
-    n "Well, it's not like that solves any of my problems."
-    mc "Maybe..."
-    mc "But at least you're enjoying yourself, right?"
+    n "除了 Monika，对将那个寄放在房间里的态度有点古怪。"
+    n "啊！我就是赢不了，————难道我赢得了吗？"
+    mc "好吧，最终因那件事得到了代价，不是吗？"
+    mc "我的意思是，我在这里，读着它。"
+    n "好吧，这并不能解决我的任何问题。"
+    mc "也许吧..."
+    mc "但是至少你玩的开心，对吧？"
     hide n_cg1_exp3
     show n_cg1_exp2 at cgfade
-    n "--"
+    n "——"
     n "..."
-    n "...So?"
-    mc "Ahaha."
+    n "...所以呢？"
+    mc "啊哈哈。"
     hide n_cg1_exp2
     show n_cg1_exp3 at cgfade
-    n "Jeez, that's enough!"
-    n "Are you gonna keep reading, or what?"
-    mc "Yeah, yeah..."
-    "I flip the page."
+    n "真是的，够了！"
+    n "你到底是要读那本书，还是有别的目的？"
+    mc "是啊..."
+    "我翻了页。"
     show black with dissolve_cg
     "..."
     "..."
     "....."
     "......."
     "........."
-    "Time passes."
+    "时间渐渐地消逝了。"
     hide n_cg1_exp3
     show n_cg1_exp4 at cgfade behind black
-    "Natsuki is strangely quiet now."
-    "I glance over at her."
+    "Natsuki 现在古怪地安静下来了。" # is strangely quiet now."
+    "我瞥了她一眼。"
     hide black with dissolve_cg
-    "It looks like she's started to fall asleep."
-    mc "Hey, Natsuki..."
+    "看来她开始入睡了。"
+    mc "嘿，Natsuki..."
     hide n_cg1_exp4
     show n_cg1_exp5 at cgfade
-    n "Y-Yeah...?"
-    "Suddenly, Natsuki collapses straight into me."
+    n "...有？"
+    "突然，Natsuki 径直陷入了我。" # 或是崩溃？
     play sound fall
     $ style.say_dialogue = style.normal
-    mc "H-Hey--"
+    mc "嘿————"
     show n_cg1_exp5
     hide n_cg1_exp5
 
@@ -195,32 +195,32 @@ label natcrush_act:
     window auto
     scene bg club_day
     show monika 1r at t11 zorder 2
-    m "Oh jeez..."
-    m 1d "Natsuki, are you okay?"
+    m "哦，天..."
+    m 1d "Natsuki，你还好吗？"
     show monika at t21 zorder 2
     show natsuki 12b at f22 zorder 3
     n "..."
     show natsuki at t22 zorder 2
     show monika at f21 zorder 3
-    m 1a "Here..."
+    m 1a "来..."
     show monika at t21 zorder 2
-    "Monika reaches into her bag and pulls out some kind of protein bar."
-    "She throws it in Natsuki's direction."
-    "Natsuki's eyes suddenly light up again."
-    "She snatches the bar from the floor and immediately tears off the wrapper."
+    "Monika 伸进她的包里，掏出某种蛋白质棒。"
+    "她把它扔向 Natsuki 的方向。"
+    "Natsuki 的眼睛突然又发亮起来了。"
+    "她从地板上抓住那条棒，并立即撕下了包装纸。"
     show natsuki at f22 zorder 3
-    n 1s "I told you not to give mmph..."
+    n 1s "我告诉过你不要给我————"
     show natsuki at t22 zorder 2
-    "She doesn't even finish her sentence before stuffing it into her mouth."
+    "在收回那个句子之前，她甚至还没有说完它。"
     show natsuki at thide zorder 1
     hide natsuki
     show monika 3b at t11 zorder 2
-    m "Don't worry, [player]."
-    m "She's fine."
-    m "It just happens every now and then."
-    m 1a "That's why I always keep a snack in my bag for her."
-    m 5a "Anyway...!"
-    m "Why don't we all share poems now?"
+    m "不用担心她，[player]。"
+    m "她还好。"
+    m "发生那种事情只是偶然的。"
+    m 1a "这就是为什么我总是为她在我的包里准备零食。"
+    m 5a "不管了...！"
+    m "我们现在为何不来分享诗呢？"
     jump natcrush
 
 return
