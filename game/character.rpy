@@ -16,7 +16,7 @@ label sayori:
         "返回角色选择":
             show sayori at thide zorder 3
             hide sayori
-            jump horrormenu
+            jump horrormenu_return_from_char_menu
     return
 
 label yuri:
@@ -37,7 +37,7 @@ label yuri:
         "返回角色选择":
             show yuri at thide zorder 3
             hide yuri
-            jump horrormenu
+            jump horrormenu_return_from_char_menu
     return
 
 return
@@ -64,7 +64,7 @@ label natsuki:
         "返回角色选择":
             show natsuki at thide zorder 3
             hide natsuki
-            jump horrormenu
+            jump horrormenu_return_from_char_menu
     return
 
 return
