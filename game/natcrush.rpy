@@ -143,7 +143,7 @@ label natcrush_act:
     mc "但是至少你玩的开心，对吧？"
     hide n_cg1_exp3
     show n_cg1_exp2 at cgfade
-    n "——"
+    n "————"
     n "..."
     n "...所以呢？"
     mc "啊哈哈。"
@@ -173,7 +173,7 @@ label natcrush_act:
     "突然，Natsuki 径直陷入了我。" # 或是崩溃？
     play sound fall
     $ style.say_dialogue = style.normal
-    mc "嘿————"
+    mc "嘿！嘿————"
     show n_cg1_exp5
     hide n_cg1_exp5
 
