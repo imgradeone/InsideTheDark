@@ -80,8 +80,10 @@ label horrorintro:
 
     show yuri 1a at t45 zorder 4
     $ style.say_dialogue = style.edited
-    show noise
-    show vignette
+    show noise zorder 3:
+        alpha 0.25
+    show vignette zorder 3:
+        alpha 0.75
     y 3y3 "啊哈↓↓↓↓↓↓↓哈↓↓↓↓↓哈↓↓↓↓↓哈↓↓↓↓哈↓↓↓哈↓↓哈↓"
     $ style.say_dialogue = style.normal
     hide noise
@@ -91,8 +93,10 @@ label horrorintro:
     y "啥啊...？"
     y "我咋变成..."
     $ style.say_dialogue = style.edited
-    show noise
-    show vignette
+    show noise zorder 3:
+        alpha 0.25
+    show vignette zorder 3:
+        alpha 0.75
     y 3y3 "疯nggggggggggggggggg子iiiiiiiiiiii了eeeeeeeeeee？！"
     show yuri at thide zorder 4
     hide yuri
