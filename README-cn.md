@@ -34,10 +34,10 @@
 跟着以下步骤来深入代码。
 
 1. 下载并安装 [Ren'Py SDK 版本 6.99.12](https://www.renpy.org/release/6.99.12). *（注意：现有版本的 DDLC 不兼容由其他版本 Ren'Py SDK 生成的 .rpyc 文件）*
-1. Clone 这个 repo 到 Ren'Py SDK 的工作目录。
-1. 下载 DDLC（可在 https://ddlc.moe 或者 Steam 获取）并将 `audio.rpa`、`images.rpa` 和 `fonts.rpa` 复制到工程的 /game 文件夹。（**不要**把 `scripts.rpa` 复制过去，因为这可能造成冲突。）
-1. 在 Ren'Py 里启动工程。它应该正常启动。
-1. 如果想构建可发行的 Release 版本，在 Ren'Py 项目启动器里选择 “Build Distributions” / “生成分发版”，勾选 “DDLC Compatible Mod” 并构建。这将创建一个包含 mod 和安装指南的跨平台 ZIP 文件。
+2. Clone 这个 repo 到 Ren'Py SDK 的工作目录。
+3. 下载 DDLC（可在 https://ddlc.moe 或者 Steam 获取）并将 `audio.rpa`、`images.rpa` 和 `fonts.rpa` 复制到工程的 /game 文件夹。（**不要**把 `scripts.rpa` 复制过去，因为这可能造成冲突。）
+4. 在 Ren'Py 里启动工程。它应该正常启动。
+5. 如果想构建可发行的 Release 版本，在 Ren'Py 项目启动器里选择 “Build Distributions” / “生成分发版”，勾选 “DDLC Compatible Mod” 并构建。这将创建一个包含 mod 和安装指南的跨平台 ZIP 文件。
 
 ### 只想玩？
 
@@ -45,13 +45,13 @@
 
 但是早期测试版本已经推出。您可以在 [Releases 页面](https://github.com/imgradeone/InsideTheDark/releases)找到它。
 
-中国大陆用户亦可访问[这里](https://gitee.com/imgradeone/InsideTheDark/releases)下载。
+中国大陆用户亦可访问[码云](https://gitee.com/imgradeone/InsideTheDark/releases)下载。
 
 目前你可以试试：
 
-1. 下载本 repo 的 ZIP。
-2. 复制 **/game 文件夹下的所有文件** 到你的原版 DDLC。您可以从 https://ddlc.moe 下载游戏。
-3. 开始玩开发版吧。
+  1. 下载本 repo 的 ZIP。
+  2. 复制 **/game 文件夹下的所有文件** 到你的原版 DDLC。您可以从 https://ddlc.moe 下载游戏。
+  3. 开始玩开发版吧。
 
 ### 简体中文版本？
 
@@ -61,10 +61,10 @@
 
 ## 感谢
 
-- Team Salvato http://teamsalvato.com / https://ddlc.moe
-- Monika After Story Team http://www.monikaafterstory.com
+- [Team Salvato](http://teamsalvato.com) / [ddlc.moe](https://ddlc.moe)
+- [Monika After Story 团队](http://www.monikaafterstory.com)
 
-## Disclaimer
+## 免责声明
 
 *Doki Doki Literature Club* 和所有相关角色和商标归 Team Salvato 所有，并且依据 [IP Guidelines](http://teamsalvato.com/ip-guidelines/) 进行使用。
 
