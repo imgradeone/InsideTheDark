@@ -19,8 +19,7 @@ label horrorintro:
     if not persistent.example_intro_seen:
         "imgradeone" "但这一次，我们会深入代码。"
         "imgradeone" "所以，确保自己已经从 https://github.com/imgradeone/InsideTheDark 克隆代码以便学习。"
-    "imgradeone" "不过，如果你只是想来体验一下恐怖的 DDLC 的话..."
-    if not persistent.example_intro_seen:
+        "imgradeone" "不过，如果你只是想来体验一下恐怖的 DDLC 的话..."
         "imgradeone" "那么..."
         menu:
             "imgradeone" "您打出真结局来了吗？"
