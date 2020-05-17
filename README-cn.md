@@ -1,6 +1,5 @@
-# Inside the Dark
+# ![Inside the Dark logo](./game/mod_assets/insidethedark.png) Inside the Dark
 
-![Inside the Dark logo](./game/mod_assets/insidethedark.png)
 既是高能播放器，又是学写代码的好东西（
 
 本 mod 基于 Monika After Story 团队的 [DDLCModTemplate](https://github.com/Monika-After-Story/DDLCModTemplate) 制作，特别感谢。
