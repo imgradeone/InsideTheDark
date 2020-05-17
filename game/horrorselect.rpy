@@ -7,9 +7,9 @@ label horrorintro:
     with dissolve_scene_full
     play music t3
 
-    "imgradeone" "那么..."
-    "imgradeone" "欢迎来到 Inside The Dark mod。"
-    "imgradeone" "我是 mod 作者，imgradeone。"
+    "???" "那么..."
+    "???" "欢迎来到 Inside The Dark mod。"
+    "???" "我是 mod 作者，imgradeone。"
     if not persistent.example_intro_seen:
         "imgradeone" "你应该蛮享受 DDLC 吧，尽管它有那么{i}亿点点{/i}...恐怖？"
         "imgradeone" "呃呵呵..."
@@ -44,7 +44,6 @@ label horrorintro:
         "imgradeone" "那么，有请 DDLC 天团出场！"
         $ persistent.example_intro_seen = True
     else:
-        "imgradeone" "四个阔爱的妹子加入了这个 mod————"
         "imgradeone" "有请 DDLC 天团出场！"
     "imgradeone" "你好！"
 
@@ -146,16 +145,6 @@ label horrormenu:
     stop music fadeout 2.0
     pause 2.0
     play music "<loop 4.444>bgm/5_ghost.ogg"
-    # pass-thru
-label hmenu_noise:
-    show noise zorder 2:
-        alpha 0.0
-        linear 3.0 alpha 0.25
-    show vignette zorder 2:
-        alpha 0.0
-        linear 3.0 alpha 0.75
-    pause 2.0
-    "imgradeone" "现在可以进入最糟糕的部分了..."
     # pass-thru
 label horrormenu_return_from_char_menu:
     menu:
