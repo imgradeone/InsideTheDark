@@ -1,5 +1,6 @@
-# Inside The Dark
+# Inside the Dark
 
+![Inside the Dark logo](./game/mod_assets/insidethedark.png)
 既是高能播放器，又是学写代码的好东西（
 
 本 mod 基于 Monika After Story 团队的 [DDLCModTemplate](https://github.com/Monika-After-Story/DDLCModTemplate) 制作，特别感谢。
@@ -18,7 +19,7 @@
 
 本 mod 理应在通关原游戏后再进行游玩，因为本 mod 包含**大量剧透**。
 
-本 mod 包含来自原游戏的**恐怖部分**，因此，本 mod 不适合儿童或者极易受影响的人。更多详情可以访问 https://ddlc.moe/warning.html（亦包含剧透）。
+本 mod 包含来自原游戏的**恐怖部分**，因此，本 mod 不适合儿童或者极易受影响的人。更多详情可以访问 https://ddlc.moe/warning.html （亦包含剧透）。
 
 **不要说我们没有警告过你.png**
 
