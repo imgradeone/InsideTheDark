@@ -18,7 +18,7 @@
 
 本 mod 理应在通关原游戏后再进行游玩，因为本 mod 包含**大量剧透**。
 
-本 mod 包含来自原游戏的**恐怖部分**，因此，本 mod 不适合儿童或者极易受影响的人。更多详情可以访问 https://ddlc.moe/warning.html （亦包含剧透）。
+本 mod 包含来自原游戏的**恐怖部分**，因此，本 mod 不适合儿童或者极易受影响的人。更多详情可以访问 https://ddlc.moe/warning.html（亦包含剧透）。
 
 **不要说我们没有警告过你.png**
 
@@ -35,23 +35,23 @@
 
 ### 只想玩？
 
-由于目前 mod 自身完成度极低，所以没有正式版 Release。
+由于目前 mod 自身完成度极低，所以没有正式的发布版。
 
-但是早期测试版本已经推出。您可以在 [Releases 页面](https://github.com/imgradeone/InsideTheDark/releases) 找到它。
+但是早期测试版本已经推出。您可以在 [Releases 页面](https://github.com/imgradeone/InsideTheDark/releases)找到它。
 
-中国大陆用户可访问 [这里](https://gitee.com/imgradeone/InsideTheDark/releases)。
+中国大陆用户亦可访问[这里](https://gitee.com/imgradeone/InsideTheDark/releases)下载。
 
 目前你可以试试：
 
 1. 下载本 repo 的 ZIP。
-1. 复制 **/game 文件夹下的所有文件** 到你的原版 DDLC。您可以从 https://ddlc.moe 下载游戏。
-1. 开始玩吧。
+2. 复制 **/game 文件夹下的所有文件** 到你的原版 DDLC。您可以从 https://ddlc.moe 下载游戏。
+3. 开始玩开发版吧。
 
 ### 简体中文版本？
 
 由于目前 mod 自身完成度极低，且字体问题待解决，所以简体中文版本绝赞咕咕咕中。
 
-目前已创建一个新 branch，用于中文版开发。同时，暂不接受社区翻译。
+目前已创建一个新 [branch](tree/chinese)，用于中文版开发。同时，暂不接受社区翻译。
 
 ## 感谢
 
@@ -60,6 +60,6 @@
 
 ## Disclaimer
 
-*Doki Doki Literature Club* 和所有相关角色和商标归 Team Salvato 所有，并且依据 [IP Guidlines](http://teamsalvato.com/ip-guidelines/) 进行使用。
+*Doki Doki Literature Club* 和所有相关角色和商标归 Team Salvato 所有，并且依据 [IP Guidelines](http://teamsalvato.com/ip-guidelines/) 进行使用。
 
 代码仅供**学习**用途。
