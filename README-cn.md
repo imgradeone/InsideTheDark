@@ -70,6 +70,15 @@ You are now viewing the Chinese version of the Inside The Dark mod. If you need 
 - [Team Salvato](http://teamsalvato.com) / [ddlc.moe](https://ddlc.moe)
 - [Monika After Story 团队](http://www.monikaafterstory.com)
 
+## 中文字体相关
+
+本 mod 的汉化版使用了部分免费商用字体，在此感谢字体作者。如有版权问题，将从 repo 里暂时移除字体。
+
+- 阿里巴巴 / 阿里巴巴普惠体 https://ics.alibaba.com/project/Hn8mXx
+- 站酷字体 / 站酷快乐体（免费字体区） https://www.zcool.com.cn/special/zcoolfonts/
+- 杨任东字体 / 杨任东竹石体 - 可关注“杨任东字体”微信公众号免费获取
+- Adobe、Google 等 / 思源宋体 https://source.typekit.com/source-han-serif/cn/
+
 ## 免责声明
 
 *Doki Doki Literature Club* 和所有相关角色和商标归 Team Salvato 所有，并且依据 [IP Guidelines](http://teamsalvato.com/ip-guidelines/) 进行使用。
