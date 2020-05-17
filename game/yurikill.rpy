@@ -60,7 +60,7 @@ label yurikill_act:
 
     menu:
 
-        "凉凉预警"
+#       "凉凉预警"
 
         "是的。":
             jump yuriinkill

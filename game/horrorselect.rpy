@@ -4,8 +4,8 @@ label horrorintro:
     "那么..."
     "欢迎来到 Inside The Dark mod。"
     "我是 mod 作者，imgradeone。"
-    "你应该蛮享受 DDLC 吧，尽管它有那么亿点点...恐怖？"
-    "Ehehe..."
+    "你应该蛮享受 DDLC 吧，尽管它有那么{i}亿点点{/i}...恐怖？"
+    "呃呵呵..."
     "所以这个 mod 可能会伤害到你。"
     "但这一次，我们会深入代码。"
     "所以，确保自己已经从 https://github.com/imgradeone/InsideTheDark 克隆代码以便学习。"
@@ -110,6 +110,8 @@ label horrormenu:
             jump natsuki
         "重播首次启动的故事":
             jump horrorintro
+#        "Credits (in dev)":
+#            jump creditofitd
         "返回主菜单":
             return
 

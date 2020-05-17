@@ -221,6 +221,9 @@ label natcrush_act:
     m 1a "这就是为什么我总是为她在我的包里准备零食。"
     m 5a "不管了...！"
     m "我们现在为何不来分享诗呢？"
+    scene black
+    show monika at thide zorder 2
+    hide monika
     jump natcrush
 
 return

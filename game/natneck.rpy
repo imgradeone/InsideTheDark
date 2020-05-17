@@ -78,6 +78,8 @@ label natneck:
             jump natneck_peace
 #        "Inside the Code (TODO)":
 #            jump natneck
+        "Alt Version by imgradeone":
+            jump natneck_alt
         "返回上一级":
             jump natsuki
 
@@ -230,3 +232,57 @@ label natneck_peace:
     scene black
     jump natneck
 return
+
+label natneck_alt:
+    "Yep, this is my own made version, but very suck."
+
+    scene bg club_day2
+
+    show natsuki 1g at t11 zorder 3
+    n "[player]..."
+    n "Why did you download this mod?"
+    n "You know what?"
+    n 2b "This is the suckest mod ever."
+    n "Why did you consider it?"
+    n 3f "You should delete the mod now."
+    $ style.say_dialogue = style.edited
+    n "Or my dad would beat the shit out of me if he found this."
+    $ style.say_dialogue = style.normal
+    n scream "Ahhhh..."
+    n "Something went wrong..."
+    show screen tear(8, offtimeMult=1, ontimeMult=10)
+    pause 3.0
+    stop music
+    hide screen tear
+    n ghost_base "Finally..."
+    n "The worst time..."
+    n "...is COMING!!!!"
+    $ style.say_dialogue = style.normal
+    $ quick_menu = False
+    pause 1
+    play sound "sfx/crack.ogg"
+    show natsuki ghost3
+    pause 0.5
+    hide natsuki
+    play sound "sfx/run.ogg"
+    show natsuki ghost4 at i11 onlayer front
+    pause 0.25
+    window hide(None)
+    hide natsuki onlayer front
+    scene black
+    with None
+    window auto
+    scene black
+    pause 0.5
+    show end:
+        xzoom -1
+    with dissolve_cg
+    pause 2.0
+    scene black
+    with None
+    $ quick_menu = True
+    $ style.say_dialogue = style.normal
+    scene black
+    jump natneck
+
+    return 
