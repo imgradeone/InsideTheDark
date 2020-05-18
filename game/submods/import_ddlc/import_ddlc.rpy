@@ -51,24 +51,24 @@ label import_ddlc_persistent:
     #If you found a DDLC save to import
     if save_path:
         $save_path=save_path[0]
-        "Save data for Doki Doki Literature Club was found at [save_path]."
+        "从 [save_path] 找到了 Doki Doki Literature Club 的存档。"
         menu:
-            "Would you like to import Doki Doki Literature Club save data into [config.name]?\n(DDLC will not be affected)"
-            "Yes, import DDLC save data.":
+            "你希望将 Doki Doki Literature Club 的存档导入 [config.name] 吗？\n（DDLC 不会被影响）"
+            "是":
                 pause 0.3
                 pass
-            "No, do not import.":
+            "否":
                 pause 0.3
                 return
     else:
         #Tell the player that the save wasn't found
-        $quick_menu = False
-        "Save data from Doki Doki Literature Club could not be found."
-        menu:
-            "[config.name] will begin with a new save."
-            "Okay":
-                pause 0.3
-                pass
+        #$quick_menu = False
+        #"找不到 Doki Doki Literature Club 的存档。"
+        #menu:
+        #   "[config.name] 会从新的存档开始。"
+        #   "好的":
+        #       pause 0.3
+        #       pass
         return
     
     python:

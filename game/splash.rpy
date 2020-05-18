@@ -292,8 +292,8 @@ label splashscreen:
         menu:
             "如果继续游玩 [config.name] 将视为你已经通关原游戏，并接受任何剧透和恐怖的内容。"
             "我同意。":
-
                 pass
+
         scene tos2
         with Dissolve(1.5)
         pause 1.0
@@ -301,6 +301,8 @@ label splashscreen:
 
         scene white
         with Dissolve(1.5)
+        
+        call import_ddlc_persistent
 
         $ persistent.first_run = True
 
