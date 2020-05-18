@@ -13,6 +13,7 @@ init python:
 
     splash_messages = [
         "请支持 Doki Doki Literature Club。",
+        splash_message_default,
         "Monika 在看着你在码。",
         "突然忸忸怩怩牛牛牛男男女女扭扭捏捏牛牛牛牛牛哪尼侬额呢喃你你弄",
         "突然nnnnnnnnnnnnnnnnnnnnn nnnnnn",
@@ -320,7 +321,7 @@ label splashscreen:
 #    pause 2.5
 #    hide intro with Dissolve(0.5, alpha=True)
 
-    if persistent.playthrough == 2 and renpy.random.randint(0, 3) == 0:
+    if renpy.random.randint(0, 3) == 0:
         $ splash_message = renpy.random.choice(splash_messages)
     show splash_warning "[splash_message]" with Dissolve(0.5, alpha=True)
     pause 2.0
