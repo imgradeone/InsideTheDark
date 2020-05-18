@@ -447,10 +447,7 @@ screen navigation():
 
             if main_menu:
 
-                if persistent.playthrough == 1:
-                    textbutton _("ŔŗñĮ¼»ŧþŀÂŻŕěōì«") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
-                else:
-                    textbutton _("新游戏") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
+                textbutton _("新游戏") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="请输入你的名字", ok_action=Function(FinishEnterName)))
 
             else:
 
@@ -472,7 +469,7 @@ screen navigation():
 
             textbutton _("设置") action [ShowMenu("preferences"), SensitiveIf(renpy.get_screen("preferences") == None)]
 
-            #textbutton _("About") action ShowMenu("about")
+            #textbutton _("关于") action ShowMenu("about")
 
             if renpy.variant("pc"):
 
@@ -731,20 +728,20 @@ screen about():
     ## This use statement includes the game_menu screen inside this one. The
     ## vbox child is then included inside the viewport inside the game_menu
     ## screen.
-    use game_menu(_("About"), scroll="viewport"):
+    use game_menu(_("关于"), scroll="viewport"):
 
         style_prefix "about"
 
         vbox:
 
             label "[config.name!t]"
-            text _("Version [config.version!t]\n")
+            text _("版本 [config.version!t]\n")
 
             ## gui.about is usually set in options.rpy.
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+            text _("使用 {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only] 制作。\n\n[renpy.license!t]")
 
 
 ## This is redefined in options.rpy to add text to the about screen.
@@ -837,7 +834,7 @@ screen file_slots(title):
 
                         add FileScreenshot(slot) xalign 0.5
 
-                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
+                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("空白槽")):
                             style "slot_time_text"
 
                         text FileSaveName(slot):
@@ -856,9 +853,9 @@ screen file_slots(title):
 
                 #textbutton _("<") action FilePagePrevious(max=9, wrap=True)
 
-                #textbutton _("{#auto_page}A") action FilePage("auto")
+                #textbutton _("自动 {#auto_page}") action FilePage("auto")
 
-                #textbutton _("{#quick_page}Q") action FilePage("quick")
+                #textbutton _("快速 {#quick_page}") action FilePage("quick")
 
                 # range(1, 10) gives the numbers from 1 to 9.
                 for page in range(1, 10):
@@ -1128,7 +1125,7 @@ screen history():
                 text h.what
 
         if not _history_list:
-            label _("The dialogue history is empty.")
+            label _("对话历史为空。")
 
 
 style history_window is empty
@@ -1365,7 +1362,7 @@ screen name_input(message, ok_action):
                 style "confirm_prompt"
                 xalign 0.5
 
-            input default "" value VariableInputValue("player") length 12 allow "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+            input default "" value VariableInputValue("player") length 20 allow "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
 
             #hbox:
             #    xalign 0.5
@@ -1404,7 +1401,7 @@ screen dialog(message, ok_action):
                 xalign 0.5
                 spacing 100
 
-                textbutton _("OK") action ok_action
+                textbutton _("确定") action ok_action
 
 image confirm_glitch:
     "gui/overlay/confirm_glitch.png"
