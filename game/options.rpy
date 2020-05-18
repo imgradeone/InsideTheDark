@@ -1,8 +1,6 @@
-
-
 # human readable name of this game
 # _() marks strings eligable for translation
-define config.name = "Inside The Dark 简体中文版"
+define config.name = "Inside The Dark"
 
 # True shows the name on main menu, False hides it
 define gui.show_name = False
@@ -11,7 +9,7 @@ define gui.show_name = False
 define config.version = "0.1.5-chinese-earlyaccess"
 
 # text placed on about screen
-define gui.about = _("")
+define gui.about = "详勘演职人员表"
 
 # short name used in executables and dirs.
 # ASCII-only, no spaces, no colons, no semis
@@ -69,16 +67,16 @@ default preferences.sfx_volume = 0.75
 define config.save_directory = "InsideTheDarkChs"
 
 # icon displayed on taskbar / dock
-define config.window_icon = "gui/window_icon.png"
+define config.window_icon = "mod_assets/insidethedark.png"
 
 # True means we allow skipping, False means not
 define config.allow_skipping = True
 
 # True means we can autosave, false means not
-define config.has_autosave = False
+define config.has_autosave = True
 
 # True means autosave when we quit, False means not
-define config.autosave_on_quit = False
+define config.autosave_on_quit = True
 
 # Number of autosave slots to use
 define config.autosave_slots = 0
