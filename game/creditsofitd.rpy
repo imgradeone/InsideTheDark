@@ -552,6 +552,6 @@ label credits2:
     #Fade to black
     scene black
 
-    jump horrorselect
+    jump horrormenu
 
     return
