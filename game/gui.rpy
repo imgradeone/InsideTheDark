@@ -1,6 +1,5 @@
 # 00gui.rpy - 59f905327a14428dd48a6f3280ecd2b9f838b3a2
-
-init -1101 python in gui:
+init -1100 python in gui:
 
     ############################################################################
     # Strings used by the confirm screen.

@@ -47,17 +47,14 @@ label horrorintro:
         "imgradeone" "有请 DDLC 天团出场！"
     "imgradeone" "你好！"
 
-    $ t45 = t11
-
-    show monika 1a at t45 zorder 4
+    show monika 1a at t11 zorder 4
     m "嗨，mod 作者！你好，[player]！"
     m 1b "我会一直爱你的呐！"
     m 5a "祝你{i}好运{/i}！"
     show monika at thide zorder 4
     hide monika
 
-    $ audio.t3g_current = "<from " + str(get_pos()) + " loop 4.618>bgm/3g.ogg"
-    play music t3g_current
+    play music "<from " + str(get_pos()) + " loop 4.618>bgm/3g.ogg"
     show noise zorder 3:
         alpha 0.0
         linear 2.0 alpha 0.25
@@ -65,7 +62,7 @@ label horrorintro:
         alpha 0.0
         linear 2.0 alpha 0.75
 
-    show natsuki 1a at t45 zorder 4
+    show natsuki 1a at t11 zorder 4
     $ style.say_dialogue = style.edited
     n 4x "WDNMD，嘿，mod 作者，听说你喜欢写 BUUUUUUUUUUUUUG？"
     $ style.say_dialogue = style.normal
@@ -78,7 +75,7 @@ label horrorintro:
     show natsuki at thide zorder 4
     hide natsuki
 
-    show yuri 1a at t45 zorder 4
+    show yuri 1a at t11 zorder 4
     $ style.say_dialogue = style.edited
     show noise zorder 3:
         alpha 0.25
@@ -101,14 +98,14 @@ label horrorintro:
     show yuri at thide zorder 4
     hide yuri
 
-    show sayori 1a at t45 zorder 4
+    show sayori 1a at t11 zorder 4
     $ style.say_dialogue = style.normal
     s "..."
     s 4p "噫啊啊啊啊啊啊啊啊啊！"
     show sayori at thide zorder 4
     hide sayori
 
-    show natsuki vomit at t45 zorder 4
+    show natsuki vomit at t11 zorder 4
     n "哇啊啊啊啊啊啊啊啊啊啊啊啊啊！"
     n "Yuri 你咋了？？？"
     show natsuki at thide zorder 4
@@ -119,7 +116,7 @@ label horrorintro:
     "imgradeone" "吧..."
 
     mc "嘿，发生啥事？？"
-    show monika 1a at t45 zorder 4
+    show monika 1a at t11 zorder 4
     m "..."
     show monika at thide zorder 4
     hide monika
@@ -128,8 +125,7 @@ label horrorintro:
 
     hide noise
     hide vignette
-    $ audio.t3_current = "<from " + str(get_pos()) + " loop 4.618>bgm/3.ogg"
-    play music t3_current
+    play music "<from " + str(get_pos()) + " loop 4.618>bgm/3.ogg"
     pause 2.0
 
     "imgradeone" "现在就和没事一样了。"
