@@ -302,7 +302,7 @@ label splashscreen:
         scene white
         with Dissolve(1.5)
         
-        call import_ddlc_persistent
+        call import_ddlc_persistent from _call_import_ddlc_persistent
 
         $ persistent.first_run = True
 
