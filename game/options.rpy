@@ -113,7 +113,7 @@ init python:
         else:
             return (float(height) * (float(config.screen_width) / float(config.screen_height)), height)
 
-# define config.default_language = "simplified_chinese"
+define config.default_language = "simplified_chinese"
 
 # BUILD CONFIG
 
