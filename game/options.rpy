@@ -113,8 +113,6 @@ init python:
         else:
             return (float(height) * (float(config.screen_width) / float(config.screen_height)), height)
 
-define config.default_language = "simplified_chinese"
-
 # BUILD CONFIG
 
 init python:
@@ -137,7 +135,7 @@ init python:
     #
 
     # packaged ZIP for distibution
-    build.package(build.directory_name + "Mod", 'zip', build.name, description='DDLC Compatible Mod')
+    build.package(build.directory_name + "Mod", 'zip', build.name, description='DDLC Mod')
 
     # archives to create
     build.archive("scripts", build.name)

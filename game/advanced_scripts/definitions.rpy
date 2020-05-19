@@ -8,10 +8,6 @@ define persistent.demo = False
 define persistent.steam = False
 define config.developer = False #Change this flag to True to enable dev tools
 
-python early:
-    import singleton
-    me = singleton.SingleInstance()
-
 init python:
     config.keymap['game_menu'].remove('mouseup_3')
     config.keymap['hide_windows'].append('mouseup_3')

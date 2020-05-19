@@ -16,3 +16,4 @@ characters/*.chr
 *.swp
 unrpa
 dir_images.rpa
+dialogue.*
