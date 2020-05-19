@@ -250,7 +250,7 @@ label splashscreen:
     if not firstrun:
         if persistent.first_run and not persistent.do_not_delete:
             $ quick_menu = False
-            show menu_bg zorder 1
+            show game_menu_bg zorder 1
             "你似乎删除了 firstrun 文件，并且我们发现还有之前的存档。"
             "如果你触发了大 bug，这里可以让你逃离 bug。"
             "但是，你收集的 CG 状态也会被删除。"
@@ -279,7 +279,7 @@ label splashscreen:
         $ quick_menu = False
         scene white
         pause 0.5
-        show menu_bg zorder 1
+        show game_menu_bg zorder 1
         with Dissolve(1.0)
         pause 1.0
 
