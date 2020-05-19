@@ -250,7 +250,7 @@ label splashscreen:
     if not firstrun:
         if persistent.first_run and not persistent.do_not_delete:
             $ quick_menu = False
-            scene menu_bg
+            add "menu_bg"
             "你似乎删除了 firstrun 文件，并且我们发现还有之前的存档。"
             "如果你触发了大 bug，这里可以让你逃离 bug。"
             "但是，你收集的 CG 状态也会被删除。"
@@ -279,14 +279,13 @@ label splashscreen:
         $ quick_menu = False
         scene white
         pause 0.5
-        scene menu_bg
+        add "menu_bg"
         with Dissolve(1.0)
         pause 1.0
 
         "[config.name] 是 Doki Doki Literature Club 的粉丝向 mod，与 Team Salvato 无关。"
-        "本 mod 理应在通关原游戏后再进行游玩，因此本 mod 包含大量剧透。"
-        "要游玩本 mod，需要原版 Doki Doki Literature Club 的文件。您可以在 https://ddlc.moe 或者 Steam 免费获取。"
-        "本 mod 包含来自原游戏的恐怖部分，因此，本 mod 不适合儿童或者极易受影响的人。更多详情可以访问 https://ddlc.moe/warning.html （亦包含剧透）。"
+        "本 mod 理应在通关原游戏后再进行游玩，因为本 mod 包含大量剧透。"
+        "本 mod 包含来自原游戏的恐怖部分，因此，本 mod 不适合儿童或者极易受影响的人。更多详情可以访问 {a=https://ddlc.moe/warning.html}https://ddlc.moe/warning.html{/a}（亦包含剧透）。"
         "**不要说我们没有警告过你.png**"
 
         menu:
