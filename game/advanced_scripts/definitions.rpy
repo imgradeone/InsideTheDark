@@ -20,13 +20,15 @@ init python:
         if pos: return pos
         return 0
     def delete_all_saves():
-        for savegame in renpy.list_saved_games(fast=True):
-            renpy.unlink_save(savegame)
+        pass
+        #for savegame in renpy.list_saved_games(fast=True):
+        #    renpy.unlink_save(savegame)
     def delete_character(name):
-        if persistent.do_not_delete: return
-        import os
-        try: os.remove(config.basedir + "/characters/" + name + ".chr")
-        except: pass
+        pass
+        #if persistent.do_not_delete: return
+        #import os
+        #try: os.remove(config.basedir + "/characters/" + name + ".chr")
+        #except: pass
     def pause(time=None):
         if not time:
             renpy.ui.saybehavior(afm=" ")

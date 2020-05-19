@@ -1,6 +1,3 @@
-#TODO: Use slow_nodismiss to set up a special event if player tries to delete monika.chr again
-
-
 default persistent.monikatopics = []
 default persistent.monika_reload = 0
 default persistent.tried_skip = None
