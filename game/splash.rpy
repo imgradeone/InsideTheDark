@@ -250,7 +250,7 @@ label splashscreen:
     if not firstrun:
         if persistent.first_run and not persistent.do_not_delete:
             $ quick_menu = False
-            scene black
+            scene menu_bg
             "你似乎删除了 firstrun 文件，并且我们发现还有之前的存档。"
             "如果你触发了大 bug，这里可以让你逃离 bug。"
             "但是，你收集的 CG 状态也会被删除。"
@@ -279,7 +279,7 @@ label splashscreen:
         $ quick_menu = False
         scene white
         pause 0.5
-        scene tos
+        scene menu_bg
         with Dissolve(1.0)
         pause 1.0
 
@@ -293,11 +293,6 @@ label splashscreen:
             "如果继续游玩 [config.name] 将视为你已经通关原游戏，并接受任何剧透和恐怖的内容。"
             "我同意。":
                 pass
-
-        scene tos2
-        with Dissolve(1.5)
-        pause 1.0
-
 
         scene white
         with Dissolve(1.5)
