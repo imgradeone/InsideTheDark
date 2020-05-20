@@ -339,6 +339,28 @@ label after_load:
     $ persistent.ghost_menu = True
     $ style.say_dialogue = style.normal
 
+    if persistent.yuri_kill > 0 and persistent.autoload == "yurikill2":
+        if persistent.yuri_kill >= 1380:
+            $ persistent.yuri_kill = 1440
+        elif persistent.yuri_kill >= 1180:
+            $ persistent.yuri_kill = 1380
+        elif persistent.yuri_kill >= 1120:
+            $ persistent.yuri_kill = 1180
+        elif persistent.yuri_kill >= 920:
+            $ persistent.yuri_kill = 1120
+        elif persistent.yuri_kill >= 720:
+            $ persistent.yuri_kill = 920
+        elif persistent.yuri_kill >= 660:
+            $ persistent.yuri_kill = 720
+        elif persistent.yuri_kill >= 460:
+            $ persistent.yuri_kill = 660
+        elif persistent.yuri_kill >= 260:
+            $ persistent.yuri_kill = 460
+        elif persistent.yuri_kill >= 200:
+            $ persistent.yuri_kill = 260
+        else:
+            $ persistent.yuri_kill = 200
+
     if anticheat != persistent.anticheat:
         stop music
         scene black
@@ -370,9 +392,35 @@ label autoload:
         main_menu = False
         _in_replay = None
 
-
+    if persistent.yuri_kill > 0 and persistent.autoload == "yurikill2":
+        $ persistent.yuri_kill += 200
 
     $ renpy.pop_call()
+    jump expression persistent.autoload
+
+# this label is for use of main menu's yuri kill jump
+# not needed there
+label autoload_yurikill:
+    if persistent.yuri_kill >= 1380:
+        $ persistent.yuri_kill = 1440
+    elif persistent.yuri_kill >= 1180:
+        $ persistent.yuri_kill = 1380
+    elif persistent.yuri_kill >= 1120:
+        $ persistent.yuri_kill = 1180
+    elif persistent.yuri_kill >= 920:
+        $ persistent.yuri_kill = 1120
+    elif persistent.yuri_kill >= 720:
+        $ persistent.yuri_kill = 920
+    elif persistent.yuri_kill >= 660:
+        $ persistent.yuri_kill = 720
+    elif persistent.yuri_kill >= 460:
+        $ persistent.yuri_kill = 660
+    elif persistent.yuri_kill >= 260:
+        $ persistent.yuri_kill = 460
+    elif persistent.yuri_kill >= 200:
+        $ persistent.yuri_kill = 260
+    else:
+        $ persistent.yuri_kill = 200
     jump expression persistent.autoload
 
 label before_main_menu:

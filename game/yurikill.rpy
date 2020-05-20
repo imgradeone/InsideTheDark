@@ -21,7 +21,7 @@ label yurikill:
 
 label yurikill_act:
 
-    "imgradeone" "已知问题：凝视尸体的时长不能通过存档读档来加速。"
+    # "imgradeone" "已知问题：凝视尸体的时长不能通过存档读档来加速。"
     "imgradeone" "好的，那么开始吧。"
     scene bg club_day2  
     #您有 1/6 的几率触发死不瞑目的 Sayori 彩蛋，如果你看到了这行注释，请加油触发（
@@ -89,7 +89,7 @@ label yurikill_act:
         # Goodbye
         # Instead of deleting saves, we'll use after_load label to return to Yuri whenever a save is loaded
         window auto
-        $ persistent.yurikillround = 1
+        $ persistent.yuri_kill = 1
 
     label yurikill1:
         window auto
@@ -111,29 +111,26 @@ label yurikill_act:
         pause 1.43
         show yuri stab_1
         pause 0.75
-        show yuri stab_2
         if not ykill_peaceful:
+            show yuri stab_2
             show blood:
                 pos (610,485)
-        pause 1.25
-        show yuri stab_3
-        pause 0.75
-        show yuri stab_2
-        if not ykill_peaceful:
-            show blood:
-                pos (610,485)
-        show yuri stab_4 with ImageDissolve("images/yuri/stab/4_wipe.png", 0.25)
-        pause 1.25
-        show yuri stab_5
-        pause 0.70
-        show yuri stab_6:
-            2.55
-            easeout_cubic 0.5 yoffset 300
-        if not ykill_peaceful:
+            pause 1.25
+            show yuri stab_3
+            pause 0.75
+            show yuri stab_2
+                show blood:
+                    pos (610,485)
+            show yuri stab_4 with ImageDissolve("images/yuri/stab/4_wipe.png", 0.25)
+            pause 1.25
+            show yuri stab_5
+            pause 0.70
+            show yuri stab_6:
+                2.55
+                easeout_cubic 0.5 yoffset 300
             show blood as blood2:
                 pos (635,335)
-        pause 2.55
-        if not ykill_peaceful:
+            pause 2.55
             hide blood
             hide blood2
         pause 0.25
@@ -147,6 +144,8 @@ label yurikill_act:
     label yurikill2:
         $ quick_menu = True
         if not ykill_peaceful:
+            $ persistent.autoload = "yurikill2"
+            $ renpy.save_persistent()
             python:
                 _history_list = []
                 m.add_history(None, "", """Welcome to the Literature Club! It's always been a dream of mine to make something special out of the things I love. Now that you're a club member, you can help me make that dream come true in this cute game!Every day is full of chit-chat and fun activities with all of my adorable and unique club members:Sayori, the youthful bundle of sunshine who values happiness the most;Natsuki, the deceivingly cute girl who packs an assertive punch;Yuri, the timid and mysterious one who finds comfort in the world of books;...And, of course, Monika, the leader of the club! That's me!I'm super excited for you to make friends with everyone and help the Literature Club become a more intimate place for all my members. But I can tell already that you're a sweetheart—will you promise to spend the most time with me?Welcome to the Literature Club! It's always been a dream of mine to make something special out of the things I love. Now that you're a club member, you can help me make that dream come true in this cute game!Every day is full of chit-chat and fun activities with all of my adorable and unique club members:Sayori, the youthful bundle of sunshine who values happiness the most;Natsuki, the deceivingly cute girl who packs an assertive punch;Yuri, the timid and mysterious one who finds comfort in the world of books;...And, of course, Monika, the leader of the club! That's me!I'm super excited for you to make friends with everyone and help the Literature Club become a more intimate place for all my members. But I can tell already that you're a sweetheart—will you promise to spend the most time with me?Welcome to the Literature Club! It's always been a dream of mine to make something special out of the things I love. Now that you're a club member, you can help me make that dream come true in this cute game!Every day is full of chit-chat and fun activities with all of my adorable and unique club members:Sayori, the youthful bundle of sunshine who values happiness the most;Natsuki, the deceivingly cute girl who packs an assertive punch;Yuri, the timid and mysterious one who finds comfort in the world of books;...And, of course, Monika, the leader of the club! That's me!I'm super excited for you to make friends with everyone and help the Literature Club become a more intimate place for all my members. But I can tell already that you're a sweetheart—will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with me?will you promise to spend the most time with""")
@@ -160,10 +159,10 @@ label yurikill_act:
             play music t6s
         show ykilling
         label yurikillloop:
-            $ persistent.yurikillround += 1
-            if persistent.yurikillround < 1440:
+            $ persistent.yuri_kill += 1
+            if persistent.yuri_kill < 1440:
                 $ gtext = glitchtext(renpy.random.randint(8, 80))
-                "imgradeone" "{fast}当前进度：[persistent.yurikillround]/1440{fast}"
+                "imgradeone" "{fast}当前进度：[persistent.yuri_kill]/1440{fast}"
                 y "[gtext]"
                 $ _history_list.pop()
                 jump yurikillloop
@@ -199,7 +198,6 @@ label yurikill_act:
             n "WTF！！！"
             $ style.say_dialogue = style.normal
             $ _history_list[-1].what = "哇！！！"
-            n "居然没有血！！！"
             n "搞什么啊！！！"
             pause 2.0
         show natsuki at lhide
@@ -217,28 +215,30 @@ label yurikill_act:
         m "有点遗憾啊。"
         m 2d "等等，[player]，你是不是整个周末都要在这里？"
         m "天哪..."
-        m 2g "我都没发现这游戏爆得这么厉害。"
-        m "肥肠抱歉！"
-        m "这肯定很无聊的说..."
-        m 2e "我帮你整理一下，好伐？"
-        m "给我一点点时间..."
-        $ consolehistory = []
-        call updateconsole("os.remove(\"characters/yuri.chr\")", "You cannot delete any character.") from _call_updateconsole_18
-        pause 1.0
-        call updateconsole("os.remove(\"characters/natsuki.chr\")", "You cannot delete any character.") from _call_updateconsole_19
-        pause 1.0
-        m 2a "可以了。"
+        if not ykill_peaceful:
+            m 2g "我都没发现这游戏爆得这么厉害。"
+            m "肥肠抱歉！"
+            m "这肯定很无聊的说..."
+            m 2e "我帮你整理一下，好伐？"
+            m "给我一点点时间..."
+            $ consolehistory = []
+            call updateconsole("os.remove(\"characters/yuri.chr\")", "You cannot delete any character.") from _call_updateconsole_18
+            pause 1.0
+            call updateconsole("os.remove(\"characters/natsuki.chr\")", "You cannot delete any character.") from _call_updateconsole_19
+            pause 1.0
+            m 2a "可以了。"
         m 2j "我现在想拿一个纸杯蛋糕了。"
         $ gtext = glitchtext(10)
         "Monika 从 [gtext] 的托盘里拿出箔纸并拿走了一个纸杯蛋糕。"
         m 2b "啊，真香！"
         m "我肯定要拿的呐，毕竟这是最后一次了。"
-        m 2a "你懂的，在她们彻底消失之前。"
-        m "...但怎么说，我真的不能让你再等下去了。"
-        m 2j "就陪我，好吧？"
-        m 2a "一下下就好。"
+        if not ykill_peaceful:
+            m 2a "你懂的，在她们彻底消失之前。"
+            m "...但怎么说，我真的不能让你再等下去了。"
+            m 2j "就陪我，好吧？"
+            m 2a "一下下就好。"
 
-        $ persistent.yurikillround = 0
+        $ persistent.yuri_kill = 0
         scene black
         show monika at thide zorder 4
         hide monika
