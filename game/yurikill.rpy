@@ -1,14 +1,13 @@
 python:
-    ykill_peaceful = false
+    ykill_peaceful = False
 
 label yurikill:
-
     menu:
 
         "imgradeone" "你想选择哪个项目？"
 
         "体验！":
-            $ ykill_peaceful = false
+            $ ykill_peaceful = False
             jump yurikill_act
         "体验！（伪和平、试验版）":
             $ ykill_peaceful = True
@@ -16,6 +15,7 @@ label yurikill:
 #        "Inside the Code (TODO)":
 #           jump yurikill
         "返回上一级":
+            $ ykill_peaceful = False
             jump yuri
     return
 
