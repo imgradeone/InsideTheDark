@@ -157,7 +157,8 @@ label yurikill_act:
             $ audiostart = str(renpy.random.random() * 360)
             $ audio.t6s = "<from " + audiostart + " loop 43.572>bgm/6s.ogg"
             play music t6s
-        show ykilling
+        if not ykill_peaceful:
+            show ykilling
         label yurikillloop:
             $ persistent.yuri_kill += 1
             if persistent.yuri_kill < 1440:
@@ -196,8 +197,9 @@ label yurikill_act:
             show natsuki scream at h11
             $ style.say_dialogue = style.edited
             n "WTF！！！"
-            $ style.say_dialogue = style.normal
             $ _history_list[-1].what = "哇！！！"
+            $ style.say_dialogue = style.normal
+            call screen dialog("刚才她没刺下去！！！111", ok_action=Return())
             n "搞什么啊！！！"
             pause 2.0
         show natsuki at lhide
