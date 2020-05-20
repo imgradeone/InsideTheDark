@@ -160,7 +160,6 @@ label yurikill_act:
             $ persistent.yuri_kill += 1
             if persistent.yuri_kill < 1440:
                 $ gtext = glitchtext(renpy.random.randint(8, 80))
-                "imgradeone" "{fast}当前进度：[persistent.yuri_kill]/1440{fast}"
                 y "[gtext]"
                 $ _history_list.pop()
                 jump yurikillloop
