@@ -10,7 +10,7 @@ label yurikill:
         "体验！":
             $ ykill_peaceful = false
             jump yurikill_act
-        "体验！（半和平、试验版）":
+        "体验！（伪和平、试验版）":
             $ ykill_peaceful = true
             jump yurikill_act
 #        "Inside the Code (TODO)":
@@ -240,6 +240,7 @@ label yurikill_act:
             m 2j "就陪我，好吧？"
             m 2a "一下下就好。"
 
+        $ persistent.autoload = None
         $ persistent.yuri_kill = 0
         scene black
         show monika at thide zorder 4
