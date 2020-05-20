@@ -66,17 +66,14 @@ label yurikill_act:
         y 3w "[player]，请一定要明白我有多爱你啊。"
         y 3m "我特别爱你，甚至一度偷你的笔去自///慰。"
         y 3y4 "我只想拉开你的表//皮，在你的身体里游走。"
-    y 3y6 "我想让你永远属于我。"
-    y "我也将永远属于你。"
-    y "听上去是不是很棒呢？"
+        y 3y6 "我想让你永远属于我。"
+        y "我也将永远属于你。"
+        y "听上去是不是很棒呢？"
     y 3s "[player]，告诉我。"
     y "告诉我你想成为我的爱人。"
     y "你接受我的感情吗？"
 
     menu:
-        if not ykill_peaceful:
-            "imgradeone" "凉凉预警"
-
         "是的。":
             jump yuriinkill
         "不！":
@@ -119,8 +116,8 @@ label yurikill_act:
             show yuri stab_3
             pause 0.75
             show yuri stab_2
-                show blood:
-                    pos (610,485)
+            show blood:
+                pos (610,485)
             show yuri stab_4 with ImageDissolve("images/yuri/stab/4_wipe.png", 0.25)
             pause 1.25
             show yuri stab_5
