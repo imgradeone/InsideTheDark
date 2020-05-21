@@ -40,7 +40,7 @@ image splash_warning = ParameterizedText(style="splash_text", xalign=0.5, yalign
 
 
 image menu_logo:
-    "/mod_assets/insidethedark.png"
+    "/moddata/insidethedark.png"
     subpixel True
     xcenter 240
     ycenter 120
@@ -217,28 +217,6 @@ image warning:
 image tos = "bg/warning.png"
 image tos2 = "bg/warning2.png"
 
-
-init python:
-    if not persistent.do_not_delete:
-
-        import os
-        try:
-            if not os.access(config.basedir + "/characters/", os.F_OK):
-                os.mkdir(config.basedir + "/characters")
-
-            try: renpy.file("../characters/monika.chr")
-            except: open(config.basedir + "/characters/monika.chr", "wb").write(renpy.file("monika.chr").read())
-            try: renpy.file("../characters/natsuki.chr")
-            except: open(config.basedir + "/characters/natsuki.chr", "wb").write(renpy.file("natsuki.chr").read())
-            try: renpy.file("../characters/yuri.chr")
-            except: open(config.basedir + "/characters/yuri.chr", "wb").write(renpy.file("yuri.chr").read())
-            try: renpy.file("../characters/sayori.chr")
-            except: open(config.basedir + "/characters/sayori.chr", "wb").write(renpy.file("sayori.chr").read())
-
-        except:
-            pass
-
-
 label splashscreen:
 
 
@@ -262,7 +240,8 @@ label splashscreen:
                 "是的，删除存档":
                     "正在删除存档...{nw}"
                     python:
-                        delete_all_saves()
+                        for savegame in renpy.list_saved_games(fast=True):
+                            renpy.unlink_save(savegame)
                         renpy.loadsave.location.unlink_persistent()
                         renpy.persistent.should_save_persistent = False
                         renpy.utter_restart()

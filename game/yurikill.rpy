@@ -220,9 +220,9 @@ label yurikill_act:
             m 2e "我帮你整理一下，好伐？"
             m "给我一点点时间..."
             $ consolehistory = []
-            call updateconsole("os.remove(\"characters/yuri.chr\")", "You cannot delete any character.") from _call_updateconsole_18
+            call updateconsole("os.remove(\"characters/yuri.chr\")", "Access denied.") from _call_updateconsole_18
             pause 1.0
-            call updateconsole("os.remove(\"characters/natsuki.chr\")", "You cannot delete any character.") from _call_updateconsole_19
+            call updateconsole("os.remove(\"characters/natsuki.chr\")", "Access denied.") from _call_updateconsole_19
             pause 1.0
             m 2a "可以了。"
         m 2j "我现在想拿一个纸杯蛋糕了。"

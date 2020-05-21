@@ -67,7 +67,7 @@ default preferences.sfx_volume = 0.75
 define config.save_directory = "InsideTheDarkChs"
 
 # icon displayed on taskbar / dock
-define config.window_icon = "mod_assets/insidethedark.png"
+define config.window_icon = "moddata/insidethedark.png"
 
 # True means we allow skipping, False means not
 define config.allow_skipping = True
@@ -139,15 +139,11 @@ init python:
 
     # archives to create
     build.archive("scripts", build.name)
-    build.archive("mod_assets", build.name)
-    build.archive("submods", build.name)
+    build.archive("moddata", build.name)
 
     # folder / files to put in archives
-    build.classify("game/mod_assets/**", "mod_assets")
-    build.classify("game/submods/**", "submods")
+    build.classify("game/moddata/**", "moddata")
     build.classify('game/**.rpyc', "scripts")
-    build.classify('game/advanced_scripts/**', "scripts")
-    build.classify('game/original_story_scripts/**', "scripts")
 
     # stuff to ignore
     build.classify('**~', None)
@@ -159,9 +155,6 @@ init python:
     build.classify('**.psd', None)
     build.classify('**.sublime-project', None)
     build.classify('**.sublime-workspace', None)
-    build.classify('/music/*.*', None)
-    build.classify('script-regex.txt', None)
-    build.classify('/game/10', None)
     build.classify('/game/cache/*.*', None)
     build.classify('**.rpa', None)
 

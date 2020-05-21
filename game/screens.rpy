@@ -20,7 +20,7 @@ style default_monika is normal:
     slow_cps 30
 
 style edited is default:
-    font "mod_assets/font/sourcehanserif.otf"
+    font "moddata/font/sourcehanserif.otf"
     kerning 8
     outlines [(10, "#000", 0, 0)]
     xpos gui.text_xpos
@@ -56,7 +56,7 @@ style splash_text:
 
 style poemgame_text:
     yalign 0.5
-    font "mod_assets/font/zhushi.ttf"
+    font "moddata/font/zhushi.ttf"
     size 30
     color "#000"
     outlines []
@@ -493,7 +493,7 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
-    font "mod_assets/font/zcoolkuaile.ttf"
+    font "moddata/font/zcoolkuaile.ttf"
     color "#fff"
     outlines [(4, "#b59", 0, 0), (2, "#b59", 2, 2)]
     hover_outlines [(4, "#fac", 0, 0), (2, "#fac", 2, 2)]
@@ -702,7 +702,7 @@ style game_menu_label:
     ysize 120
 
 style game_menu_label_text:
-    font "mod_assets/font/zcoolkuaile.ttf"
+    font "moddata/font/zcoolkuaile.ttf"
     size gui.title_text_size
     color "#fff"
     outlines [(6, "#b59", 0, 0), (3, "#b59", 2, 2)]
@@ -780,13 +780,7 @@ screen load():
 
 init python:
     def FileActionMod(name, page=None, **kwargs):
-        if persistent.playthrough == 1 and not persistent.deleted_saves and renpy.current_screen().screen_name[0] == "load" and FileLoadable(name):
-            return Show(screen="dialog", message="File error: \"characters/sayori.chr\"\n\nThe file is missing or corrupt.",
-                ok_action=Show(screen="dialog", message="The save file is corrupt. Starting a new game.", ok_action=Function(renpy.full_restart, label="start")))
-        elif persistent.playthrough == 3 and renpy.current_screen().screen_name[0] == "save":
-            return Show(screen="dialog", message="There's no point in saving anymore.\nDon't worry, I'm not going anywhere.", ok_action=Hide("dialog"))
-        else:
-            return FileAction(name)
+        return FileAction(name)
 
 
 screen file_slots(title):
@@ -1037,7 +1031,7 @@ style pref_label:
     bottom_margin 2
 
 style pref_label_text:
-    font "mod_assets/font/zcoolkuaile.ttf"
+    font "moddata/font/zcoolkuaile.ttf"
     size 24
     color "#fff"
     outlines [(3, "#b59", 0, 0), (1, "#b59", 1, 1)]
@@ -1055,7 +1049,7 @@ style radio_button:
 
 style radio_button_text:
     properties gui.button_text_properties("radio_button")
-    font "mod_assets/font/zhushi.ttf"
+    font "moddata/font/zhushi.ttf"
     outlines []
 
 style check_vbox:
@@ -1067,7 +1061,7 @@ style check_button:
 
 style check_button_text:
     properties gui.button_text_properties("check_button")
-    font "mod_assets/font/zhushi.ttf"
+    font "moddata/font/zhushi.ttf"
     outlines []
 
 style slider_slider:

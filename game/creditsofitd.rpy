@@ -127,7 +127,7 @@ image credits_cg10_clearall:
 
 #DDLC Logo
 image credits_logo:
-    "mod_assets/insidethedark.png"
+    "moddata/insidethedark.png"
     truecenter
     zoom 0.6 alpha 0 subpixel True
     linear 2.0 alpha 1
@@ -145,21 +145,21 @@ image credits_ts:
 
 #This styles the different text in the credits
 style credits_header:
-    font "mod_assets/font/sourcehanserif.otf"
+    font "moddata/font/sourcehanserif.otf"
     color "#ffaae6"
     size 36
     text_align 0.5
     outlines []
 
 style credits_text:
-    font "mod_assets/font/alipuhuireg.ttf"
+    font "moddata/font/alipuhuireg.ttf"
     color "#fff"
     size 36
     text_align 0.5
     outlines []
 
 style monika_credits_text:
-    font "mod_assets/font/zhushi.ttf"
+    font "moddata/font/zhushi.ttf"
     color "#fff"
     size 40
     text_align 0.5
