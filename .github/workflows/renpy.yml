@@ -28,7 +28,7 @@ jobs:
       - name: Create symlink
         run: |
             mkdir mod
-            ln -s game mod/game
+            ln -s game mod
 
       # Now it's time to get the DDLC archives.
       - name: Download DDLC archives
