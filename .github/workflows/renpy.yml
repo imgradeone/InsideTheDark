@@ -32,7 +32,7 @@ jobs:
 
       # Now it's time to get the DDLC archives.
       - name: Download DDLC archives
-        uses: Sayo-nika/mc-action@master
+        uses: Dobby233Liu/mc-action@master
 
       # Let's make sure our code works by running the linter.
       - name: Lint DDLC Mod
