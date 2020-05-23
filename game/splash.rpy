@@ -1,12 +1,4 @@
 ## splash screen is first thing that gets shown to player
-init -100 python:
-    # archive check for mods
-    #for archive in ['audio','images','fonts']:
-    #    if archive not in config.archives:
-    #        renpy.error("DDLC archive files not found in /game folder. Check installation and try again. / 看样子你还没有把 DDLC 游戏的文件复制过去呐。建议您去看看 README 一步步操作。")
-    renpy.file("audio.rpa")
-    renpy.file("images.rpa")
-    renpy.file("fonts.rpa")
 
 # disclaimers
 init python:
