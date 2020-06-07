@@ -266,6 +266,8 @@ label splashscreen:
             "如果继续游玩 [config.name] 将视为你已经通关原游戏，并接受任何剧透和恐怖的内容。"
             "我同意。":
                 pass
+            "我不同意，退出。":
+                $ renpy.quit()
 
         scene white
         with Dissolve(1.5)
@@ -300,7 +302,7 @@ label splashscreen:
     return
 
 label warningscreen:
-    hide intro
+#   hide intro
     show warning
     pause 3.0
 
@@ -335,12 +337,11 @@ label after_load:
     if anticheat != persistent.anticheat:
         stop music
         scene black
-        "The save file could not be loaded."
-        "Are you trying to cheat?"
-        "Or there is a bug...?"
-        "If this happened, please delete the firstrun file at /game folder."
-        "And also, you can create a issue from this project's GitHub repo, which can be found at Help."
-        "Now restarting..."
+        "存档无法加载。"
+        "您是不是想作弊？"
+        "或者有 bug 发生了？"
+        "如果确实有此事，请将游戏目录内的 firstrun 文件删除，以便重置存档。"
+        "正在重启...{w=2.0}{nw}"
 
         $ renpy.utter_restart()
     return
