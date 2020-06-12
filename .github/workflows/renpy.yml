@@ -6,7 +6,7 @@ on:
   pull_request:
   push:
   release:
-    types: [published]
+    types: [created]
 
 # Write the jobs and its steps
 # This is where things get interesting.
@@ -68,7 +68,7 @@ jobs:
       # target the right binary to upload.
       - name: Upload files to release
         uses: skx/github-action-publish-binaries@master
-        if: github.event.release # Runs ONLY when it's a published release
+        if: github.event.release # Runs ONLY when it's a created release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:

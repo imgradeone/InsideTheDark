@@ -1,6 +1,6 @@
 # human readable name of this game
 # _() marks strings eligable for translation
-define config.name = "Inside The Dark"
+define config.name = "Inside the Dark"
 
 # True shows the name on main menu, False hides it
 define gui.show_name = False
