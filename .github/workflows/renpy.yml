@@ -23,12 +23,6 @@ jobs:
         uses: actions/checkout@v1
         with:
           submodules: true
-    
-      # alice team is crime from hardcoding paths
-      - name: Create symlink
-        run: |
-            mkdir mod
-            ln -s game mod
 
       # Now it's time to get the DDLC archives.
       - name: Download DDLC archives
