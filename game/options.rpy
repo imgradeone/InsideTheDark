@@ -30,7 +30,7 @@ define config.exit_transition = Dissolve(.2)
 # transition used when the game has been loaded
 define config.after_load_transition = None
 
-# transition used when teh game has ended
+# transition used when the game has ended
 define config.end_game_transition = Dissolve(.5)
 
 # Controls when dialogue window is displayed:

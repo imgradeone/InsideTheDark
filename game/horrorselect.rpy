@@ -9,7 +9,7 @@ label horrorintro:
 
     # "Dobby233Liu" "我觉得我{b}现在{/b}明白了。"
     "???" "那么..."
-    "???" "欢迎来到 Inside The Dark mod。"
+    "???" "欢迎来到 Inside the Dark。"
     "???" "我是 mod 作者，imgradeone。"
     if not persistent.example_intro_seen:
         "imgradeone" "你应该蛮享受 DDLC 吧，尽管它有那么{i}亿点点{/i}...恐怖？"
