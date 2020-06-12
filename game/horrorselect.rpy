@@ -7,6 +7,7 @@ label horrorintro:
     with dissolve_scene_full
     play music t3
 
+    # "Dobby233Liu" "我觉得我{b}现在{/b}明白了。"
     "???" "那么..."
     "???" "欢迎来到 Inside The Dark mod。"
     "???" "我是 mod 作者，imgradeone。"
