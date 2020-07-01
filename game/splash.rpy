@@ -1,10 +1,4 @@
 ## splash screen is first thing that gets shown to player
-init -100 python:
-
-    # archive check for mods
-    for archive in ['audio','images','fonts']:
-        if archive not in config.archives:
-            renpy.error("DDLC archive files not found in /game folder. Check installation and try again. / 看样子你还没有把 DDLC 游戏的文件复制过去呐。建议您去看看 README 一步步操作。")
 
 # disclaimers
 init python:
@@ -13,8 +7,24 @@ init python:
     splash_message_default = "这是非官方的粉丝向 mod，与 Team Salvato 无关。\n本 mod 不适合儿童或者极易受影响的人。\n\n不要说我们没有警告过你.png"
 
     splash_messages = [
-        "Please support Doki Doki Literature Club.",
-        "Monika is watching you code."
+        "请支持 Doki Doki Literature Club。",
+        splash_message_default,
+        "Monika 在看着你在码。",
+        "突然忸忸怩怩牛牛牛男男女女扭扭捏捏牛牛牛牛牛哪尼侬额呢喃你你弄",
+        "突然nnnnnnnnnnnnnnnnnnnnn nnnnnn",
+        "这 TM 是噩梦吧？",
+        "噫啊↑啊↗啊→啊↘啊↓啊↓啊↓啊↓！！！ —— Natsuki",
+        "WDNMD，嘿，mod 作者，听说你喜欢写 BUUUUUUUUUUUUUG？ —— Natsuki",
+        "哇啊啊啊啊啊啊啊啊啊啊啊啊啊！ —— Natsuki",
+        "啊哈↓↓↓↓↓↓↓哈↓↓↓↓↓哈↓↓↓↓↓哈↓↓↓↓哈↓↓↓哈↓↓哈↓ —— Yuri",
+        "我咋变成疯nggggggggggggggggg人nnnnnnnnnnnn了eeeeeeeeeee？！ —— Yuri",
+        "噫啊啊啊啊啊啊啊啊啊！ —— Sayori",
+        "这也许是你游最烂的 mod...",
+        "我永远爱你。",
+        "爱你们喵！",
+        "我会一直爱你的呐！", # those 3 are intended
+        "祝你好运！",
+        "您有 1/6 的几率触发死不瞑目的 Sayori 彩蛋，如果你看到了这行警告，请加油触发（"
     ]
 
 
@@ -22,7 +32,7 @@ image splash_warning = ParameterizedText(style="splash_text", xalign=0.5, yalign
 
 
 image menu_logo:
-    "/mod_assets/DDLCModTemplateLogo.png"
+    "/moddata/insidethedark.png"
     subpixel True
     xcenter 240
     ycenter 120
@@ -199,28 +209,6 @@ image warning:
 image tos = "bg/warning.png"
 image tos2 = "bg/warning2.png"
 
-
-init python:
-    if not persistent.do_not_delete:
-
-        import os
-        try:
-            if not os.access(config.basedir + "/characters/", os.F_OK):
-                os.mkdir(config.basedir + "/characters")
-
-            try: renpy.file("../characters/monika.chr")
-            except: open(config.basedir + "/characters/monika.chr", "wb").write(renpy.file("monika.chr").read())
-            try: renpy.file("../characters/natsuki.chr")
-            except: open(config.basedir + "/characters/natsuki.chr", "wb").write(renpy.file("natsuki.chr").read())
-            try: renpy.file("../characters/yuri.chr")
-            except: open(config.basedir + "/characters/yuri.chr", "wb").write(renpy.file("yuri.chr").read())
-            try: renpy.file("../characters/sayori.chr")
-            except: open(config.basedir + "/characters/sayori.chr", "wb").write(renpy.file("sayori.chr").read())
-
-        except:
-            pass
-
-
 label splashscreen:
 
 
@@ -230,11 +218,12 @@ label splashscreen:
             firstrun = renpy.file("firstrun").read(1)
         except:
             with open(config.basedir + "/game/firstrun", "wb") as f:
+                f.write('1')
                 pass
     if not firstrun:
         if persistent.first_run and not persistent.do_not_delete:
             $ quick_menu = False
-            scene black
+            show game_menu_bg zorder 1
             "你似乎删除了 firstrun 文件，并且我们发现还有之前的存档。"
             "如果你触发了大 bug，这里可以让你逃离 bug。"
             "但是，你收集的 CG 状态也会被删除。"
@@ -243,7 +232,8 @@ label splashscreen:
                 "是的，删除存档":
                     "正在删除存档...{nw}"
                     python:
-                        delete_all_saves()
+                        for savegame in renpy.list_saved_games(fast=True):
+                            renpy.unlink_save(savegame)
                         renpy.loadsave.location.unlink_persistent()
                         renpy.persistent.should_save_persistent = False
                         renpy.utter_restart()
@@ -263,28 +253,26 @@ label splashscreen:
         $ quick_menu = False
         scene white
         pause 0.5
-        scene tos
+        show game_menu_bg zorder 1
         with Dissolve(1.0)
         pause 1.0
 
         "[config.name] 是 Doki Doki Literature Club 的粉丝向 mod，与 Team Salvato 无关。"
-        "本 mod 理应在通关原游戏后再进行游玩，因此本 mod 包含大量剧透。"
-        "要游玩本 mod，需要原版 Doki Doki Literature Club 的文件。您可以在 https://ddlc.moe 或者 Steam 免费获取。"
-        "本 mod 包含来自原游戏的恐怖部分，因此，本 mod 不适合儿童或者极易受影响的人。更多详情可以访问 https://ddlc.moe/warning.html （亦包含剧透）。"
+        "本 mod 理应在通关原游戏后再进行游玩，因为本 mod 包含大量剧透。"
+        "本 mod 包含来自原游戏的恐怖部分，因此，本 mod 不适合儿童或者极易受影响的人。更多详情可以访问 {a=https://ddlc.moe/warning.html}https://ddlc.moe/warning.html{/a}（亦包含剧透）。"
         "**不要说我们没有警告过你.png**"
 
         menu:
             "如果继续游玩 [config.name] 将视为你已经通关原游戏，并接受任何剧透和恐怖的内容。"
             "我同意。":
-
                 pass
-        scene tos2
-        with Dissolve(1.5)
-        pause 1.0
-
+            "我不同意，退出。":
+                $ renpy.quit()
 
         scene white
         with Dissolve(1.5)
+        
+        call import_ddlc_persistent from _call_import_ddlc_persistent
 
         $ persistent.first_run = True
 
@@ -297,15 +285,15 @@ label splashscreen:
     $ config.allow_skipping = False
 
     show white
-    $ persistent.ghost_menu = False
+    $ persistent.ghost_menu = True
     $ splash_message = splash_message_default
-    $ config.main_menu_music = audio.t1
+    $ config.main_menu_music = audio.mend
     $ renpy.music.play(config.main_menu_music)
-    show intro with Dissolve(0.5, alpha=True)
-    pause 2.5
-    hide intro with Dissolve(0.5, alpha=True)
+#    show intro with Dissolve(0.5, alpha=True)
+#    pause 2.5
+#    hide intro with Dissolve(0.5, alpha=True)
 
-    if persistent.playthrough == 2 and renpy.random.randint(0, 3) == 0:
+    if renpy.random.randint(0, 3) == 0:
         $ splash_message = renpy.random.choice(splash_messages)
     show splash_warning "[splash_message]" with Dissolve(0.5, alpha=True)
     pause 2.0
@@ -314,25 +302,46 @@ label splashscreen:
     return
 
 label warningscreen:
-    hide intro
+#   hide intro
     show warning
     pause 3.0
 
 label after_load:
     $ config.allow_skipping = allow_skipping
     $ _dismiss_pause = config.developer
-    $ persistent.ghost_menu = False
+    $ persistent.ghost_menu = True
     $ style.say_dialogue = style.normal
+
+    if persistent.yuri_kill > 0 and persistent.autoload == "yurikill2":
+        if persistent.yuri_kill >= 1380:
+            $ persistent.yuri_kill = 1440
+        elif persistent.yuri_kill >= 1180:
+            $ persistent.yuri_kill = 1380
+        elif persistent.yuri_kill >= 1120:
+            $ persistent.yuri_kill = 1180
+        elif persistent.yuri_kill >= 920:
+            $ persistent.yuri_kill = 1120
+        elif persistent.yuri_kill >= 720:
+            $ persistent.yuri_kill = 920
+        elif persistent.yuri_kill >= 660:
+            $ persistent.yuri_kill = 720
+        elif persistent.yuri_kill >= 460:
+            $ persistent.yuri_kill = 660
+        elif persistent.yuri_kill >= 260:
+            $ persistent.yuri_kill = 460
+        elif persistent.yuri_kill >= 200:
+            $ persistent.yuri_kill = 260
+        else:
+            $ persistent.yuri_kill = 200
 
     if anticheat != persistent.anticheat:
         stop music
         scene black
-        "The save file could not be loaded."
-        "Are you trying to cheat?"
-        "Or there is a bug...?"
-        "If this happened, please delete the firstrun file at /game folder."
-        "And also, you can create a issue from this project's GitHub repo, which can be found at Help."
-        "Now restarting..."
+        "存档无法加载。"
+        "您是不是想作弊？"
+        "或者有 bug 发生了？"
+        "如果确实有此事，请将游戏目录内的 firstrun 文件删除，以便重置存档。"
+        "正在重启...{w=2.0}{nw}"
 
         $ renpy.utter_restart()
     return
@@ -355,13 +364,39 @@ label autoload:
         main_menu = False
         _in_replay = None
 
-
+    if persistent.yuri_kill > 0 and persistent.autoload == "yurikill2":
+        $ persistent.yuri_kill += 200
 
     $ renpy.pop_call()
     jump expression persistent.autoload
 
+# this label is for use of main menu's yuri kill jump
+# not needed there
+label autoload_yurikill:
+    if persistent.yuri_kill >= 1380:
+        $ persistent.yuri_kill = 1440
+    elif persistent.yuri_kill >= 1180:
+        $ persistent.yuri_kill = 1380
+    elif persistent.yuri_kill >= 1120:
+        $ persistent.yuri_kill = 1180
+    elif persistent.yuri_kill >= 920:
+        $ persistent.yuri_kill = 1120
+    elif persistent.yuri_kill >= 720:
+        $ persistent.yuri_kill = 920
+    elif persistent.yuri_kill >= 660:
+        $ persistent.yuri_kill = 720
+    elif persistent.yuri_kill >= 460:
+        $ persistent.yuri_kill = 660
+    elif persistent.yuri_kill >= 260:
+        $ persistent.yuri_kill = 460
+    elif persistent.yuri_kill >= 200:
+        $ persistent.yuri_kill = 260
+    else:
+        $ persistent.yuri_kill = 200
+    jump expression persistent.autoload
+
 label before_main_menu:
-    $ config.main_menu_music = audio.t1
+    $ config.main_menu_music = audio.mend
     return
 
 label quit:

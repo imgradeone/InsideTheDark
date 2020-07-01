@@ -1,0 +1,76 @@
+# Set the name of the workflow here
+name: Build for DDLC
+
+# Specify when to run this workflow
+on:
+  pull_request:
+  push:
+  release:
+    types: [created]
+
+# Write the jobs and its steps
+# This is where things get interesting.
+jobs:
+  build:
+    name: Build with Ren'Py SDK
+    runs-on: ubuntu-latest
+
+    # Here's where we starting telling it how to run the workflow.
+    steps:
+
+      # First we clone the repo
+      - name: Clone repository
+        uses: actions/checkout@v1
+        with:
+          submodules: true
+
+      # Now it's time to get the DDLC archives.
+      - name: Download DDLC archives
+        uses: Dobby233Liu/mc-action@master
+
+      # Let's make sure our code works by running the linter.
+      - name: Lint DDLC Mod
+        uses: ProjectAliceDev/renpy-lint-action@v1.1.0
+        with:
+          sdk-version: '6.99.12.4'
+          project-dir: .
+        env:
+          SDL_AUDIODRIVER: dummy
+          SDL_VIDEODRIVER: dummy
+
+      # Finally, let's build the project.
+      - name: Build DDLC Mod
+        uses: ProjectAliceDev/renpy-build-action@v1.1.1
+        # This ID is needed for the release step.
+        id: buildseq
+        with:
+          sdk-version: '6.99.12.4'
+          project-dir: .
+        env:
+          SDL_AUDIODRIVER: dummy
+          SDL_VIDEODRIVER: dummy
+
+      # If we want to have nightly builds that aren't targeted with a GitHub release,
+      # we can use GitHub Actions to upload artifacts in a similar way to Azure
+      # Pipelines. This requires developers and users to navigate to Actions to
+      # download a release in this manner.
+      # 
+      # We'll use the outputs from the previous action to get the directory and
+      # target the right binary to upload.
+      - name: Publish artifact to GitHub Actions
+        uses: actions/upload-artifact@v1
+        with:
+          name: ${{ steps.buildseq.outputs.dir }}
+          path: ${{ format('{0}/{1}-Mod.zip', steps.buildseq.outputs.dir, steps.buildseq.outputs.version) }}
+
+      # If we want to release it, we'll need to run the action.
+      # We'll use the outputs from the previous action to get the directory and
+      # target the right binary to upload.
+      - name: Upload files to release
+        uses: skx/github-action-publish-binaries@master
+        if: github.event.release # Runs ONLY when it's a created release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          # We use the outputs here to tell it where exactly the file is.
+          args: ${{ format('{0}/{1}-Mod.zip', steps.buildseq.outputs.dir, steps.buildseq.outputs.version) }}

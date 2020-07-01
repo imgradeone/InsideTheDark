@@ -1,6 +1,6 @@
 image exception_bg = "#dadada"
 image fake_exception = Text("An exception has occurred.", size=40, style="_default")
-image fake_exception2 = Text("File \"game/sayoriisgone.rpy\", line 216\nSee traceback.txt for details.", size=20, style="_default")
+image fake_exception2 = Text("File \"game/sayoriisgone.rpy\", line 221\nSee traceback.txt for details.", size=20, style="_default")
 
 image splash_glitch:
     subpixel True
@@ -83,38 +83,39 @@ image splash_glitch_y:
 label sayoriisgone:
 
     menu:
-
-        "你想选择哪个项目？"
+        "imgradeone" "你想选择哪个项目？"
 
         "体验！":
             jump sayoriisgone_act
-        "Inside the Code (TODO)":
+        "深入代码（WIP）":
             jump sayoriisgone_ins
+        "imgradeone 的另版":
+            jump sayoriisgone_alt
         "返回上一级":
             jump sayori
     return
 
 label sayoriisgone_act:
-    "接下来是原版内容。"
-    "请注意脖子安全。"
-    "让我先导入资源..."
+    "imgradeone" "接下来是原版内容。"
+    "imgradeone" "请注意脖子安全。"
+    "imgradeone" "让我先导入资源..."
 
     menu:
-        "对了，你想对 Sayori 说什么？"
+        "imgradeone" "对了，你想对 Sayori 说什么？"
 
         "我爱你。":
             $ sayori_confess = True
             scene s_cg3 with dissolve_cg
-            "你是个大好人。"
-            "你就是能拯救 Sayori 的人！"
+            "imgradeone" "你是个大好人。"
+            "imgradeone" "你就是能拯救 Sayori 的人！"
             scene black with dissolve_cg
         "你永远是我最好的朋友。":
             $ sayori_confess = False
-            "这不太好吧..."
-            "但这是你的选择。"
-            "所以..."
+            "imgradeone" "这不太好吧..."
+            "imgradeone" "但这是你的选择。"
+            "imgradeone" "所以..."
 
-    "开始吧。"
+    "imgradeone" "开始吧。"
 
     scene bg residential_day
     "我在想什么？"
@@ -149,7 +150,7 @@ label sayoriisgone_act:
     "我真的不想直接破门而入啊..."
     "这是侵犯隐私吧？"
     "但这回我真的别无选择了。"
-    "我悄悄打开了门。\nI gently open the door."
+    "我悄悄打开了门。"
     mc "{cps=30}.......Sayo--{/cps}{nw}"
     window hide(None)
     window auto
@@ -218,7 +219,7 @@ label sayoriisgone_act:
     show fake_exception2 zorder 2:
         xpos 0.1 ypos 0.15
     python:
-        try: sys.modules['renpy.error'].report_exception("噫...我啥都没干吧？等我一下，我应该能修了这个 bug...也许吧...\n实际上，你猜猜是怎么回事？如果我直接把她删了，事情就会更简单了。就是她把修 bug 搞得更难的。啊哈哈！那么，现在没事了。", False)
+        try: sys.modules['renpy.error'].report_exception("噫...我啥都没干吧？等我一下，我应该能修了这个 bug... 也许吧...\n实际上，你猜猜是怎么回事？如果我直接把她删了，事情就会更简单了。就是她把修 bug 搞得更难的。啊哈哈！那么，现在没事了。", False)
         except: pass
     pause 6.0
 
@@ -234,7 +235,7 @@ label sayoriisgone_act:
     "这 TM 绝对是假的！"
     "Sayori 不会这么干的。"
     "明明几天前还很正常的啊。"
-    "所以我才不相信我眼前的所见...！"
+    "所以我才不相信我眼前所见的...！"
     scene black with dissolve_cg
     "我差点点吐了。"
     "就是昨天..."
@@ -287,49 +288,49 @@ label sayoriisgone_act:
 
     "..."
 
-    "天哪..."
-    "但愿没出 bug..."
-    "嘿，Sayori！"
-    "你还好吧？"
+    "imgradeone" "天哪..."
+    "imgradeone" "但愿没出 bug..."
+    "imgradeone" "嘿，Sayori！"
+    "imgradeone" "你还好吧？"
 
     show sayori 4p at t11 zorder 2
     s "啊啊啊啊啊啊啊..."
 
-    "讲真，有点抱歉把你的模型挂上去..."
-    "但是..."
-    "记住..."
-    "我永远爱你。"
+    "imgradeone" "讲真，有点抱歉把你的模型挂上去..."
+    "imgradeone" "但是..."
+    "imgradeone" "记住..."
+    "imgradeone" "我永远爱你。"
 
-    s 1q "Ehehe..."
+    s 1q "呃呵呵..."
 
     hide sayori
 
-    "顺便，你有没有去看看 traceback.txt？"
-    "那里有些很..."
-    "有意思的东西。"
+    "imgradeone" "顺便，你有没有去看看 traceback.txt？"
+    "imgradeone" "那里有些..."
+    "imgradeone" "很有意思的东西。"
 
-    "我先整理一下..."
+    "imgradeone" "我先整理一下..."
     stop music fadeout 2.0
     jump sayoriisgone
 
 return
 
 label sayoriisgone_ins:
-    "当前汉化未完全，暂时放出英文版。"
+    "imgradeone" "当前汉化未完成，暂时放出英文版。"
 
-    "I'm still working on this."
+    "imgradeone" "I'm still working on this."
 
-    "comingsoon..."
+    "imgradeone" "comingsoon..."
 
-    "But now I can show you a part of it."
+    "imgradeone" "But now I can show you a part of it."
 
-    "So, I still need to import the resources..."
+    "imgradeone" "So, I still need to import the resources..."
 
-    image fake_exception3 = Text("File \"game/sayoriisgone.rpy\", line 416\nSee traceback.txt for details.", size=20, style="_default")
+    image fake_exception3 = Text("File \"game/sayoriisgone.rpy\", line 339\nSee traceback.txt for details.", size=20, style="_default")
     
-    "OK."
+    "imgradeone" "OK."
 
-    "First of all, you will noticed that there are a fake exception in the background."
+    "imgradeone" "First of all, you will noticed that there are a fake exception in the background."
     show exception_bg zorder 2
     show fake_exception zorder 2:
         xpos 0.1 ypos 0.05
@@ -339,28 +340,118 @@ label sayoriisgone_ins:
         try: sys.modules['renpy.error'].report_exception("wait, wow, that's such a great thing.", False)
         except: pass
     
-    "Just look like this."
-    "This looks like a real Ren'Py error. At this time, I created the traceback file as well."
-    "Go to have a look at the traceback file."
-    "..."
-    "Ahaha, that's really interesting."
+    "imgradeone" "Just look like this."
+    "imgradeone" "This looks like a real Ren'Py error. At this time, I created the traceback file as well."
+    "imgradeone" "Go to have a look at the traceback file."
+    "imgradeone" "..."
+    "imgradeone" "Ahaha, that's really interesting."
 
-    "So how do I write the traceback?"
+    "imgradeone" "So how do I write the traceback?"
 
     call updateconsole("sys.modules['renpy.error'].report_exception(\"wait, wow, that's such a great thing.\", False)", "traceback.txt created.") from _call_updateconsole_15
 
-    "That is the code."
-    "Clone the repo and have a look."
+    "imgradeone" "That is the code."
+    "imgradeone" "Clone the repo and have a look."
     call hideconsole from _call_hideconsole_2
     hide fake_exception
     hide fake_exception2
     hide exception_bg
 
-    "I'm still working on this."
+    "imgradeone" "I'm still working on this."
 
-    "comingsoon..."
-
+    "imgradeone" "comingsoon..."
 
     jump sayoriisgone
 
 return
+
+label sayoriisgone_alt:
+
+    mc "Sayori？"
+    mc "起床了，小懒虫..."
+    "没有反应。"
+    "我真的不想直接破门而入啊..."
+    "这是侵犯隐私吧？"
+    "但这回我真的别无选择了。"
+    "我悄悄打开了门。"
+    mc "{cps=30}.......Sayo--{/cps}{nw}"
+
+    window hide(None)
+    window auto
+    play music td
+    show sayori 1p at t31 zorder 1
+    show s_kill_bg2
+    show s_kill_bg as s_kill_bg at s_kill_bg_start
+    pause 3.75
+    show s_kill_bg2 as s_kill_bg
+    pause 0.01
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    pause 0.25
+    stop sound
+    hide screen tear
+    show s_kill_bg_zoom zorder 2
+    show s_kill_bg2_zoom zorder 2
+    pause 2.0
+    show noise zorder 3:
+        alpha 0.0
+        linear 3.0 alpha 0.25
+    show vignette zorder 3:
+        alpha 0.0
+        linear 3.0 alpha 0.75
+    pause 1.5
+    show white zorder 2
+    show splash_glitch zorder 2
+    pause 1.5
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    pause 0.2
+    stop sound
+    hide screen tear
+    pause 4.0
+    show screen tear(20, 0.1, 0.1, 0, 40)
+    play sound "sfx/s_kill_glitch1.ogg"
+    pause 0.2
+    stop sound
+    hide screen tear
+    hide splash_glitch
+    show splash_glitch2 zorder 2
+    show splash_glitch_m zorder 2
+    show splash_glitch_n zorder 2
+    show splash_glitch_y zorder 2
+    pause 0.75
+    hide white
+    hide splash_glitch2
+    hide splash_glitch_m
+    hide splash_glitch_n
+    hide splash_glitch_y
+    show exception_bg zorder 2
+    show fake_exception zorder 2:
+        xpos 0.1 ypos 0.05
+    show fake_exception2 zorder 2:
+        xpos 0.1 ypos 0.15
+    python:
+        try: sys.modules['renpy.error'].report_exception("oof", False)
+        except: pass
+    pause 6.0
+
+    s "..."
+    s "搞什么啊..."
+    s "这游戏..."
+    hide fake_exception
+    hide fake_exception2
+    hide exception_bg
+
+    scene black with dissolve_cg
+
+    hide sayori
+
+    "imgradeone" "顺便，你有没有去看看 traceback.txt？"
+    "imgradeone" "那里有些..."
+    "imgradeone" "很{i}有{/i}意思的东西。"
+
+    stop music fadeout 2.0
+
+    jump sayoriisgone
+
+return 

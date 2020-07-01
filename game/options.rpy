@@ -1,17 +1,15 @@
-
-
 # human readable name of this game
 # _() marks strings eligable for translation
-define config.name = "Inside The Dark 简体中文版"
+define config.name = "Inside the Dark"
 
 # True shows the name on main menu, False hides it
 define gui.show_name = False
 
 # Version of the game
-define config.version = "0.1.2-chinese-earlyaccess"
+define config.version = "0.1.5-chinese-earlyaccess"
 
 # text placed on about screen
-define gui.about = _("")
+define gui.about = "详勘演职人员表"
 
 # short name used in executables and dirs.
 # ASCII-only, no spaces, no colons, no semis
@@ -23,7 +21,7 @@ define config.has_music = True
 define config.has_voice = False
 
 # main menu music
-define config.main_menu_music = audio.t1
+define config.main_menu_music = audio.mend
 
 # enter / exiting game menu transitions
 define config.enter_transition = Dissolve(.2)
@@ -32,7 +30,7 @@ define config.exit_transition = Dissolve(.2)
 # transition used when the game has been loaded
 define config.after_load_transition = None
 
-# transition used when teh game has ended
+# transition used when the game has ended
 define config.end_game_transition = Dissolve(.5)
 
 # Controls when dialogue window is displayed:
@@ -69,16 +67,16 @@ default preferences.sfx_volume = 0.75
 define config.save_directory = "InsideTheDarkChs"
 
 # icon displayed on taskbar / dock
-define config.window_icon = "gui/window_icon.png"
+define config.window_icon = "moddata/insidethedark.png"
 
 # True means we allow skipping, False means not
 define config.allow_skipping = True
 
 # True means we can autosave, false means not
-define config.has_autosave = False
+define config.has_autosave = True
 
 # True means autosave when we quit, False means not
-define config.autosave_on_quit = False
+define config.autosave_on_quit = True
 
 # Number of autosave slots to use
 define config.autosave_slots = 0
@@ -115,8 +113,6 @@ init python:
         else:
             return (float(height) * (float(config.screen_width) / float(config.screen_height)), height)
 
-
-
 # BUILD CONFIG
 
 init python:
@@ -139,19 +135,15 @@ init python:
     #
 
     # packaged ZIP for distibution
-    build.package(build.directory_name + "Mod", 'zip', build.name, description='DDLC Compatible Mod')
+    build.package(build.directory_name + "Mod", 'zip', build.name, description='DDLC Mod')
 
     # archives to create
     build.archive("scripts", build.name)
-    build.archive("mod_assets", build.name)
-    build.archive("submods", build.name)
+    build.archive("moddata", build.name)
 
     # folder / files to put in archives
-    build.classify("game/mod_assets/**", "mod_assets")
-    build.classify("game/submods/**", "submods")
+    build.classify("game/moddata/**", "moddata")
     build.classify('game/**.rpyc', "scripts")
-    build.classify('game/advanced_scripts/**', "scripts")
-    build.classify('game/original_story_scripts/**', "scripts")
 
     # stuff to ignore
     build.classify('**~', None)
@@ -163,9 +155,6 @@ init python:
     build.classify('**.psd', None)
     build.classify('**.sublime-project', None)
     build.classify('**.sublime-workspace', None)
-    build.classify('/music/*.*', None)
-    build.classify('script-regex.txt', None)
-    build.classify('/game/10', None)
     build.classify('/game/cache/*.*', None)
     build.classify('**.rpa', None)
 

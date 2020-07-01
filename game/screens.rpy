@@ -1,4 +1,3 @@
-﻿
 ## Initialization
 ################################################################################
 
@@ -21,7 +20,7 @@ style default_monika is normal:
     slow_cps 30
 
 style edited is default:
-    font "mod_assets/font/sourcehanserif.otf"
+    font "moddata/font/sourcehanserif.otf"
     kerning 8
     outlines [(10, "#000", 0, 0)]
     xpos gui.text_xpos
@@ -57,7 +56,7 @@ style splash_text:
 
 style poemgame_text:
     yalign 0.5
-    font "mod_assets/font/zhushi.ttf"
+    font "moddata/font/zhushi.ttf"
     size 30
     color "#000"
     outlines []
@@ -448,10 +447,7 @@ screen navigation():
 
             if main_menu:
 
-                if persistent.playthrough == 1:
-                    textbutton _("ŔŗñĮ¼»ŧþŀÂŻŕěōì«") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
-                else:
-                    textbutton _("新游戏") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
+                textbutton _("新游戏") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="请输入你的名字", ok_action=Function(FinishEnterName)))
 
             else:
 
@@ -473,7 +469,7 @@ screen navigation():
 
             textbutton _("设置") action [ShowMenu("preferences"), SensitiveIf(renpy.get_screen("preferences") == None)]
 
-            #textbutton _("About") action ShowMenu("about")
+            #textbutton _("关于") action ShowMenu("about")
 
             if renpy.variant("pc"):
 
@@ -497,7 +493,7 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
-    font "mod_assets/font/zcoolkuaile.ttf"
+    font "moddata/font/zcoolkuaile.ttf"
     color "#fff"
     outlines [(4, "#b59", 0, 0), (2, "#b59", 2, 2)]
     hover_outlines [(4, "#fac", 0, 0), (2, "#fac", 2, 2)]
@@ -517,14 +513,9 @@ screen main_menu():
 
     style_prefix "main_menu"
 
-    if persistent.ghost_menu:
-         add "white"
-         add "menu_art_y_ghost"
-         add "menu_art_n_ghost"
-    else:
-        add "menu_bg"
-        add "menu_art_y"
-        add "menu_art_n"
+    add "menu_bg"
+    add "menu_art_y_ghost"
+    add "menu_art_n_ghost"
     frame:
         pass
 
@@ -541,23 +532,14 @@ screen main_menu():
             text "[config.version]":
                 style "main_menu_version"
 
-    if not persistent.ghost_menu:
-        add "menu_particles"
-        add "menu_particles"
-        add "menu_particles"
-        add "menu_logo"
-    if persistent.ghost_menu:
-        add "menu_art_s_ghost"
-        add "menu_art_m_ghost"
-    else:
-        if persistent.playthrough == 1 or persistent.playthrough == 2:
-            add "menu_art_s_glitch"
-        else:
-            add "menu_art_s"
     add "menu_particles"
-    if persistent.playthrough != 4:
-        add "menu_art_m"
-        add "menu_fade"
+    add "menu_particles"
+    add "menu_particles"
+    add "menu_logo"
+    add "menu_art_s_glitch"
+    add "menu_particles"
+    add "menu_art_m"
+    add "menu_fade"
 
     key "K_ESCAPE" action Quit(confirm=False)
 
@@ -720,7 +702,7 @@ style game_menu_label:
     ysize 120
 
 style game_menu_label_text:
-    font "mod_assets/font/zcoolkuaile.ttf"
+    font "moddata/font/zcoolkuaile.ttf"
     size gui.title_text_size
     color "#fff"
     outlines [(6, "#b59", 0, 0), (3, "#b59", 2, 2)]
@@ -746,20 +728,20 @@ screen about():
     ## This use statement includes the game_menu screen inside this one. The
     ## vbox child is then included inside the viewport inside the game_menu
     ## screen.
-    use game_menu(_("About"), scroll="viewport"):
+    use game_menu(_("关于"), scroll="viewport"):
 
         style_prefix "about"
 
         vbox:
 
             label "[config.name!t]"
-            text _("Version [config.version!t]\n")
+            text _("版本 [config.version!t]\n")
 
             ## gui.about is usually set in options.rpy.
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+            text _("使用 {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only] 制作。\n\n[renpy.license!t]")
 
 
 ## This is redefined in options.rpy to add text to the about screen.
@@ -798,13 +780,7 @@ screen load():
 
 init python:
     def FileActionMod(name, page=None, **kwargs):
-        if persistent.playthrough == 1 and not persistent.deleted_saves and renpy.current_screen().screen_name[0] == "load" and FileLoadable(name):
-            return Show(screen="dialog", message="File error: \"characters/sayori.chr\"\n\nThe file is missing or corrupt.",
-                ok_action=Show(screen="dialog", message="The save file is corrupt. Starting a new game.", ok_action=Function(renpy.full_restart, label="start")))
-        elif persistent.playthrough == 3 and renpy.current_screen().screen_name[0] == "save":
-            return Show(screen="dialog", message="There's no point in saving anymore.\nDon't worry, I'm not going anywhere.", ok_action=Hide("dialog"))
-        else:
-            return FileAction(name)
+        return FileAction(name)
 
 
 screen file_slots(title):
@@ -852,7 +828,7 @@ screen file_slots(title):
 
                         add FileScreenshot(slot) xalign 0.5
 
-                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("empty slot")):
+                        text FileTime(slot, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("空白槽")):
                             style "slot_time_text"
 
                         text FileSaveName(slot):
@@ -871,9 +847,9 @@ screen file_slots(title):
 
                 #textbutton _("<") action FilePagePrevious(max=9, wrap=True)
 
-                #textbutton _("{#auto_page}A") action FilePage("auto")
+                #textbutton _("自动 {#auto_page}") action FilePage("auto")
 
-                #textbutton _("{#quick_page}Q") action FilePage("quick")
+                #textbutton _("快速 {#quick_page}") action FilePage("quick")
 
                 # range(1, 10) gives the numbers from 1 to 9.
                 for page in range(1, 10):
@@ -1055,7 +1031,7 @@ style pref_label:
     bottom_margin 2
 
 style pref_label_text:
-    font "mod_assets/font/zcoolkuaile.ttf"
+    font "moddata/font/zcoolkuaile.ttf"
     size 24
     color "#fff"
     outlines [(3, "#b59", 0, 0), (1, "#b59", 1, 1)]
@@ -1073,7 +1049,7 @@ style radio_button:
 
 style radio_button_text:
     properties gui.button_text_properties("radio_button")
-    font "mod_assets/font/zhushi.ttf"
+    font "moddata/font/zhushi.ttf"
     outlines []
 
 style check_vbox:
@@ -1085,7 +1061,7 @@ style check_button:
 
 style check_button_text:
     properties gui.button_text_properties("check_button")
-    font "mod_assets/font/zhushi.ttf"
+    font "moddata/font/zhushi.ttf"
     outlines []
 
 style slider_slider:
@@ -1143,7 +1119,7 @@ screen history():
                 text h.what
 
         if not _history_list:
-            label _("The dialogue history is empty.")
+            label _("对话历史为空。")
 
 
 style history_window is empty
@@ -1380,7 +1356,7 @@ screen name_input(message, ok_action):
                 style "confirm_prompt"
                 xalign 0.5
 
-            input default "" value VariableInputValue("player") length 12 allow "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+            input default "" value VariableInputValue("player") length 20 allow "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
 
             #hbox:
             #    xalign 0.5
@@ -1419,7 +1395,7 @@ screen dialog(message, ok_action):
                 xalign 0.5
                 spacing 100
 
-                textbutton _("OK") action ok_action
+                textbutton _("确定") action ok_action
 
 image confirm_glitch:
     "gui/overlay/confirm_glitch.png"

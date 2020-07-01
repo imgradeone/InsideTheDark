@@ -1,4 +1,3 @@
-
 .DS_Store
 errors.txt
 *.rpa
@@ -15,5 +14,6 @@ traceback.txt
 game/firstrun
 characters/*.chr
 *.swp
-game/mod_assets/font/*.ttf
-game/mod_assets/font/*.otf
+unrpa
+dir_images.rpa
+dialogue.*
